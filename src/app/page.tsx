@@ -35,7 +35,7 @@ export default function Home() {
   const handleLeave = useCallback(() => setEasterEgg(false), []);
 
   return (
-    <div>
+    <div className="w-full">
       {/* Easter Egg GIF */}
       {easterEgg && (
         <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
@@ -47,31 +47,32 @@ export default function Home() {
         </div>
       )}
 
-      {/* Header */}
-      <header className={`${animate ? "animate-fade-in-down" : ""} sticky top-0 z-40 flex items-center justify-between px-8 py-4 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
-        <Link href="/" className="flex items-center gap-2.5">
-          <span
-            className="relative flex h-2 w-2"
-            onMouseEnter={handleEnter}
-            onMouseLeave={handleLeave}
-          >
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-          </span>
-          <span className="text-sm font-medium tracking-widest text-foreground">
-            PJ&thinsp;&mdash;&thinsp;26
-          </span>
-        </Link>
+      {/* First screen: header + hero = exactly 100svh */}
+      <div className="flex h-svh flex-col">
+        <header className={`${animate ? "animate-fade-in-down" : ""} shrink-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
+          <Link href="/" className="flex items-center gap-2.5">
+            <span
+              className="relative flex h-2 w-2"
+              onMouseEnter={handleEnter}
+              onMouseLeave={handleLeave}
+            >
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
+            </span>
+            <span className="text-sm font-medium tracking-widest text-foreground">
+              PJ&thinsp;&mdash;&thinsp;26
+            </span>
+          </Link>
 
-        <div className="flex items-center gap-3 md:gap-8">
-          <Navigation />
-          <ThemeToggle />
-        </div>
-      </header>
+          <div className="flex items-center gap-3 md:gap-8">
+            <Navigation />
+            <ThemeToggle />
+          </div>
+        </header>
 
-      {/* Hero Section */}
-      <div className="flex min-h-[calc(100svh-56px)] flex-col">
-        <main className="flex flex-1 flex-col justify-end px-8 pb-[50px] md:px-12 lg:px-20">
+        {/* Hero Section */}
+        <div className="flex flex-1 flex-col">
+          <main className="flex flex-1 flex-col justify-end px-4 pb-[50px] sm:px-8 md:px-12 lg:px-20">
           <section className="max-w-lg space-y-6">
             <h1 className={`${animate ? "animate-fade-in-up" : ""} text-3xl font-semibold leading-tight tracking-tight md:text-4xl`} style={animate ? { animationDelay: "0.2s" } : undefined}>
               Hey, I&apos;m Pedro Julien &ndash;
@@ -103,10 +104,11 @@ export default function Home() {
             </p>
           </section>
         </main>
+        </div>
       </div>
 
       {/* Project Module — Artas */}
-      <section ref={project1.ref} className="px-8 py-16 md:py-24 md:px-12 lg:px-20">
+      <section ref={project1.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project1.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project1.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2026</p>
@@ -139,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Project Module — Mude */}
-      <section ref={project2.ref} className="px-8 py-16 md:py-24 md:px-12 lg:px-20">
+      <section ref={project2.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project2.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project2.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2024</p>
@@ -171,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Project Module — My Phone */}
-      <section ref={project3.ref} className="px-8 py-16 md:py-24 md:px-12 lg:px-20">
+      <section ref={project3.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project3.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project3.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2023</p>
@@ -203,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* Project Module — Combustion */}
-      <section ref={project4.ref} className="px-8 py-16 md:py-24 md:px-12 lg:px-20">
+      <section ref={project4.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project4.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project4.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2024</p>

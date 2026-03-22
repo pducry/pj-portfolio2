@@ -25,13 +25,22 @@
   --font-sans: var(--font-instrument-sans);
 }
 
-*, *::before, *::after {
-  cursor: none !important;
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
 html {
   overflow-x: clip;
   width: 100%;
+  min-width: 360px;
 }
 
 body {
@@ -42,6 +51,7 @@ body {
   overflow-y: scroll;
   scrollbar-width: none;
   width: 100%;
+  min-width: 360px;
   position: relative;
 }
 
