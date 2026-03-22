@@ -29,7 +29,7 @@ interface TrailItem {
 
 const MAX_ITEMS = 10;
 const SPAWN_DISTANCE = 80;
-const LIFETIME = 1400;
+const LIFETIME = 1800;
 
 export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HTMLDivElement | null> }) {
   const [items, setItems] = useState<TrailItem[]>([]);
@@ -42,8 +42,8 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
     const src = IMAGES[imgIndexRef.current % IMAGES.length];
     imgIndexRef.current++;
 
-    const rotation = (Math.random() - 0.5) * 30;
-    const size = 140 + Math.random() * 100;
+    const rotation = 0;
+    const size = 161 + Math.random() * 115;
 
     setItems((prev) => {
       const next = [...prev.slice(-MAX_ITEMS + 1), { id, src, x, y, rotation, size, dying: false }];
@@ -53,12 +53,12 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
     // Start fade-out
     setTimeout(() => {
       setItems((prev) => prev.map((item) => item.id === id ? { ...item, dying: true } : item));
-    }, LIFETIME * 0.6);
+    }, LIFETIME * 0.55);
 
     // Remove
     setTimeout(() => {
       setItems((prev) => prev.filter((item) => item.id !== id));
-    }, LIFETIME);
+    }, LIFETIME + 200);
   }, []);
 
   useEffect(() => {
@@ -99,8 +99,8 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
             left: item.x,
             top: item.y,
             width: item.size,
-            transform: `translate(-50%, -50%) rotate(${item.rotation}deg)`,
-            transition: item.dying ? "opacity 0.6s ease-out" : "opacity 0.15s ease-in",
+            transform: `translate(-50%, -50%)`,
+            transition: item.dying ? "opacity 0.9s ease-out" : "opacity 0.2s ease-in",
             opacity: item.dying ? 0 : 1,
             zIndex: item.id % 10,
           }}
