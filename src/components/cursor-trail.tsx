@@ -22,14 +22,15 @@ interface TrailItem {
   src: string;
   x: number;
   y: number;
-  rotation: number;
   size: number;
-  dying: boolean;
+  state: "entering" | "visible" | "dying";
 }
 
 const MAX_ITEMS = 10;
 const SPAWN_DISTANCE = 80;
-const LIFETIME = 1800;
+const ENTER_DURATION = 350;
+const VISIBLE_DURATION = 1000;
+const EXIT_DURATION = 700;
 
 export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HTMLDivElement | null> }) {
   const [items, setItems] = useState<TrailItem[]>([]);
@@ -41,24 +42,31 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
     const id = ++idRef.current;
     const src = IMAGES[imgIndexRef.current % IMAGES.length];
     imgIndexRef.current++;
+    const size = 201 + Math.random() * 144;
 
-    const rotation = 0;
-    const size = 161 + Math.random() * 115;
+    setItems((prev) => [
+      ...prev.slice(-MAX_ITEMS + 1),
+      { id, src, x, y, size, state: "entering" },
+    ]);
 
-    setItems((prev) => {
-      const next = [...prev.slice(-MAX_ITEMS + 1), { id, src, x, y, rotation, size, dying: false }];
-      return next;
-    });
-
-    // Start fade-out
+    // entering → visible
     setTimeout(() => {
-      setItems((prev) => prev.map((item) => item.id === id ? { ...item, dying: true } : item));
-    }, LIFETIME * 0.55);
+      setItems((prev) =>
+        prev.map((item) => item.id === id ? { ...item, state: "visible" } : item)
+      );
+    }, ENTER_DURATION);
 
-    // Remove
+    // visible → dying
+    setTimeout(() => {
+      setItems((prev) =>
+        prev.map((item) => item.id === id ? { ...item, state: "dying" } : item)
+      );
+    }, ENTER_DURATION + VISIBLE_DURATION);
+
+    // remove
     setTimeout(() => {
       setItems((prev) => prev.filter((item) => item.id !== id));
-    }, LIFETIME + 200);
+    }, ENTER_DURATION + VISIBLE_DURATION + EXIT_DURATION);
   }, []);
 
   useEffect(() => {
@@ -77,9 +85,8 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
 
       const dx = x - lastPos.current.x;
       const dy = y - lastPos.current.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
 
-      if (dist >= SPAWN_DISTANCE) {
+      if (Math.sqrt(dx * dx + dy * dy) >= SPAWN_DISTANCE) {
         lastPos.current = { x, y };
         spawn(x, y);
       }
@@ -89,28 +96,48 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
     return () => container.removeEventListener("mousemove", onMove);
   }, [containerRef, spawn]);
 
+  const getStyle = (item: TrailItem): React.CSSProperties => {
+    const base: React.CSSProperties = {
+      position: "absolute",
+      left: item.x,
+      top: item.y,
+      width: item.size,
+      transform: "translate(-50%, -50%)",
+      zIndex: item.id % 10,
+      willChange: "transform, opacity",
+    };
+
+    if (item.state === "entering") {
+      return {
+        ...base,
+        opacity: 0,
+        scale: "0.82",
+        transition: `opacity ${ENTER_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1), scale ${ENTER_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`,
+      };
+    }
+    if (item.state === "visible") {
+      return {
+        ...base,
+        opacity: 1,
+        scale: "1",
+        transition: `opacity ${ENTER_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1), scale ${ENTER_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`,
+      };
+    }
+    // dying
+    return {
+      ...base,
+      opacity: 0,
+      scale: "0.92",
+      transition: `opacity ${EXIT_DURATION}ms cubic-bezier(0.4, 0, 1, 1), scale ${EXIT_DURATION}ms cubic-bezier(0.4, 0, 1, 1)`,
+    };
+  };
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {items.map((item) => (
-        <div
-          key={item.id}
-          className="absolute"
-          style={{
-            left: item.x,
-            top: item.y,
-            width: item.size,
-            transform: `translate(-50%, -50%)`,
-            transition: item.dying ? "opacity 0.9s ease-out" : "opacity 0.2s ease-in",
-            opacity: item.dying ? 0 : 1,
-            zIndex: item.id % 10,
-          }}
-        >
+        <div key={item.id} style={getStyle(item)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={item.src}
-            alt=""
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
+          <img src={item.src} alt="" style={{ width: "100%", height: "auto", display: "block" }} />
         </div>
       ))}
     </div>
