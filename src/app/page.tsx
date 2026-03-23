@@ -31,6 +31,7 @@ export default function Home() {
   const project2 = useScrollReveal();
   const project3 = useScrollReveal();
   const project4 = useScrollReveal();
+  const project5 = useScrollReveal();
 
   const handleEnter = useCallback(() => setEasterEgg(true), []);
   const handleLeave = useCallback(() => setEasterEgg(false), []);
@@ -230,6 +231,39 @@ export default function Home() {
               <Image
                 src="/gallery/combustion.png"
                 alt="Combustion — sound design studio rebranding"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Module — Mercado Pago 2026 */}
+      <section ref={project5.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
+        <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
+          <div className={`space-y-4 lg:flex-1 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.1s" } : undefined}>
+            <p className="text-xs font-medium uppercase tracking-widest text-muted">2026</p>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Mercado Pago 2026</h2>
+            <div className="flex flex-wrap gap-2">
+              {["Product Design"].map((tag) => (
+                <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-muted">
+              Shaping the next generation of Mercado Pago&apos;s product experience — where AI-driven
+              design meets real financial needs. From acquisition flows to core app interfaces,
+              a UX approach built to reduce friction, build trust and make financial inclusion
+              feel effortless for millions of users across Latin America.
+            </p>
+          </div>
+          <div className={`lg:w-[62%] lg:shrink-0 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.3s" } : undefined}>
+            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
+              <Image
+                src="/gallery/meli.jpg"
+                alt="Mercado Pago 2026 — UX design with AI"
                 fill
                 className="object-cover"
               />
