@@ -100,8 +100,9 @@ export function GeoTime() {
   if (!time) return null;
 
   return (
-    <span className="hidden md:inline-block text-xs tabular-nums text-muted">
-      {city ? `${city} · ${time}` : time}
+    <span className="hidden md:inline-flex items-center gap-1.5 text-xs tabular-nums text-muted">
+      {city && <span className="text-foreground font-medium">{city}</span>}
+      <span>{time}</span>
     </span>
   );
 }
