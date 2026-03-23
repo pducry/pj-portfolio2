@@ -50,35 +50,37 @@ export default function Home() {
         </div>
       )}
 
-      {/* First screen: header + hero = exactly 100svh */}
-      <div ref={heroRef} className="relative flex h-svh flex-col">
+      {/* Sticky header */}
+      <header className={`${animate ? "animate-fade-in-down" : ""} sticky top-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
+        <Link href="/" className="flex items-center gap-2.5">
+          <span
+            className="relative flex h-2 w-2"
+            onMouseEnter={handleEnter}
+            onMouseLeave={handleLeave}
+          >
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
+          </span>
+          <span className="text-sm font-medium tracking-widest text-foreground">
+            PJ&thinsp;&mdash;&thinsp;26
+          </span>
+        </Link>
+
+        <GeoTime />
+        <div className="flex items-center gap-3 md:gap-8">
+          <Navigation />
+          <ThemeToggle />
+        </div>
+      </header>
+
+      {/* Hero — fills remaining viewport height */}
+      <div ref={heroRef} className="relative flex h-[calc(100svh-56px)] flex-col">
         {/* Cursor trail — desktop only */}
         <div className="hidden md:block">
           <CursorTrail containerRef={heroRef} />
         </div>
-        <header className={`${animate ? "animate-fade-in-down" : ""} shrink-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
-          <Link href="/" className="flex items-center gap-2.5">
-            <span
-              className="relative flex h-2 w-2"
-              onMouseEnter={handleEnter}
-              onMouseLeave={handleLeave}
-            >
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-            </span>
-            <span className="text-sm font-medium tracking-widest text-foreground">
-              PJ&thinsp;&mdash;&thinsp;26
-            </span>
-          </Link>
 
-          <GeoTime />
-          <div className="flex items-center gap-3 md:gap-8">
-            <Navigation />
-            <ThemeToggle />
-          </div>
-        </header>
-
-        {/* Hero Section */}
+        {/* Hero content */}
         <div className="relative z-10 flex flex-1 flex-col">
           <main className="flex flex-1 flex-col justify-end px-4 pb-[50px] sm:px-8 md:px-12 lg:px-20">
           <section className="max-w-lg space-y-6">
