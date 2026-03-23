@@ -28,7 +28,7 @@ interface TrailItem {
 
 const MAX_ITEMS = 20;
 const SPAWN_DISTANCE = 180;
-const ENTER_DURATION = 350;
+const ENTER_DURATION = 160;
 const VISIBLE_DURATION = 1000;
 const EXIT_DURATION = 700;
 
