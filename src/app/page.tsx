@@ -262,7 +262,7 @@ export default function Home() {
           <div className={`lg:w-[62%] lg:shrink-0 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
-                src="/gallery/meli.jpg"
+                src="/gallery/meli2.jpg"
                 alt="Mercado Pago 2026 — UX design with AI"
                 fill
                 className="object-cover"
