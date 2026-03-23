@@ -40,13 +40,14 @@ export function Navigation() {
             <Link
               key={href}
               href={href}
-              className={`text-sm transition-colors ${
+              className={`group relative text-sm transition-colors ${
                 isActive
                   ? "font-medium text-foreground"
                   : "text-muted hover:text-foreground"
               }`}
             >
               {label}
+              <span className="absolute bottom-[-2px] left-0 h-[1px] w-0 bg-foreground transition-all duration-300 ease-out group-hover:w-full" />
             </Link>
           );
         })}
