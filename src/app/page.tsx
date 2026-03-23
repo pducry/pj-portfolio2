@@ -151,7 +151,7 @@ export default function Home() {
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2026</p>
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Mercado Pago 2026</h2>
             <div className="flex flex-wrap gap-2">
-              {["Product Design"].map((tag) => (
+              {["Product Design", "AI"].map((tag) => (
                 <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
                   {tag}
                 </span>
