@@ -126,7 +126,6 @@ export default function Bio() {
                     Mercado Pago
                   </h3>
                   <p className="text-xs text-foreground/50">Design Manager</p>
-                  <p className="text-xs text-foreground/50">Current</p>
                 </div>
                 <p className="text-sm leading-relaxed text-muted">
                   As a Design Manager at Mercado Livre, responsible for elevating
