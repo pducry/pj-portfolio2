@@ -6,7 +6,6 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Navigation } from "@/components/navigation";
 import { useEntrance } from "@/components/entrance-provider";
-import { CursorTrail } from "@/components/cursor-trail";
 import { GeoTime } from "@/components/geo-time";
 
 function useScrollReveal() {
@@ -32,7 +31,6 @@ export default function Home() {
   const project2 = useScrollReveal();
   const project3 = useScrollReveal();
   const project4 = useScrollReveal();
-  const heroRef = useRef<HTMLDivElement>(null);
 
   const handleEnter = useCallback(() => setEasterEgg(true), []);
   const handleLeave = useCallback(() => setEasterEgg(false), []);
@@ -74,14 +72,8 @@ export default function Home() {
       </header>
 
       {/* Hero — fills remaining viewport height */}
-      <div ref={heroRef} className="relative flex h-[calc(100svh-56px)] flex-col">
-        {/* Cursor trail — desktop only */}
-        <div className="hidden md:block">
-          <CursorTrail containerRef={heroRef} />
-        </div>
-
-        {/* Hero content */}
-        <div className="relative z-10 flex flex-1 flex-col">
+      <div className="flex h-[calc(100svh-56px)] flex-col">
+        <div className="flex flex-1 flex-col">
           <main className="flex flex-1 flex-col justify-end px-4 pb-[50px] sm:px-8 md:px-12 lg:px-20">
           <section className="max-w-lg space-y-6">
             <h1 className={`${animate ? "animate-fade-in-up" : ""} text-3xl font-semibold leading-tight tracking-tight md:text-4xl`} style={animate ? { animationDelay: "0.2s" } : undefined}>
