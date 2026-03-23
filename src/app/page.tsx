@@ -241,42 +241,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Project Module — Combustion */}
+      {/* Project Module — Foracle */}
       <section ref={project5.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.1s" } : undefined}>
-            <p className="text-xs font-medium uppercase tracking-widest text-muted">2024</p>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Combustion</h2>
-            <div className="flex flex-wrap gap-2">
-              {["Branding"].map((tag) => (
-                <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <p className="max-w-md text-sm leading-relaxed text-muted">
-              Rebranding of a São Paulo-based sound design studio with a strong international presence.
-              A new visual identity built to match the weight and reach of their work — bold, precise
-              and unmistakably sonic.
-            </p>
-          </div>
-          <div className={`lg:w-[62%] lg:shrink-0 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.3s" } : undefined}>
-            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
-              <Image
-                src="/gallery/combustion.png"
-                alt="Combustion — sound design studio rebranding"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Module — Foracle */}
-      <section ref={project6.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
-        <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
-          <div className={`space-y-4 lg:flex-1 ${project6.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project6.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2026</p>
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Foracle</h2>
             <div className="flex flex-wrap gap-2">
@@ -292,11 +260,43 @@ export default function Home() {
               without the paywall.
             </p>
           </div>
-          <div className={`lg:w-[62%] lg:shrink-0 ${project6.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project6.visible ? { animationDelay: "0.3s" } : undefined}>
+          <div className={`lg:w-[62%] lg:shrink-0 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
                 src="/gallery/foracle.jpg"
                 alt="Foracle — free fonts curation"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Module — Combustion */}
+      <section ref={project6.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
+        <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
+          <div className={`space-y-4 lg:flex-1 ${project6.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project6.visible ? { animationDelay: "0.1s" } : undefined}>
+            <p className="text-xs font-medium uppercase tracking-widest text-muted">2024</p>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Combustion</h2>
+            <div className="flex flex-wrap gap-2">
+              {["Branding"].map((tag) => (
+                <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-muted">
+              Rebranding of a São Paulo-based sound design studio with a strong international presence.
+              A new visual identity built to match the weight and reach of their work — bold, precise
+              and unmistakably sonic.
+            </p>
+          </div>
+          <div className={`lg:w-[62%] lg:shrink-0 ${project6.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project6.visible ? { animationDelay: "0.3s" } : undefined}>
+            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
+              <Image
+                src="/gallery/combustion.png"
+                alt="Combustion — sound design studio rebranding"
                 fill
                 className="object-cover"
               />
