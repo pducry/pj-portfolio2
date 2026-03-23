@@ -7,6 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Navigation } from "@/components/navigation";
 import { useEntrance } from "@/components/entrance-provider";
 import { CursorTrail } from "@/components/cursor-trail";
+import { GeoTime } from "@/components/geo-time";
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,6 +71,7 @@ export default function Home() {
             </span>
           </Link>
 
+          <GeoTime />
           <div className="flex items-center gap-3 md:gap-8">
             <Navigation />
             <ThemeToggle />

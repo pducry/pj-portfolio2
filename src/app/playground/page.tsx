@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Navigation } from "@/components/navigation";
+import { GeoTime } from "@/components/geo-time";
 import { HorizontalGallery } from "@/components/horizontal-gallery";
 import { GridControls } from "@/components/grid-controls";
 import { useEntrance } from "@/components/entrance-provider";
@@ -61,6 +62,7 @@ export default function Playground() {
             </span>
           </Link>
 
+          <GeoTime />
           <div className="flex items-center gap-3 md:gap-8">
             <Navigation />
             <ThemeToggle />
