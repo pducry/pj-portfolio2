@@ -49,7 +49,7 @@ export default function Home() {
       )}
 
       {/* Sticky header */}
-      <header className={`${animate ? "animate-fade-in-down" : ""} sticky top-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
+      <header className={`${animate ? "animate-fade-in-down" : ""} fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-4 sm:px-8 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
         <Link href="/" className="flex items-center gap-2.5">
           <span
             className="relative flex h-2 w-2"
@@ -71,8 +71,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero — fills remaining viewport height */}
-      <div className="flex h-[calc(100svh-56px)] flex-col">
+      {/* Hero — fills remaining viewport height (pt-14 offsets fixed header) */}
+      <div className="flex h-[calc(100svh-56px)] flex-col pt-14">
         <div className="flex flex-1 flex-col">
           <main className="flex flex-1 flex-col justify-end px-4 pb-[50px] sm:px-8 md:px-12 lg:px-20">
           <section className="max-w-lg space-y-6">
