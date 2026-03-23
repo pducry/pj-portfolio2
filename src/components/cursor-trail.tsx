@@ -42,7 +42,7 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
     const id = ++idRef.current;
     const src = IMAGES[imgIndexRef.current % IMAGES.length];
     imgIndexRef.current++;
-    const size = 201 + Math.random() * 144;
+    const size = 240;
 
     setItems((prev) => [
       ...prev.slice(-MAX_ITEMS + 1),
