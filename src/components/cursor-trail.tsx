@@ -26,8 +26,8 @@ interface TrailItem {
   state: "entering" | "visible" | "dying";
 }
 
-const MAX_ITEMS = 10;
-const SPAWN_DISTANCE = 80;
+const MAX_ITEMS = 20;
+const SPAWN_DISTANCE = 50;
 const ENTER_DURATION = 350;
 const VISIBLE_DURATION = 1000;
 const EXIT_DURATION = 700;
