@@ -207,42 +207,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Project Module — My Phone */}
+      {/* Project Module — Foracle */}
       <section ref={project4.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project4.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project4.visible ? { animationDelay: "0.1s" } : undefined}>
-            <p className="text-xs font-medium uppercase tracking-widest text-muted">2023</p>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">My Phone</h2>
-            <div className="flex flex-wrap gap-2">
-              {["Product Design", "Branding"].map((tag) => (
-                <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <p className="max-w-md text-sm leading-relaxed text-muted">
-              A complete digital product experience — from website design and responsive interfaces
-              to cohesive branding that connects every touchpoint. Crafted with attention to detail,
-              blending visual identity with a seamless user journey across web and mobile.
-            </p>
-          </div>
-          <div className={`lg:w-[62%] lg:shrink-0 ${project4.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project4.visible ? { animationDelay: "0.3s" } : undefined}>
-            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
-              <Image
-                src="/gallery/Myphonethumb.png"
-                alt="My Phone — product showcase"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Module — Foracle */}
-      <section ref={project5.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
-        <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
-          <div className={`space-y-4 lg:flex-1 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2026</p>
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Foracle</h2>
             <div className="flex flex-wrap gap-2">
@@ -258,11 +226,43 @@ export default function Home() {
               without the paywall.
             </p>
           </div>
+          <div className={`lg:w-[62%] lg:shrink-0 ${project4.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project4.visible ? { animationDelay: "0.3s" } : undefined}>
+            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
+              <Image
+                src="/gallery/foracle1.jpg"
+                alt="Foracle — free fonts curation"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Module — My Phone */}
+      <section ref={project5.ref} className="px-4 py-16 sm:px-8 md:py-24 md:px-12 lg:px-20">
+        <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
+          <div className={`space-y-4 lg:flex-1 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.1s" } : undefined}>
+            <p className="text-xs font-medium uppercase tracking-widest text-muted">2023</p>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">My Phone</h2>
+            <div className="flex flex-wrap gap-2">
+              {["Product Design", "Branding"].map((tag) => (
+                <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-muted">
+              A complete digital product experience — from website design and responsive interfaces
+              to cohesive branding that connects every touchpoint. Crafted with attention to detail,
+              blending visual identity with a seamless user journey across web and mobile.
+            </p>
+          </div>
           <div className={`lg:w-[62%] lg:shrink-0 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
-                src="/gallery/foracle.jpg"
-                alt="Foracle — free fonts curation"
+                src="/gallery/Myphonethumb.png"
+                alt="My Phone — product showcase"
                 fill
                 className="object-cover"
               />
