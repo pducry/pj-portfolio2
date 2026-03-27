@@ -94,29 +94,8 @@ export default function MudePage() {
       {/* Two-column layout */}
       <div className="pt-14 flex flex-col lg:flex-row min-h-screen">
 
-        {/* LEFT — scrolling images */}
-        <div className="lg:w-[58%] px-4 py-12 sm:px-8 md:px-12 lg:pl-20 lg:pr-10 space-y-6">
-          {images.map((img, i) => (
-            <RevealImage key={i} src={img.src} alt={img.alt} />
-          ))}
-
-          {/* Back link at bottom */}
-          <div className="pt-8 pb-4">
-            <Link
-              href="/"
-              className="group inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 12H5M5 12l7-7M5 12l7 7" />
-              </svg>
-              Back to Works
-            </Link>
-          </div>
-          <p className="text-xs text-muted pb-8">&copy; Pedro Julien 2026</p>
-        </div>
-
-        {/* RIGHT — sticky info */}
-        <div className="lg:w-[42%] lg:sticky lg:top-14 lg:h-[calc(100vh-56px)] px-4 py-12 sm:px-8 md:px-12 lg:pr-20 lg:pl-10 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-border/40">
+        {/* LEFT — sticky info */}
+        <div className="lg:w-[42%] lg:sticky lg:top-14 lg:h-[calc(100vh-56px)] px-4 py-12 sm:px-8 md:px-12 lg:pl-20 lg:pr-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border/40">
           <div className="space-y-10 max-w-sm">
 
             {/* Title */}
@@ -165,6 +144,27 @@ export default function MudePage() {
             </div>
 
           </div>
+        </div>
+
+        {/* RIGHT — scrolling images */}
+        <div className="lg:w-[58%] px-4 py-12 sm:px-8 md:px-12 lg:pr-20 lg:pl-10 space-y-6">
+          {images.map((img, i) => (
+            <RevealImage key={i} src={img.src} alt={img.alt} />
+          ))}
+
+          {/* Back link at bottom */}
+          <div className="pt-8 pb-4">
+            <Link
+              href="/"
+              className="group inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg>
+              Back to Works
+            </Link>
+          </div>
+          <p className="text-xs text-muted pb-8">&copy; Pedro Julien 2026</p>
         </div>
 
       </div>
