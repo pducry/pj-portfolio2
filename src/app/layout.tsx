@@ -36,9 +36,7 @@ export default function RootLayout({
           <EntranceProvider>
             <CustomCursor />
             <PasswordGate>
-              <div className="w-full" style={{ overflowX: "clip" }}>
-                {children}
-              </div>
+              {children}
             </PasswordGate>
           </EntranceProvider>
         </ThemeProvider>
