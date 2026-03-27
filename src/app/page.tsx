@@ -180,7 +180,9 @@ export default function Home() {
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project3.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project3.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2024</p>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Mude</h2>
+            <Link href="/mude" className="group inline-block">
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl group-hover:opacity-70 transition-opacity">Mude</h2>
+            </Link>
             <div className="flex flex-wrap gap-2">
               {["Product Design"].map((tag) => (
                 <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
