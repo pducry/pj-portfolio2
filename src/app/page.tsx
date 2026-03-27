@@ -197,14 +197,16 @@ export default function Home() {
             </p>
           </div>
           <div className={`lg:w-[62%] lg:shrink-0 ${project3.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project3.visible ? { animationDelay: "0.3s" } : undefined}>
-            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
-              <Image
-                src="/gallery/mude.png"
-                alt="Mude — mindfulness app"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <Link href="/mude" className="block group">
+              <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
+                <Image
+                  src="/gallery/mude.png"
+                  alt="Mude — mindfulness app"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
