@@ -8,8 +8,8 @@ import { Navigation } from "@/components/navigation";
 import { useEntrance } from "@/components/entrance-provider";
 
 const images = [
-  { src: "/projects/mude/Mude1.png", alt: "Mude — 1" },
   { src: "/projects/mude/Mude2.png", alt: "Mude — 2" },
+  { src: "/projects/mude/Mude1.png", alt: "Mude — 1" },
   { src: "/projects/mude/Mude3.png", alt: "Mude — 3" },
   { src: "/projects/mude/Mude4.png", alt: "Mude — 4" },
   { src: "/projects/mude/Mude5.png", alt: "Mude — 5" },
