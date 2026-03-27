@@ -92,7 +92,7 @@ export default function MudePage() {
       </header>
 
       {/* Two-column layout */}
-      <div className="pt-14 flex flex-col lg:flex-row min-h-screen">
+      <div className="pt-14 flex flex-col lg:flex-row lg:items-start min-h-screen">
 
         {/* LEFT — sticky info */}
         <div className="lg:w-[42%] lg:sticky lg:top-14 lg:h-[calc(100vh-56px)] px-4 py-12 sm:px-8 md:px-12 lg:pl-20 lg:pr-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border/40">
