@@ -1,66 +1,22 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Navigation } from "@/components/navigation";
 import { useEntrance } from "@/components/entrance-provider";
+import { RevealMedia, type MediaItem } from "@/components/reveal-media";
 
-const images = [
-  { src: "/projects/mude/Mude2.png", alt: "Mude — 2" },
-  { src: "/projects/mude/Mude1.png", alt: "Mude — 1" },
-  { src: "/projects/mude/Mude3.png", alt: "Mude — 3" },
-  { src: "/projects/mude/Mude4.png", alt: "Mude — 4" },
-  { src: "/projects/mude/Mude5.png", alt: "Mude — 5" },
-  { src: "/projects/mude/Mude6.png", alt: "Mude — 6" },
-  { src: "/projects/mude/Mude7.png", alt: "Mude — 7" },
-  { src: "/projects/mude/Mude8.png", alt: "Mude — 8" },
-  { src: "/projects/mude/Mude9.png", alt: "Mude — 9" },
+const media: MediaItem[] = [
+  { type: "image", src: "/projects/mude/Mude2.png", alt: "Mude — 2" },
+  { type: "image", src: "/projects/mude/Mude1.png", alt: "Mude — 1" },
+  { type: "image", src: "/projects/mude/Mude3.png", alt: "Mude — 3" },
+  { type: "image", src: "/projects/mude/Mude4.png", alt: "Mude — 4" },
+  { type: "image", src: "/projects/mude/Mude5.png", alt: "Mude — 5" },
+  { type: "image", src: "/projects/mude/Mude6.png", alt: "Mude — 6" },
+  { type: "image", src: "/projects/mude/Mude7.png", alt: "Mude — 7" },
+  { type: "image", src: "/projects/mude/Mude8.png", alt: "Mude — 8" },
+  { type: "image", src: "/projects/mude/Mude9.png", alt: "Mude — 9" },
 ];
-
-function RevealImage({ src, alt }: { src: string; alt: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.05 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      style={{
-        transition: "opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1)",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(28px)",
-      }}
-    >
-      <div className="overflow-hidden rounded-lg">
-        <div style={{
-          transition: "transform 0.75s cubic-bezier(0.22,1,0.36,1)",
-          transform: visible ? "scale(1)" : "scale(1.03)",
-        }}>
-          <Image
-            src={src}
-            alt={alt}
-            width={1920}
-            height={1080}
-            className="w-full h-auto object-contain"
-            sizes="(max-width: 768px) 100vw, 58vw"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function MudePage() {
   const animate = useEntrance();
@@ -166,8 +122,8 @@ export default function MudePage() {
 
         {/* Images */}
         <div className="px-4 py-10 sm:px-8 lg:px-12 space-y-5">
-          {images.map((img, i) => (
-            <RevealImage key={i} src={img.src} alt={img.alt} />
+          {media.map((item, i) => (
+            <RevealMedia key={i} item={item} />
           ))}
           <p className="text-xs text-muted pt-4 pb-8">&copy; Pedro Julien 2026</p>
         </div>
