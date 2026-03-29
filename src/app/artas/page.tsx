@@ -173,17 +173,16 @@ export default function ArtasPage() {
             )}
           </div>
 
-          {/* Stack tags */}
-          <div className="flex flex-wrap gap-1.5">
-            {(tab === "overview"
-              ? ["Three.js", "WebGL", "Vanilla JS", "Firebase"]
-              : ["Three.js", "WebGL", "ES Modules", "Firebase Auth", "Firestore", "Cloud Storage"]
-            ).map((tag) => (
-              <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
-                {tag}
-              </span>
-            ))}
-          </div>
+          {/* Stack tags — technical only */}
+          {tab === "technical" && (
+            <div className="flex flex-wrap gap-1.5">
+              {["Three.js", "WebGL", "ES Modules", "Firebase Auth", "Firestore", "Cloud Storage"].map((tag) => (
+                <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           <Link
             href="/"
@@ -250,16 +249,15 @@ export default function ArtasPage() {
             )}
           </div>
 
-          <div className="flex flex-wrap gap-1.5">
-            {(tab === "overview"
-              ? ["Three.js", "WebGL", "Vanilla JS", "Firebase"]
-              : ["Three.js", "WebGL", "ES Modules", "Firebase Auth", "Firestore", "Cloud Storage"]
-            ).map((tag) => (
-              <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
-                {tag}
-              </span>
-            ))}
-          </div>
+          {tab === "technical" && (
+            <div className="flex flex-wrap gap-1.5">
+              {["Three.js", "WebGL", "ES Modules", "Firebase Auth", "Firestore", "Cloud Storage"].map((tag) => (
+                <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           <Link href="/" className="inline-flex items-center gap-2 text-xs text-muted">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
