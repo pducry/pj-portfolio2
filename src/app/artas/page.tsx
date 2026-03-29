@@ -104,7 +104,13 @@ export default function ArtasPage() {
             </div>
             <div className="space-y-1">
               <p className="text-[10px] font-medium uppercase tracking-widest text-muted">Category</p>
-              <span className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">Immersive Platform</span>
+              <div className="flex flex-wrap gap-1.5">
+                {["Product Design", "AI", "Branding"].map((tag) => (
+                  <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
