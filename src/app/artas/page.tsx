@@ -64,6 +64,7 @@ function RevealImage({ src, alt }: { src: string; alt: string }) {
 
 export default function ArtasPage() {
   const animate = useEntrance();
+  const [tab, setTab] = useState<"overview" | "technical">("overview");
 
   return (
     <div className="w-full">
@@ -107,28 +108,71 @@ export default function ArtasPage() {
             </div>
           </div>
 
-          {/* Description */}
-          <div className="space-y-3 text-sm leading-relaxed text-muted border-t border-border/40 pt-6">
-            <p>
-              ARTAS is a social art platform that reimagines how visual art is discovered and shared online.
-              Instead of the typical flat-grid gallery, it opens with an immersive 3D spatial navigation
-              experience — a starfield universe where artworks float as explorable nodes.
-            </p>
-            <p>
-              Built with Three.js, WebGL bloom effects, and a 10,000-particle starfield. 6,100+ lines of
-              handcrafted vanilla JS across 28 source files — zero frameworks, zero bundlers.
-              Firebase handles auth, database, and storage.
-            </p>
-            <p>
-              Dark cinematic aesthetic. Spatial navigation with grab-cursor. Discover, engage, join,
-              create, connect — the 3D entry point isn&apos;t decoration, it shapes how users emotionally
-              approach the content.
-            </p>
+          {/* Tab toggle */}
+          <div className="flex gap-0 border-b border-border/40">
+            <button
+              onClick={() => setTab("overview")}
+              className={`pb-2 text-[11px] font-medium uppercase tracking-widest transition-colors ${tab === "overview" ? "text-foreground border-b border-foreground" : "text-muted hover:text-foreground"}`}
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => setTab("technical")}
+              className={`pb-2 ml-6 text-[11px] font-medium uppercase tracking-widest transition-colors ${tab === "technical" ? "text-foreground border-b border-foreground" : "text-muted hover:text-foreground"}`}
+            >
+              Technical
+            </button>
+          </div>
+
+          {/* Tab content */}
+          <div className="space-y-3 text-sm leading-relaxed text-muted">
+            {tab === "overview" ? (
+              <>
+                <p>
+                  ARTAS is a social art platform that reimagines how visual art is discovered and shared online.
+                  Instead of the typical flat-grid gallery, it opens with an immersive 3D spatial navigation
+                  experience — a starfield universe where artworks float as explorable nodes.
+                </p>
+                <p>
+                  Dark cinematic aesthetic. Spatial navigation with grab-cursor. Discover, engage, join,
+                  create, connect — the 3D entry point isn&apos;t decoration, it shapes how users emotionally
+                  approach the content.
+                </p>
+                <p>
+                  The name plays on <em>art</em> + <em>artas</em> (Spanish for &ldquo;many things&rdquo;) — a space
+                  where many forms of visual expression coexist.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  Built with Three.js and Unreal Bloom post-processing — full WebGL pipeline with
+                  a 10,000-particle starfield, bloom effects, and spatial audio-ready architecture.
+                </p>
+                <p>
+                  6,100+ lines of handcrafted vanilla JS across 28 source files. Modular ES6
+                  architecture — SceneManager, CameraController, ContentNodes, InteractionManager —
+                  each a standalone ES module. Zero frameworks, zero bundlers.
+                </p>
+                <p>
+                  Firebase handles the backend: Authentication (Google + email), Firestore for data,
+                  Cloud Storage for uploads. Progressive enhancement with WebGL fallback detection
+                  for unsupported devices.
+                </p>
+                <p>
+                  14 meaningful commits over ~2 months — each one a working milestone.
+                  100% open-source, zero proprietary dependencies.
+                </p>
+              </>
+            )}
           </div>
 
           {/* Stack tags */}
           <div className="flex flex-wrap gap-1.5">
-            {["Three.js", "WebGL", "Vanilla JS", "Firebase", "Firestore", "ES Modules"].map((tag) => (
+            {(tab === "overview"
+              ? ["Three.js", "WebGL", "Vanilla JS", "Firebase"]
+              : ["Three.js", "WebGL", "ES Modules", "Firebase Auth", "Firestore", "Cloud Storage"]
+            ).map((tag) => (
               <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
                 {tag}
               </span>
@@ -164,17 +208,53 @@ export default function ArtasPage() {
               <p className="text-sm">Design & Development</p>
             </div>
           </div>
-          <p className="text-sm text-muted leading-relaxed">
-            A social art platform with immersive 3D spatial navigation — a starfield universe
-            where artworks float as explorable nodes. Built with Three.js and vanilla JS.
-          </p>
+
+          {/* Mobile tab toggle */}
+          <div className="flex gap-0 border-b border-border/40">
+            <button
+              onClick={() => setTab("overview")}
+              className={`pb-2 text-[11px] font-medium uppercase tracking-widest transition-colors ${tab === "overview" ? "text-foreground border-b border-foreground" : "text-muted hover:text-foreground"}`}
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => setTab("technical")}
+              className={`pb-2 ml-6 text-[11px] font-medium uppercase tracking-widest transition-colors ${tab === "technical" ? "text-foreground border-b border-foreground" : "text-muted hover:text-foreground"}`}
+            >
+              Technical
+            </button>
+          </div>
+
+          <div className="text-sm text-muted leading-relaxed space-y-3">
+            {tab === "overview" ? (
+              <p>
+                A social art platform with immersive 3D spatial navigation — a starfield universe
+                where artworks float as explorable nodes.
+              </p>
+            ) : (
+              <>
+                <p>
+                  Three.js + WebGL bloom pipeline with 10,000-particle starfield. 6,100+ lines of
+                  vanilla JS, 28 source files, modular ES6 architecture. Firebase backend.
+                </p>
+                <p>
+                  14 meaningful commits over ~2 months. 100% open-source.
+                </p>
+              </>
+            )}
+          </div>
+
           <div className="flex flex-wrap gap-1.5">
-            {["Three.js", "WebGL", "Vanilla JS", "Firebase"].map((tag) => (
+            {(tab === "overview"
+              ? ["Three.js", "WebGL", "Vanilla JS", "Firebase"]
+              : ["Three.js", "WebGL", "ES Modules", "Firebase Auth", "Firestore", "Cloud Storage"]
+            ).map((tag) => (
               <span key={tag} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] tracking-wide text-muted">
                 {tag}
               </span>
             ))}
           </div>
+
           <Link href="/" className="inline-flex items-center gap-2 text-xs text-muted">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 12H5M5 12l7-7M5 12l7 7" />
