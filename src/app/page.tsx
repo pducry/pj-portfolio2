@@ -114,7 +114,9 @@ export default function Home() {
         <div className="block space-y-6 lg:flex lg:space-y-0 lg:items-end lg:gap-20">
           <div className={`space-y-4 lg:flex-1 ${project1.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project1.visible ? { animationDelay: "0.1s" } : undefined}>
             <p className="text-xs font-medium uppercase tracking-widest text-muted">2026</p>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Artas</h2>
+            <Link href="/artas" className="group inline-block">
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl group-hover:opacity-70 transition-opacity">Artas</h2>
+            </Link>
             <div className="flex flex-wrap gap-2">
               {["Product Design", "AI", "Branding"].map((tag) => (
                 <span key={tag} className="rounded-full border border-border px-3 py-1 text-[11px] tracking-wide text-muted">
@@ -130,14 +132,16 @@ export default function Home() {
             </p>
           </div>
           <div className={`lg:w-[62%] lg:shrink-0 ${project1.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project1.visible ? { animationDelay: "0.3s" } : undefined}>
-            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
-              <Image
-                src="/gallery/artasthumb.png"
-                alt="Artas — creative image interaction"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <Link href="/artas" className="block group">
+              <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
+                <Image
+                  src="/gallery/artasthumb.png"
+                  alt="Artas — creative image interaction"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
