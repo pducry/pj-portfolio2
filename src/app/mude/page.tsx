@@ -43,7 +43,7 @@ export default function MudePage() {
 
       {/* Fixed left panel — desktop only */}
       <div className="hidden lg:flex fixed top-[57px] left-0 bottom-0 w-[40%] z-30 flex-col justify-end px-12 xl:px-20 pb-16 border-r border-border/40 bg-background">
-        <div className="space-y-8 max-w-xs">
+        <div className="space-y-8 max-w-sm">
 
           <h1 className="text-4xl font-semibold tracking-tight">Mude</h1>
 
