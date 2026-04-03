@@ -37,13 +37,25 @@ export default function Contact() {
               Get in touch.
             </p>
 
-            <div className="space-y-2 text-sm text-muted">
+            <div className="space-y-4 text-sm">
               <a
                 href="mailto:pducry@gmail.com"
-                className="block transition-colors hover:text-foreground"
+                className="block text-foreground font-medium transition-colors hover:opacity-70"
               >
                 pducry@gmail.com
               </a>
+
+              <div className="flex gap-6 text-muted">
+                <a href="https://www.instagram.com/pedro_julien" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+                  Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/pedro_julien" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+                  LinkedIn
+                </a>
+                <a href="https://github.com/pducry" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+                  GitHub
+                </a>
+              </div>
             </div>
 
             <p className="text-xs text-muted">
