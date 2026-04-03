@@ -63,6 +63,7 @@ const images = [
   { src: "/gallery/111.png", alt: "111" },
   { src: "/gallery/112.png", alt: "112" },
   { src: "/gallery/114.png", alt: "114" },
+  { src: "/gallery/0222c.jpg", alt: "Wave — poster design" },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
