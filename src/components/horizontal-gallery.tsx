@@ -64,6 +64,9 @@ const images = [
   { src: "/gallery/112.png", alt: "112" },
   { src: "/gallery/114.png", alt: "114" },
   { src: "/gallery/0222c.jpg", alt: "Wave — poster design" },
+  { src: "/gallery/Thumb-red.jpg", alt: "Wave — desktop UI" },
+  { src: "/gallery/mockup-desktop-003-3.png", alt: "Wave — mobile screens" },
+  { src: "/gallery/0222b.jpg", alt: "Wave — logo sizes" },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
