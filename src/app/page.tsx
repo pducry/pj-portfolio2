@@ -237,7 +237,7 @@ export default function Home() {
           <div className={`lg:w-[62%] lg:shrink-0 ${project4.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project4.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
-                src="/gallery/Foracle-1.jpg"
+                src="/gallery/Foracle2.jpg"
                 alt="Foracle — free fonts curation"
                 fill
                 className="object-cover"
