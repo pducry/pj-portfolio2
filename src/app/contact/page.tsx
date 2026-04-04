@@ -27,40 +27,31 @@ export default function Contact() {
       </header>
 
       <div className="flex min-h-[calc(100svh-56px)] flex-col pt-14">
-        <main className="flex flex-1 flex-col justify-end px-8 pb-[50px] md:px-12 lg:px-20">
-          <section className="max-w-lg space-y-6">
-            <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
-              Contact
-            </h1>
+        <main className="flex flex-1 flex-col justify-end px-8 pb-16 md:px-12 lg:px-20">
+          <section className="max-w-xl">
 
-            <p className="max-w-md text-sm leading-relaxed text-muted">
-              Get in touch.
-            </p>
+            <p className="text-sm text-muted mb-10">Say hello</p>
 
-            <div className="space-y-4 text-sm">
-              <a
-                href="mailto:pducry@gmail.com"
-                className="block text-foreground font-medium transition-colors hover:opacity-70"
-              >
-                pducry@gmail.com
-              </a>
+            <a
+              href="mailto:pducry@gmail.com"
+              className="block text-3xl md:text-5xl font-semibold tracking-tight text-foreground hover:opacity-60 transition-opacity"
+            >
+              pducry@gmail.com
+            </a>
 
-              <div className="flex gap-6 text-muted">
-                <a href="https://www.instagram.com/pedro_julien" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
-                  Instagram
-                </a>
-                <a href="https://www.linkedin.com/in/pedro_julien" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
-                  LinkedIn
-                </a>
-                <a href="https://github.com/pducry" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
-                  GitHub
-                </a>
-              </div>
+            <div className="mt-16 flex flex-col gap-3">
+              <p className="text-[10px] font-medium uppercase tracking-widest text-muted mb-2">Elsewhere</p>
+              <a href="https://www.instagram.com/pedro_julien" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-muted hover:text-foreground transition-colors">Instagram</a>
+              <a href="https://www.linkedin.com/in/pedro_julien" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-muted hover:text-foreground transition-colors">LinkedIn</a>
+              <a href="https://github.com/pducry" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-muted hover:text-foreground transition-colors">GitHub</a>
+              <a href="https://foundation.app/@ixaser" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-muted hover:text-foreground transition-colors">Foundation</a>
+              <a href="https://objkt.com/users/tz1VZcpNZW6W8D2hGXvTDqJqwGjmjPKRYwRM" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-muted hover:text-foreground transition-colors">Objkt</a>
             </div>
 
-            <p className="text-xs text-muted">
+            <p className="mt-16 text-xs text-muted">
               &copy; Pedro Julien 2026
             </p>
+
           </section>
         </main>
       </div>
