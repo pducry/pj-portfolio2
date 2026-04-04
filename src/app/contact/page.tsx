@@ -34,7 +34,7 @@ export default function Contact() {
 
             <a
               href="mailto:pducry@gmail.com"
-              className="block text-3xl md:text-5xl font-semibold tracking-tight text-foreground hover:opacity-60 transition-opacity"
+              className="block text-sm font-bold text-foreground hover:opacity-60 transition-opacity"
             >
               pducry@gmail.com
             </a>
