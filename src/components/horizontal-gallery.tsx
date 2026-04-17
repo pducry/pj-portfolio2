@@ -63,6 +63,9 @@ const images = [
   { src: "/gallery/111.png", alt: "111" },
   { src: "/gallery/112.png", alt: "112" },
   { src: "/gallery/114.png", alt: "114" },
+  { src: "/gallery/126.png", alt: "126" },
+  { src: "/gallery/127.png", alt: "127" },
+  { src: "/gallery/128.png", alt: "128" },
   { src: "/gallery/0222c.jpg", alt: "Wave — poster design" },
   { src: "/gallery/Thumb-red.jpg", alt: "Wave — desktop UI" },
   { src: "/gallery/mockup-desktop-003-3.png", alt: "Wave — mobile screens" },
@@ -160,6 +163,15 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
     () => setSelected((s) => (s !== null ? (s + 1) % shuffled.length : null)),
     [shuffled],
   );
+
+  useEffect(() => {
+    if (selected !== null) {
+      document.body.setAttribute("data-lightbox-open", "");
+    } else {
+      document.body.removeAttribute("data-lightbox-open");
+    }
+    return () => document.body.removeAttribute("data-lightbox-open");
+  }, [selected]);
 
   useEffect(() => {
     if (selected === null) return;
