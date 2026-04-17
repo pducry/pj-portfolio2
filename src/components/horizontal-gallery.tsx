@@ -63,6 +63,9 @@ const images = [
   { src: "/gallery/103.png", alt: "Project 58" },
   { src: "/gallery/104.png", alt: "Project 59" },
   { src: "/gallery/105.png", alt: "Project 60" },
+  { src: "/gallery/126.png", alt: "Project 61" },
+  { src: "/gallery/127.png", alt: "Project 62" },
+  { src: "/gallery/128.png", alt: "Project 63" },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -145,6 +148,15 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
     () => setSelected((s) => (s !== null ? (s + 1) % shuffled.length : null)),
     [shuffled],
   );
+
+  useEffect(() => {
+    if (selected !== null) {
+      document.body.setAttribute("data-lightbox-open", "");
+    } else {
+      document.body.removeAttribute("data-lightbox-open");
+    }
+    return () => document.body.removeAttribute("data-lightbox-open");
+  }, [selected]);
 
   useEffect(() => {
     if (selected === null) return;
