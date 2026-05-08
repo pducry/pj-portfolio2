@@ -1,0 +1,19 @@
+next.config.ts
+  s_a9de98a8c537b4::t_d2452c251e2946 3-4,8-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "ce550d87a0b500ce7913c1611ac558bdabe09e93",
+  "prompts": {},
+  "sessions": {
+    "s_a9de98a8c537b4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10e8294c-52de-43bf-9aeb-ea3464b0e997",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
