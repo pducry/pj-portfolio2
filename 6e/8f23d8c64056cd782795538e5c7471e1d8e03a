@@ -1,0 +1,19 @@
+src/components/theme-provider.tsx
+  s_a9de98a8c537b4::t_6a7747fff66082 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "6e8f23d8c64056cd782795538e5c7471e1d8e03a",
+  "prompts": {},
+  "sessions": {
+    "s_a9de98a8c537b4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10e8294c-52de-43bf-9aeb-ea3464b0e997",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
