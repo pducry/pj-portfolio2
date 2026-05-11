@@ -1,0 +1,44 @@
+src/app/page.tsx
+  s_a9de98a8c537b4::t_a70dfe7ffcf887 308
+  s_a9de98a8c537b4::t_b89364ff9107d1 273
+  s_a9de98a8c537b4::t_f9238f912b9579 241
+  s_a9de98a8c537b4::t_5cc42fc2ee6e06 46
+  s_a9de98a8c537b4::t_2b91e9e3de72bd 139
+  s_a9de98a8c537b4::t_bbf58069815b13 208
+  s_a9de98a8c537b4::t_0316d3ce0e7e15 173
+  s_a9de98a8c537b4::t_1db8d4f4d3b81e 9
+src/app/playground/page.tsx
+  s_a9de98a8c537b4::t_38d8d12db8f668 41
+  s_a9de98a8c537b4::t_a0d314b1d9ea98 11
+src/components/horizontal-gallery.tsx
+  s_a9de98a8c537b4::t_4753cd6de6dcaa 6
+  s_a9de98a8c537b4::t_1695248187bbb7 118
+  s_a9de98a8c537b4::t_50d72652987927 275
+src/lib/asset.ts
+  s_a9de98a8c537b4::t_647c7e0ed8f82a 1-6
+next.config.ts
+  s_a9de98a8c537b4::t_8f0142f9e320b7 10-12
+src/components/reveal-media.tsx
+  s_a9de98a8c537b4::t_5ad05aaf98ab96 42
+  s_a9de98a8c537b4::t_2873bb6820c2f4 5
+  s_a9de98a8c537b4::t_d4e7d3d88dc9bb 50
+src/components/cursor-trail.tsx
+  s_a9de98a8c537b4::t_937c2c52bcce48 4
+  s_a9de98a8c537b4::t_5b6a1eb601aa25 141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.6",
+  "base_commit_sha": "5a280fa3651ec9c93ad0e9074a7d0edcc3a58a25",
+  "prompts": {},
+  "sessions": {
+    "s_a9de98a8c537b4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10e8294c-52de-43bf-9aeb-ea3464b0e997",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
