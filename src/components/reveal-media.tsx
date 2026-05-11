@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export type MediaItem =
   | { type: "image"; src: string; alt: string }
@@ -38,7 +39,7 @@ export function RevealMedia({ item }: { item: MediaItem }) {
         }}>
           {item.type === "video" ? (
             <video
-              src={item.src}
+              src={asset(item.src)}
               controls
               playsInline
               preload="metadata"
@@ -46,7 +47,7 @@ export function RevealMedia({ item }: { item: MediaItem }) {
             />
           ) : (
             <Image
-              src={item.src}
+              src={asset(item.src)}
               alt={item.alt}
               width={1920}
               height={1080}

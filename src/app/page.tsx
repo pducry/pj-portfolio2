@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Navigation } from "@/components/navigation";
 import { useEntrance } from "@/components/entrance-provider";
+import { asset } from "@/lib/asset";
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -42,7 +43,7 @@ export default function Home() {
       {easterEgg && (
         <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
           <img
-            src="/compilacao.gif"
+            src={asset("/compilacao.gif")}
             alt=""
             className="max-h-[400px] w-auto object-contain"
           />
@@ -135,7 +136,7 @@ export default function Home() {
             <Link href="/artas" className="block group">
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
                 <Image
-                  src="/gallery/artasthumb.png"
+                  src={asset("/gallery/artasthumb.png")}
                   alt="Artas — creative image interaction"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -169,7 +170,7 @@ export default function Home() {
           <div className={`lg:w-[62%] lg:shrink-0 ${project2.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project2.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
-                src="/gallery/meli3.jpg"
+                src={asset("/gallery/meli3.jpg")}
                 alt="Mercado Pago 2026 — UX design with AI"
                 fill
                 className="object-cover"
@@ -204,7 +205,7 @@ export default function Home() {
             <Link href="/mude" className="block group">
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
                 <Image
-                  src="/gallery/mude.png"
+                  src={asset("/gallery/mude.png")}
                   alt="Mude — mindfulness app"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -237,7 +238,7 @@ export default function Home() {
           <div className={`lg:w-[62%] lg:shrink-0 ${project4.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project4.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
-                src="/gallery/Foracle2.jpg"
+                src={asset("/gallery/Foracle2.jpg")}
                 alt="Foracle — free fonts curation"
                 fill
                 className="object-cover"
@@ -269,7 +270,7 @@ export default function Home() {
           <div className={`lg:w-[62%] lg:shrink-0 ${project5.visible ? "animate-fade-in-up" : "opacity-0"}`} style={project5.visible ? { animationDelay: "0.3s" } : undefined}>
             <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
               <Image
-                src="/gallery/Myphonethumb.png"
+                src={asset("/gallery/Myphonethumb.png")}
                 alt="My Phone — product showcase"
                 fill
                 className="object-cover"
@@ -304,7 +305,7 @@ export default function Home() {
             <Link href="/combustion" className="block group">
               <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "5 / 3" }}>
                 <Image
-                  src="/gallery/combustion.png"
+                  src={asset("/gallery/combustion.png")}
                   alt="Combustion — sound design studio rebranding"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import { LayoutGroup, motion, AnimatePresence, useInView } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const images = [
   { src: "/gallery/1a.png", alt: "1a" },
@@ -114,7 +115,7 @@ function GalleryItem({
       }}
     >
       <Image
-        src={img.src}
+        src={asset(img.src)}
         alt={img.alt}
         width={1920}
         height={1440}
@@ -271,7 +272,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
             style={{ maxWidth: "90vw", maxHeight: "80vh" }}
           >
             <Image
-              src={shuffled[selected].src}
+              src={asset(shuffled[selected].src)}
               alt={shuffled[selected].alt}
               width={1600}
               height={1200}

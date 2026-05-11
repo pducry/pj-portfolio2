@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { asset } from "@/lib/asset";
 
 const IMAGES = [
   "/gallery/1a.png", "/gallery/1m.png", "/gallery/1q.png", "/gallery/1w.png", "/gallery/1x.png",
@@ -137,7 +138,7 @@ export function CursorTrail({ containerRef }: { containerRef: React.RefObject<HT
       {items.map((item) => (
         <div key={item.id} style={getStyle(item)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={item.src} alt="" style={{ width: "100%", height: "auto", display: "block" }} />
+          <img src={asset(item.src)} alt="" style={{ width: "100%", height: "auto", display: "block" }} />
         </div>
       ))}
     </div>

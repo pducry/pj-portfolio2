@@ -8,6 +8,7 @@ import { Navigation } from "@/components/navigation";
 import { HorizontalGallery } from "@/components/horizontal-gallery";
 import { GridControls } from "@/components/grid-controls";
 import { useEntrance } from "@/components/entrance-provider";
+import { asset } from "@/lib/asset";
 
 export default function Playground() {
   const animate = useEntrance();
@@ -37,7 +38,7 @@ export default function Playground() {
       {easterEgg && (
         <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
           <img
-            src="/compilacao.gif"
+            src={asset("/compilacao.gif")}
             alt=""
             className="max-h-[400px] w-auto object-contain"
           />
