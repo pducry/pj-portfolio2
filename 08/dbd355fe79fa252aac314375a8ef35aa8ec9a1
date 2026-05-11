@@ -1,0 +1,20 @@
+docs/superpowers/specs/2026-05-11-pj-portfolio2-design.md
+  s_ce6e1556090104::t_cdb879ed6f95e2 1-100,102,108-157
+  s_ce6e1556090104::t_3bc6a00fbf69e1 101,103-107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.6",
+  "base_commit_sha": "08dbd355fe79fa252aac314375a8ef35aa8ec9a1",
+  "prompts": {},
+  "sessions": {
+    "s_ce6e1556090104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "704277c8-6444-42e4-8bb9-f8b041c4e5c1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
