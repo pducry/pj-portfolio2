@@ -26,7 +26,13 @@
 }
 
 html {
-  font-size: 26px;
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 26px;
+  }
 }
 
 body {

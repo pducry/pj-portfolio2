@@ -48,11 +48,12 @@ export function MobileMenu() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.18 }}
-            className="fixed inset-0 z-50 bg-background flex flex-col px-6"
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.28, ease: [0.25, 1, 0.5, 1] }}
+            className="fixed inset-0 z-50 flex flex-col px-6"
+            style={{ backgroundColor: "var(--background)" }}
           >
             {/* Top bar */}
             <div className="flex items-center justify-between py-6">

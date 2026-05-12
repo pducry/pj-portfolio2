@@ -133,16 +133,22 @@ export default function Bio() {
       </div>
 
       {/* ── Video FFForma ── */}
-      <div className={`grid ${COL} gap-x-0 mb-24`}>
-        <span className="hidden lg:block" />
-        <span className="hidden lg:block" />
+      {/* Mobile: edge-to-edge com margem pequena */}
+      <div className="lg:hidden -mx-6 mb-16 flex justify-center">
+        <video
+          src={asset("/ffforma-slideshow.mp4")}
+          autoPlay loop muted playsInline
+          className="w-full h-auto block px-3"
+        />
+      </div>
+      {/* Desktop: alinhado à coluna */}
+      <div className={`hidden lg:grid ${COL} gap-x-0 mb-24`}>
+        <span />
+        <span />
         <div className="col-span-2">
           <video
             src={asset("/ffforma-slideshow.mp4")}
-            autoPlay
-            loop
-            muted
-            playsInline
+            autoPlay loop muted playsInline
             className="w-[85%] h-auto block"
           />
         </div>
@@ -161,7 +167,7 @@ export default function Bio() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-9`}
+            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-4 lg:py-9`}
           >
             <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
               {t.categories[project.category as keyof typeof t.categories]}
@@ -188,8 +194,8 @@ export default function Bio() {
               <div
                 key={entry.company}
                 className={`grid items-center border-b border-border ${COL} gap-x-0
-                  ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
-                  py-9`}
+                    ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
+                  py-4 lg:py-9`}
               >
                 <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
                   {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
