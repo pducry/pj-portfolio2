@@ -134,31 +134,12 @@ interface HorizontalGalleryProps {
 export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryProps) {
   const [shuffled, setShuffled] = useState(images);
   const [selected, setSelected] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [autoIndex, setAutoIndex] = useState(0);
-
   useEffect(() => {
     setShuffled(shuffle(images));
   }, []);
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 1024);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  // Auto-play infinito no mobile
-  useEffect(() => {
-    if (!isMobile || shuffled.length === 0) return;
-    const id = setInterval(() => {
-      setAutoIndex(i => (i + 1) % shuffled.length);
-    }, 460);
-    return () => clearInterval(id);
-  }, [isMobile, shuffled.length]);
-
-  const effectiveColumns = isMobile ? 1 : columns;
-  const effectiveGap = isMobile ? 16 : gap;
+  const effectiveColumns = columns;
+  const effectiveGap = gap;
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [cursorSide, setCursorSide] = useState<"left" | "right">("right");
   const [onImage, setOnImage] = useState(false);
@@ -194,37 +175,6 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, [selected, close, prev, next]);
-
-  // Mobile: auto-play slideshow
-  if (isMobile) {
-    return (
-      <section className="py-8">
-        <div className="relative overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={shuffled[autoIndex]?.src}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-            >
-              {shuffled[autoIndex] && (
-                <Image
-                  src={asset(shuffled[autoIndex].src)}
-                  alt={shuffled[autoIndex].alt}
-                  width={1920}
-                  height={1440}
-                  className="w-full h-auto object-contain"
-                  sizes="100vw"
-                  priority
-                />
-              )}
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="px-8 py-16 md:px-12 lg:px-20">

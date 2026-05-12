@@ -4,6 +4,7 @@ import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 import { asset } from "@/lib/asset";
 import { SiteHeader } from "@/components/site-header";
+import { AutoCarousel } from "@/components/auto-carousel";
 
 type Entry = { company: string; role: string; years: string };
 
@@ -92,6 +93,11 @@ export default function Bio() {
             className="w-[85%] h-auto block"
           />
         </div>
+      </div>
+
+      {/* ── Carrossel automático ── */}
+      <div className="mb-20">
+        <AutoCarousel />
       </div>
 
       {/* ── Projects ── */}
