@@ -54,7 +54,7 @@ const clients = [
 ];
 
 const TOP      = "lg:grid-cols-[180px_110px_1fr_auto]";
-const COL      = "lg:grid-cols-[180px_110px_1fr_32px]";
+const COL      = "lg:grid-cols-[200px_110px_1fr_32px]";
 const PROJ_COL = "lg:grid-cols-[180px_110px_200px_1fr_32px]";
 
 export default function Bio() {
@@ -197,7 +197,7 @@ export default function Bio() {
                     ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
                   py-4 lg:py-12`}
               >
-                <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
+                <span className="hidden text-base text-muted lg:block">
                   {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
                 </span>
                 <span className="hidden text-base text-muted lg:block whitespace-nowrap">{entry.period ?? ""}</span>

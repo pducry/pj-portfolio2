@@ -20,7 +20,7 @@ export function SiteHeader() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 flex items-center justify-between px-6 py-8 bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 flex items-center justify-between px-6 py-8 bg-background">
       <Link href="/works" className="text-base font-medium text-foreground transition-opacity hover:opacity-60">
         Pedro Julien
       </Link>
