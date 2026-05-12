@@ -37,6 +37,10 @@ export const translations = {
       "Strong Sales Experience",
       "Entrepreneurial Background",
     ],
+    playground: {
+      label: "Playground",
+      p1: "A space for visual experimentation — motion, generative graphics, brand explorations, and creative research. These are initiatives that happen outside of client work, driven purely by curiosity and the desire to push visual boundaries.",
+    },
     contact: {
       label: "Contact",
       subtitle: "Open to collaborations, consulting, and conversations.",
@@ -79,6 +83,10 @@ export const translations = {
       "Experiência Comercial",
       "Perfil Empreendedor",
     ],
+    playground: {
+      label: "Playground",
+      p1: "Um espaço de experimentação visual — motion, gráficos generativos, explorações de marca e pesquisa criativa. São iniciativas que acontecem fora do trabalho com clientes, movidas pela curiosidade e pelo desejo de expandir os limites visuais.",
+    },
     contact: {
       label: "Contato",
       subtitle: "Aberto a colaborações, consultorias e conversas.",
