@@ -96,10 +96,10 @@ function GalleryItem({
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{
-        duration: 0.6,
+        duration: 0.56,
         ease: [0.25, 1, 0.5, 1],
         delay: colIndex * 0.08,
-        layout: { duration: 0.6, ease: [0.25, 1, 0.5, 1] },
+        layout: { duration: 0.56, ease: [0.25, 1, 0.5, 1] },
       }}
     >
       <Image
@@ -183,7 +183,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
             gridTemplateColumns: `repeat(${effectiveColumns}, 1fr)`,
             gap: `${effectiveGap}px`,
           }}
-          transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.56, ease: [0.25, 1, 0.5, 1] }}
         >
           {shuffled.map((img, i) => (
             <GalleryItem
