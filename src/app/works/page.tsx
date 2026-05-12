@@ -2,7 +2,6 @@
 
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
-import { asset } from "@/lib/asset";
 import { SiteHeader } from "@/components/site-header";
 import { AutoCarousel } from "@/components/auto-carousel";
 
@@ -73,31 +72,16 @@ export default function Bio() {
         <span className="hidden lg:block" />
       </div>
 
-      {/* ── Video FFForma ── */}
-      {/* Mobile: edge-to-edge com margem pequena */}
-      <div className="lg:hidden -mx-6 mb-16 flex justify-center">
-        <video
-          src={asset("/ffforma-slideshow.mp4")}
-          autoPlay loop muted playsInline
-          className="w-full h-auto block px-3"
-        />
+      {/* ── Carrossel automático — mobile: edge-to-edge, desktop: alinhado à coluna ── */}
+      <div className="lg:hidden -mx-6 mb-16 px-3">
+        <AutoCarousel />
       </div>
-      {/* Desktop: alinhado à coluna */}
       <div className={`hidden lg:grid ${COL} gap-x-8 mb-24`}>
         <span />
         <span />
-        <div className="col-span-2">
-          <video
-            src={asset("/ffforma-slideshow.mp4")}
-            autoPlay loop muted playsInline
-            className="w-[85%] h-auto block"
-          />
+        <div className="col-span-2 w-[85%]">
+          <AutoCarousel />
         </div>
-      </div>
-
-      {/* ── Carrossel automático ── */}
-      <div className="mb-20">
-        <AutoCarousel />
       </div>
 
       {/* ── Projects ── */}
