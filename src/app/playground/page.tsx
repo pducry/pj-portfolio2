@@ -7,7 +7,6 @@ import { GridControls } from "@/components/grid-controls";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 
-const TOP = "lg:grid-cols-[180px_110px_1fr_auto]";
 
 export default function Playground() {
   const [columns, setColumns] = useState(3);
@@ -40,18 +39,11 @@ export default function Playground() {
     <div className="animate-fade-in">
       <SiteHeader />
 
-      <div className="px-6">
-        {/* Intro — mesmo padrão de Works */}
-        <div className={`grid ${TOP} gap-x-8 items-start pt-6 pb-20`}>
-          <span className="hidden lg:block" />
-          <span className="hidden lg:block" />
-          <div className="space-y-5 max-w-xl col-span-2 lg:col-span-1">
-            <p className="text-base leading-snug text-foreground/75">
-              {t.playground.p1}
-            </p>
-          </div>
-          <span className="hidden lg:block" />
-        </div>
+      {/* Intro — mesmo padrão de Works */}
+      <div className="px-6 pt-6 pb-16 max-w-xl">
+        <p className="text-base leading-snug text-foreground/75">
+          {t.playground.p1}
+        </p>
       </div>
 
       {/* Gallery */}
