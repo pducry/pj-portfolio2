@@ -166,7 +166,7 @@ export default function Bio() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-7`}
+            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-9`}
           >
             <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
               {t.categories[project.category as keyof typeof t.categories]}
@@ -188,7 +188,7 @@ export default function Bio() {
                 key={entry.company}
                 className={`grid items-center border-b border-border ${COL} gap-x-0
                   ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
-                  ${i === 0 && si > 0 ? "pt-14 pb-7" : "py-7"}`}
+                  py-9`}
               >
                 <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
                   {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
