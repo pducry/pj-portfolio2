@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Navigation } from "@/components/navigation";
+import { SiteHeader } from "@/components/site-header";
 import { HorizontalGallery } from "@/components/horizontal-gallery";
 import { GridControls } from "@/components/grid-controls";
 import { useEntrance } from "@/components/entrance-provider";
@@ -56,26 +55,9 @@ export default function Playground() {
       )}
 
       {/* Header */}
-      <header className={`${animate ? "animate-fade-in-down" : ""} sticky top-0 z-40 flex items-center justify-between px-8 py-4 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
-        <Link href="/" className="flex items-center gap-2.5">
-          <span
-            className="relative flex h-2 w-2"
-            onMouseEnter={handleEnter}
-            onMouseLeave={handleLeave}
-          >
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-          </span>
-          <span className="text-sm font-medium tracking-widest text-foreground">
-            PJ&thinsp;&mdash;&thinsp;26
-          </span>
-        </Link>
-
-        <div className="flex items-center gap-8">
-          <Navigation />
-          <ThemeToggle />
-        </div>
-      </header>
+      <div className={animate ? "animate-fade-in-down" : ""}>
+        <SiteHeader />
+      </div>
 
       {/* Hero Section */}
       <div className="flex min-h-[calc(100svh-56px)] flex-col">
