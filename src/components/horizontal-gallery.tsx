@@ -47,13 +47,24 @@ const images = [
   { src: "/gallery/Myphone2.png",    alt: "Mobile" },
   { src: "/gallery/Myphone3.png",    alt: "Mobile" },
   { src: "/gallery/Myphone5.png",    alt: "Mobile" },
+  { src: "/gallery/Myphonethumb.png",alt: "Mobile" },
+  { src: "/gallery/Mude5.png",       alt: "Mude" },
+  { src: "/gallery/Mude6.png",       alt: "Mude" },
   { src: "/gallery/Mudethumb.png",   alt: "Mude" },
   { src: "/gallery/combustion1.png", alt: "Combustion" },
   { src: "/gallery/combustion6.png", alt: "Combustion" },
+  { src: "/gallery/2.png",           alt: "Project" },
   { src: "/gallery/5.png",           alt: "Project" },
   { src: "/gallery/17.png",          alt: "Project" },
+  { src: "/gallery/19.png",          alt: "Project" },
+  { src: "/gallery/41.png",          alt: "Project" },
   { src: "/gallery/46.png",          alt: "Project" },
+  { src: "/gallery/47.png",          alt: "Project" },
+  { src: "/gallery/56.png",          alt: "Project" },
+  { src: "/gallery/61.png",          alt: "Project" },
+  { src: "/gallery/62.png",          alt: "Project" },
   { src: "/gallery/125.png",         alt: "Project" },
+  { src: "/gallery/128.png",         alt: "Project" },
   { src: "/gallery/129.png",         alt: "Project" },
   { src: "/gallery/131.png",         alt: "Project" },
   { src: "/gallery/132.png",         alt: "Project" },
@@ -96,10 +107,10 @@ function GalleryItem({
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{
-        duration: 0.56,
+        duration: 0.54,
         ease: [0.25, 1, 0.5, 1],
         delay: colIndex * 0.08,
-        layout: { duration: 0.56, ease: [0.25, 1, 0.5, 1] },
+        layout: { duration: 0.54, ease: [0.25, 1, 0.5, 1] },
       }}
     >
       <Image
@@ -183,7 +194,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
             gridTemplateColumns: `repeat(${effectiveColumns}, 1fr)`,
             gap: `${effectiveGap}px`,
           }}
-          transition={{ duration: 0.56, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.54, ease: [0.25, 1, 0.5, 1] }}
         >
           {shuffled.map((img, i) => (
             <GalleryItem
