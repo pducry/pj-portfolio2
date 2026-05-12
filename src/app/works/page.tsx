@@ -166,19 +166,14 @@ export default function Bio() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-start border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-8`}
+            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-7`}
           >
-            <span className="hidden text-base text-muted lg:block">
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
-            <span className="hidden text-base text-muted lg:block">{project.year}</span>
-            <span className="hidden text-base text-muted lg:block">{project.role}</span>
-            <div>
-              <p className="text-base font-medium text-foreground">{project.name}</p>
-              <p className="text-sm text-muted mt-1 lg:hidden">
-                {t.categories[project.category as keyof typeof t.categories]} · {project.year} · {project.role}
-              </p>
-            </div>
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">{project.role}</span>
+            <p className="text-base font-medium text-foreground truncate">{project.name}</p>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
           </div>
         ))}
@@ -191,24 +186,19 @@ export default function Bio() {
             {section.entries.map((entry, i) => (
               <div
                 key={entry.company}
-                className={`grid items-start border-b border-border ${COL} gap-x-0
+                className={`grid items-center border-b border-border ${COL} gap-x-0
                   ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
-                  ${i === 0 && si > 0 ? "pt-16 pb-8" : "py-8"}`}
+                  ${i === 0 && si > 0 ? "pt-14 pb-7" : "py-7"}`}
               >
-                <span className="hidden text-base text-muted lg:block">
+                <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
                   {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
                 </span>
-                <span className="hidden text-base text-muted lg:block">{entry.period ?? ""}</span>
-                <div>
-                  <p className="text-base font-medium text-foreground">{entry.company}</p>
-                  <p className="text-base text-muted mt-1">
+                <span className="hidden text-base text-muted lg:block whitespace-nowrap">{entry.period ?? ""}</span>
+                <div className="flex items-baseline gap-6 min-w-0">
+                  <p className="text-base font-medium text-foreground whitespace-nowrap">{entry.company}</p>
+                  <p className="text-base text-muted whitespace-nowrap">
                     {t.roles[entry.role as keyof typeof t.roles]}
                   </p>
-                  {i === 0 && (
-                    <p className="text-sm text-muted mt-2 lg:hidden">
-                      {t.experience[section.label === "Current" ? "current" : "past"]}
-                    </p>
-                  )}
                 </div>
                 <span className="hidden text-base lg:block text-right text-muted/40">
                   {si === 0 ? <span className="transition-colors group-hover:text-foreground">→</span> : ""}
