@@ -1,0 +1,88 @@
+export type Lang = "en" | "pt";
+
+export const translations = {
+  en: {
+    nav: { bio: "Bio", playground: "Playground", contact: "Contact" },
+    bio: {
+      label: "Bio",
+      p1: "Designer based in São Paulo, Brazil. Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience. With 18+ years of professional experience, he plays a central and strategic role across all stages of a project — from understanding business strategy to delivering final prototypes.",
+      p2a: "Fueled by curiosity, Pedro finds himself in a process of continuous iteration and experimentation. Founder of",
+      p2b: ", a studio crafting new motion and visual solutions using GenAI for the creative industry.",
+      cta: "Get in touch",
+    },
+    projects: { type: "Type", year: "Year", name: "Project's Name" },
+    categories: {
+      "Design System":   "Design System",
+      "Brand Identity":  "Brand Identity",
+      "Digital Product": "Digital Product",
+      "Interactive":     "Interactive",
+    },
+    experience: { current: "Current", past: "Past experience" },
+    roles: {
+      "Design Manager":   "Design Manager",
+      "Creative Director":"Creative Director",
+      "Head of Design":   "Head of Design",
+      "Design Director":  "Design Director",
+      "Senior Designer":  "Senior Designer",
+    },
+    footer: { skills: "Professional Skills", clients: "Clients", contact: "Contact" },
+    skills: [
+      "Team Management",
+      "User Experience Design",
+      "Branding",
+      "Visual Design",
+      "Product Envisioning",
+      "Design Process Consulting",
+      "Team Growth & Leadership",
+      "Strong Sales Experience",
+      "Entrepreneurial Background",
+    ],
+    contact: {
+      label: "Contact",
+      subtitle: "Open to collaborations, consulting, and conversations.",
+    },
+    copyright: "© Pedro Julien 2026",
+  },
+  pt: {
+    nav: { bio: "Bio", playground: "Playground", contact: "Contato" },
+    bio: {
+      label: "Bio",
+      p1: "Designer baseado em São Paulo, Brasil. Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção entre produtos digitais e experiências de branding. Com mais de 18 anos de experiência profissional, ele desempenha um papel central e estratégico em todas as etapas de um projeto — desde a compreensão da estratégia de negócios até a entrega de protótipos finais.",
+      p2a: "Movido pela curiosidade, Pedro está em um processo contínuo de iteração e experimentação. Fundador da",
+      p2b: ", um estúdio que cria novas soluções de motion e visuais usando GenAI para a indústria criativa.",
+      cta: "Entre em contato",
+    },
+    projects: { type: "Tipo", year: "Ano", name: "Nome do Projeto" },
+    categories: {
+      "Design System":   "Sistema de Design",
+      "Brand Identity":  "Identidade de Marca",
+      "Digital Product": "Produto Digital",
+      "Interactive":     "Interativo",
+    },
+    experience: { current: "Atual", past: "Experiência anterior" },
+    roles: {
+      "Design Manager":   "Gerente de Design",
+      "Creative Director":"Diretor Criativo",
+      "Head of Design":   "Head de Design",
+      "Design Director":  "Diretor de Design",
+      "Senior Designer":  "Designer Sênior",
+    },
+    footer: { skills: "Habilidades", clients: "Clientes", contact: "Contato" },
+    skills: [
+      "Gestão de Times",
+      "Design de Experiência",
+      "Branding",
+      "Design Visual",
+      "Visão de Produto",
+      "Consultoria em Processos",
+      "Liderança e Crescimento",
+      "Experiência Comercial",
+      "Perfil Empreendedor",
+    ],
+    contact: {
+      label: "Contato",
+      subtitle: "Aberto a colaborações, consultorias e conversas.",
+    },
+    copyright: "© Pedro Julien 2026",
+  },
+} as const;

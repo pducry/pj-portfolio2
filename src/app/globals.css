@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #EFEFEF;
-  --foreground: #1a1a1a;
-  --muted: #6b6b6b;
-  --border: #d4d4d4;
-  --card: #ffffff;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #737373;
+  --border: #e5e5e5;
+  --card: #f5f5f5;
 }
 
 .dark {
   --background: #111111;
   --foreground: #ededed;
-  --muted: #999999;
-  --border: #333333;
+  --muted: #888888;
+  --border: #2a2a2a;
   --card: #1a1a1a;
 }
 
@@ -25,34 +25,17 @@
   --font-sans: var(--font-instrument-sans);
 }
 
-@media (pointer: fine) {
-  *, *::before, *::after {
-    cursor: none !important;
-  }
-}
-
-@media (pointer: coarse) {
-  .custom-cursor {
-    display: none !important;
-  }
-}
-
 html {
-  overflow-x: clip;
-  width: 100%;
-  min-width: 360px;
+  font-size: 22px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  overflow-x: clip;
   overflow-y: scroll;
   scrollbar-width: none;
-  width: 100%;
-  min-width: 360px;
-  position: relative;
+  cursor: auto;
 }
 
 body::-webkit-scrollbar {
@@ -64,51 +47,11 @@ body::-webkit-scrollbar {
   color: var(--background);
 }
 
-@keyframes fade-in-down {
-  from {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-down {
-  animation: fade-in-down 0.8s ease-out both;
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out both;
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0), 0 0 0 0 rgba(239, 68, 68, 0);
-    border-color: rgba(239, 68, 68, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 8px 0 rgba(239, 68, 68, 0.15), 0 0 20px 0 rgba(239, 68, 68, 0.05);
-    border-color: rgba(239, 68, 68, 0.5);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-body[data-lightbox-open] .custom-cursor {
-  opacity: 0 !important;
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
 }

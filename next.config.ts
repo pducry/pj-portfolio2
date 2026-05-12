@@ -5,10 +5,10 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig: NextConfig = {
   devIndicators: false,
   output: "export",
-  basePath: isProd ? "/pj-portfolio" : "",
-  assetPrefix: isProd ? "/pj-portfolio/" : "",
+  basePath: isProd ? "/pj-portfolio2" : "",
+  assetPrefix: isProd ? "/pj-portfolio2/" : "",
   env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? "/pj-portfolio" : "",
+    NEXT_PUBLIC_BASE_PATH: isProd ? "/pj-portfolio2" : "",
   },
   images: {
     unoptimized: true,
