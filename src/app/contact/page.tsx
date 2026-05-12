@@ -17,22 +17,23 @@ export default function Contact() {
   const t = translations[lang].contact;
 
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in flex flex-col min-h-svh">
       <SiteHeader />
-      <main className="px-6 pt-16 pb-32">
-        <div className="max-w-lg space-y-12">
-          <div className="space-y-3">
+
+      <main className="flex-1 flex flex-col justify-end px-6 pb-12">
+        <div className="space-y-10">
+          <div className="space-y-2">
             <p className="text-sm text-muted uppercase tracking-widest">{t.label}</p>
             <p className="text-base leading-snug text-foreground/70">{t.subtitle}</p>
           </div>
-          <div className="space-y-5">
+          <div className="space-y-0">
             {links.map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
                 target={href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="flex items-center justify-between border-b border-border pb-5 text-base text-foreground/70 transition-colors hover:text-foreground group"
+                className="flex items-center justify-between border-b border-border py-4 text-base text-foreground/70 transition-colors hover:text-foreground group"
               >
                 <span>{label}</span>
                 <span className="text-muted/40 transition-colors group-hover:text-foreground">→</span>
