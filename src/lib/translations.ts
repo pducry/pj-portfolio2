@@ -5,7 +5,7 @@ export const translations = {
     nav: { bio: "Works", playground: "Playground", contact: "Contact" },
     bio: {
       label: "Bio",
-      p1: "Designer based in São Paulo, Brazil. Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience. With 18+ years of professional experience, he plays a central and strategic role across all stages of a project — from understanding business strategy to delivering final prototypes.",
+      p1: "Designer based in Rio de Janeiro, Brazil. Pedro is a Brazilian/Swiss designer and design director working at the intersection of digital products and branding experience. With 20+ years of professional experience, he plays a central and strategic role across all stages of a project — from understanding business strategy to delivering final prototypes, a builder and crafter powered by AI.",
       p2a: "Fueled by curiosity, Pedro finds himself in a process of continuous iteration and experimentation. Founder of",
       p2b: ", a studio crafting new motion and visual solutions using GenAI for the creative industry.",
       cta: "Get in touch",
@@ -47,7 +47,7 @@ export const translations = {
     nav: { bio: "Works", playground: "Playground", contact: "Contato" },
     bio: {
       label: "Bio",
-      p1: "Designer baseado em São Paulo, Brasil. Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção entre produtos digitais e experiências de branding. Com mais de 18 anos de experiência profissional, ele desempenha um papel central e estratégico em todas as etapas de um projeto — desde a compreensão da estratégia de negócios até a entrega de protótipos finais.",
+      p1: "Designer baseado no Rio de Janeiro, Brasil. Pedro é um designer e diretor de design brasileiro/suíço que atua na interseção entre produtos digitais e experiências de branding. Com mais de 20 anos de experiência profissional, ele desempenha um papel central e estratégico em todas as etapas de um projeto — da compreensão da estratégia de negócios à entrega de protótipos finais, um builder e crafter movido por IA.",
       p2a: "Movido pela curiosidade, Pedro está em um processo contínuo de iteração e experimentação. Fundador da",
       p2b: ", um estúdio que cria novas soluções de motion e visuais usando GenAI para a indústria criativa.",
       cta: "Entre em contato",
