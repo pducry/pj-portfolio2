@@ -7,27 +7,27 @@ import { translations } from "@/lib/translations";
 import { asset } from "@/lib/asset";
 import { MobileMenu } from "@/components/mobile-menu";
 
-type Entry = { company: string; role: string; period?: string };
+type Entry = { company: string; role: string; years: string };
 type ResumeSection = { label: string; entries: Entry[] };
 
 const experience: ResumeSection[] = [
   {
     label: "Current",
     entries: [
-      { company: "Mercado Pago", role: "Design Manager", period: "2020" },
+      { company: "Mercado Pago",            role: "Design Manager",   years: "2020—"      },
     ],
   },
   {
     label: "Past experience",
     entries: [
-      { company: "Rise New York & Partners", role: "Creative Director" },
-      { company: "Meiuca",                  role: "Head of Design" },
-      { company: "Descomplica",             role: "Design Manager" },
-      { company: "DDB Unlimited",           role: "Design Director" },
-      { company: "Work & Co",               role: "Senior Designer" },
-      { company: "Google Brand Studio",     role: "Senior Designer" },
-      { company: "Y Dreams",                role: "Senior Designer" },
-      { company: "Koi Factory",             role: "Senior Designer" },
+      { company: "Rise New York & Partners",role: "Creative Director",years: "2018—2020"  },
+      { company: "Meiuca",                  role: "Head of Design",   years: "2017—2018"  },
+      { company: "Descomplica",             role: "Design Manager",   years: "2015—2017"  },
+      { company: "DDB Unlimited",           role: "Design Director",  years: "2013—2015"  },
+      { company: "Work & Co",               role: "Senior Designer",  years: "2011—2013"  },
+      { company: "Google Brand Studio",     role: "Senior Designer",  years: "2010—2011"  },
+      { company: "Y Dreams",                role: "Senior Designer",  years: "2008—2010"  },
+      { company: "Koi Factory",             role: "Senior Designer",  years: "2006—2008"  },
     ],
   },
 ];
@@ -206,10 +206,10 @@ export default function Bio() {
                     ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
                   py-4 lg:py-12`}
               >
-                <span className="hidden text-base text-muted lg:block">
-                  {si === 0 && i === 0 ? t.experience.current : ""}
+                <span className="hidden text-base text-muted lg:block whitespace-nowrap">
+                  {entry.years}
                 </span>
-                <span className="hidden text-base text-muted lg:block whitespace-nowrap">{entry.period ?? ""}</span>
+                <span className="hidden lg:block" />
                 {/* Desktop: company + role inline */}
                 <div className="hidden lg:flex items-baseline gap-6 min-w-0">
                   <p className="text-base font-medium text-foreground whitespace-nowrap">{entry.company}</p>
@@ -218,8 +218,7 @@ export default function Bio() {
                 {/* Mobile: stacked */}
                 <div className="lg:hidden">
                   <p className="text-base font-medium text-foreground">{entry.company}</p>
-                  <p className="text-sm text-muted mt-1">{t.roles[entry.role as keyof typeof t.roles]}</p>
-                  {i === 0 && <p className="text-xs text-muted/60 mt-0.5">{t.experience[section.label === "Current" ? "current" : "past"]}</p>}
+                  <p className="text-sm text-muted mt-1">{t.roles[entry.role as keyof typeof t.roles]} · {entry.years}</p>
                 </div>
                 <span className="hidden text-base lg:block text-right text-muted/40">
                   {si === 0 ? <span className="transition-colors group-hover:text-foreground">→</span> : ""}
