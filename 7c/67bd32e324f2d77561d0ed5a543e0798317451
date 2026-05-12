@@ -1,0 +1,44 @@
+src/components/language-provider.tsx
+  s_ce6e1556090104::t_27ff0308afad13 1-36
+next.config.ts
+  s_ce6e1556090104::t_704f1e2598e3d9 8-9,11
+src/app/bio/page.tsx
+  s_ce6e1556090104::t_f250e4e5387cda 141-142,144-149,151-152
+  s_ce6e1556090104::t_f045d9e9bf6a36 150
+  s_ce6e1556090104::t_4b04dc4ddc9eca 5-6,8-9,11-31,33,35-46,48-51,61
+  s_ce6e1556090104::t_0db51314b27709 4,54-56,58-60,63-67,69-70,72-73,75-80,82-83,85-86,89-99,103-109,113,137,155-162,164-172,174-177,179-182,184-209,211,213-214,216-255,257-258
+  s_ce6e1556090104::t_7f0c97550d4071 52
+  s_ce6e1556090104::t_2097f4a601eac3 139,153-154
+  s_ce6e1556090104::t_0ecd45555c0b9c 140,143
+src/lib/translations.ts
+  s_ce6e1556090104::t_f54b01c9651dca 1-88
+src/app/layout.tsx
+  s_ce6e1556090104::t_2226570f6fb4dd 3
+  s_ce6e1556090104::t_636c2189bcc777 26
+src/app/contact/page.tsx
+  s_ce6e1556090104::t_3a7e928f1aefbe 3-13,16-17,20-25,27-41,43
+src/app/globals.css
+  s_ce6e1556090104::t_52eace5adca3dc 38
+  s_ce6e1556090104::t_006df9d8888529 29
+  s_ce6e1556090104::t_b5a07666043855 8,14-15
+src/components/site-header.tsx
+  s_ce6e1556090104::t_bf6a819fcef7ef 5-71
+src/components/providers.tsx
+  s_ce6e1556090104::t_0f929cb05f7921 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.6",
+  "base_commit_sha": "7c67bd32e324f2d77561d0ed5a543e0798317451",
+  "prompts": {},
+  "sessions": {
+    "s_ce6e1556090104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "704277c8-6444-42e4-8bb9-f8b041c4e5c1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
