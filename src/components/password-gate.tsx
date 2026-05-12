@@ -35,28 +35,23 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-svh items-center justify-center bg-background px-8">
-      <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6">
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-        </span>
-
+      <form onSubmit={handleSubmit} className="flex flex-col items-start gap-6 w-64">
+        <p className="text-base font-medium text-foreground">Pedro Julien</p>
         <input
           type="password"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Password"
           autoFocus
-          className={`w-48 border-b bg-transparent pb-2 text-center text-sm tracking-widest text-foreground outline-none transition-colors placeholder:text-muted ${
-            error ? "border-red-500" : "border-border focus:border-foreground"
+          className={`w-full border-b bg-transparent pb-2 text-base tracking-widest text-foreground outline-none transition-colors placeholder:text-muted ${
+            error ? "border-red-400" : "border-border focus:border-foreground"
           }`}
         />
-
         <button
           type="submit"
-          className="text-xs text-muted transition-colors hover:text-foreground"
+          className="text-base text-muted transition-colors hover:text-foreground"
         >
-          Enter
+          Enter →
         </button>
       </form>
     </div>

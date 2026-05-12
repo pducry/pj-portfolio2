@@ -13,14 +13,14 @@ export function SiteHeader() {
   const t = translations[lang].nav;
 
   const navLinks = [
-    { href: "/bio",        label: t.bio },
+    { href: "/works",        label: t.bio },
     { href: "/playground", label: t.playground },
     { href: "/contact",    label: t.contact },
   ];
 
   return (
     <header className="sticky top-0 z-40 flex items-center justify-between px-6 py-8 bg-background/80 backdrop-blur-sm">
-      <Link href="/bio" className="text-base font-medium text-foreground transition-opacity hover:opacity-60">
+      <Link href="/works" className="text-base font-medium text-foreground transition-opacity hover:opacity-60">
         Pedro Julien
       </Link>
 

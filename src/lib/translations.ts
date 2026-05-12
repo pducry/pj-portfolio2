@@ -2,7 +2,7 @@ export type Lang = "en" | "pt";
 
 export const translations = {
   en: {
-    nav: { bio: "Bio", playground: "Playground", contact: "Contact" },
+    nav: { bio: "Works", playground: "Playground", contact: "Contact" },
     bio: {
       label: "Bio",
       p1: "Designer based in São Paulo, Brazil. Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience. With 18+ years of professional experience, he plays a central and strategic role across all stages of a project — from understanding business strategy to delivering final prototypes.",
@@ -44,7 +44,7 @@ export const translations = {
     copyright: "© Pedro Julien 2026",
   },
   pt: {
-    nav: { bio: "Bio", playground: "Playground", contact: "Contato" },
+    nav: { bio: "Works", playground: "Playground", contact: "Contato" },
     bio: {
       label: "Bio",
       p1: "Designer baseado em São Paulo, Brasil. Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção entre produtos digitais e experiências de branding. Com mais de 18 anos de experiência profissional, ele desempenha um papel central e estratégico em todas as etapas de um projeto — desde a compreensão da estratégia de negócios até a entrega de protótipos finais.",

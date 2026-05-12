@@ -2,12 +2,15 @@
 
 import { ThemeProvider } from "./theme-provider";
 import { LanguageProvider } from "./language-provider";
+import { PasswordGate } from "./password-gate";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        {children}
+        <PasswordGate>
+          {children}
+        </PasswordGate>
       </LanguageProvider>
     </ThemeProvider>
   );
