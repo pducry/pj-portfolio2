@@ -7,7 +7,7 @@ import { GridControls } from "@/components/grid-controls";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 
-const COL = "lg:grid-cols-[180px_110px_1fr_32px]";
+const TOP = "lg:grid-cols-[180px_110px_1fr_auto]";
 
 export default function Playground() {
   const [columns, setColumns] = useState(3);
@@ -40,19 +40,25 @@ export default function Playground() {
     <div className="animate-fade-in">
       <SiteHeader />
 
-      {/* ── Desktop intro text — alinhado à esquerda com as imagens ── */}
-      <div className="hidden lg:block px-8 lg:px-20 pt-6 pb-16">
-        <p className="text-base leading-snug text-foreground/75 max-w-xl">
-          {t.playground.p1}
-        </p>
+      <div className="px-6">
+        {/* Intro — mesmo padrão de Works */}
+        <div className={`grid ${TOP} gap-x-8 items-start pt-6 pb-20`}>
+          <span className="hidden lg:block" />
+          <span className="hidden lg:block" />
+          <div className="space-y-5 max-w-xl col-span-2 lg:col-span-1">
+            <p className="text-base leading-snug text-foreground/75">
+              {t.playground.p1}
+            </p>
+          </div>
+          <span className="hidden lg:block" />
+        </div>
       </div>
 
-      {/* ── Gallery ── */}
+      {/* Gallery */}
       <div ref={galleryRef}>
         <HorizontalGallery columns={columns} gap={gap} />
       </div>
 
-      {/* Grid controls — desktop only */}
       {isDesktop && (
         <GridControls
           visible={galleryInView}
