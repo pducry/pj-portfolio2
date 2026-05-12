@@ -3,7 +3,6 @@
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 import { SiteHeader } from "@/components/site-header";
-import { AutoCarousel } from "@/components/auto-carousel";
 
 type Entry = { company: string; role: string; years: string };
 
@@ -55,10 +54,8 @@ export default function Bio() {
 
       <div className="px-6">
       {/* ── Intro text — centrado no grid, stick ao topo ── */}
-      <div className={`grid ${TOP} gap-x-8 items-start pt-4 pb-16`}>
-        <span className="hidden lg:block" />
-        <span className="hidden lg:block" />
-        <div className="space-y-5 max-w-xl col-span-2 lg:col-span-1">
+      <div className="pt-4 pb-8">
+        <div className="space-y-5 max-w-xl">
           <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
           <p className="text-base leading-snug text-foreground/75">
             {t.bio.p2a}{" "}
@@ -68,21 +65,17 @@ export default function Bio() {
           <a href="mailto:pducry@gmail.com" className="inline-flex items-center gap-2 text-base text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground transition-colors">
             {t.bio.cta} →
           </a>
+          <div className="pt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" className="animate-bounce text-foreground/60">
+              <line x1="9" y1="1" x2="9" y2="14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              <polyline points="3,9 9,15 15,9" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </div>
-        <span className="hidden lg:block" />
       </div>
 
-      {/* ── Carrossel automático — mobile: edge-to-edge, desktop: alinhado à coluna ── */}
-      <div className="lg:hidden -mx-6 mb-16 px-3">
-        <AutoCarousel />
-      </div>
-      <div className={`hidden lg:grid ${COL} gap-x-8 mb-24`}>
-        <span />
-        <span />
-        <div className="col-span-2 w-[85%]">
-          <AutoCarousel />
-        </div>
-      </div>
+      {/* ── Spacer ── */}
+      <div className="h-[200px]" />
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
@@ -139,9 +132,12 @@ export default function Bio() {
               <p className="text-base text-muted whitespace-nowrap">{t.roles[entry.role as keyof typeof t.roles]}</p>
             </div>
             {/* Mobile */}
-            <div className="lg:hidden">
-              <p className="text-base font-medium text-foreground">{entry.company}</p>
-              <p className="text-sm text-muted mt-1">{t.roles[entry.role as keyof typeof t.roles]} · {entry.years}</p>
+            <div className="lg:hidden flex items-start justify-between gap-4 w-full">
+              <div>
+                <p className="text-base font-medium text-foreground">{entry.company}</p>
+                <p className="text-sm text-muted mt-0.5">{t.roles[entry.role as keyof typeof t.roles]}</p>
+              </div>
+              <span className="text-sm text-muted whitespace-nowrap pt-0.5">{entry.years}</span>
             </div>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
           </div>

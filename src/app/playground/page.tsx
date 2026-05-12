@@ -39,15 +39,9 @@ export default function Playground() {
     <div className="animate-fade-in">
       <SiteHeader />
 
-      {/* Intro — mesmo padrão de Works */}
       <div className="px-6">
-        <div className={`grid lg:grid-cols-[180px_110px_1fr_auto] gap-x-8 items-start pt-4 pb-16`}>
-          <span className="hidden lg:block" />
-          <span className="hidden lg:block" />
-          <div className="max-w-xl col-span-2 lg:col-span-1">
-            <p className="text-base leading-snug text-foreground/75">{t.playground.p1}</p>
-          </div>
-          <span className="hidden lg:block" />
+        <div className="pt-4 pb-16">
+          <p className="text-base leading-snug text-foreground/75 max-w-xl">{t.playground.p1}</p>
         </div>
       </div>
 
