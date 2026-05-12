@@ -93,7 +93,7 @@ export default function Bio() {
       </div>
 
       {/* ── Desktop: header + Intro na mesma row ── */}
-      <div className={`hidden lg:grid ${TOP} gap-x-0 items-start pt-6 pb-28`}>
+      <div className={`hidden lg:grid ${TOP} gap-x-8 items-start pt-6 pb-28`}>
         <div className="pt-0.5">
           <Link href="/works" className="text-base font-medium text-foreground hover:opacity-60 transition-opacity">
             Pedro Julien
@@ -142,7 +142,7 @@ export default function Bio() {
         />
       </div>
       {/* Desktop: alinhado à coluna */}
-      <div className={`hidden lg:grid ${COL} gap-x-0 mb-24`}>
+      <div className={`hidden lg:grid ${COL} gap-x-8 mb-24`}>
         <span />
         <span />
         <div className="col-span-2">
@@ -156,7 +156,7 @@ export default function Bio() {
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
-        <div className={`grid ${PROJ_COL} gap-x-0 py-3 border-b border-border`}>
+        <div className={`grid ${PROJ_COL} gap-x-8 py-4 border-b border-border`}>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.type}</span>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.year}</span>
           <span className="hidden text-base text-foreground/30 lg:block pr-16">{t.projects.role}</span>
@@ -167,7 +167,7 @@ export default function Bio() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-4 lg:py-9`}
+            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-8 py-4 lg:py-12`}
           >
             <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
               {t.categories[project.category as keyof typeof t.categories]}
@@ -193,9 +193,9 @@ export default function Bio() {
             {section.entries.map((entry, i) => (
               <div
                 key={entry.company}
-                className={`grid items-center border-b border-border ${COL} gap-x-0
+                className={`grid items-center border-b border-border ${COL} gap-x-8
                     ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
-                  py-4 lg:py-9`}
+                  py-4 lg:py-12`}
               >
                 <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
                   {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
