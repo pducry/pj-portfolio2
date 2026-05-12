@@ -54,17 +54,22 @@ export default function Bio() {
       <SiteHeader />
 
       <div className="px-6">
-      {/* ── Intro text ── */}
-      <div className="pt-6 pb-16 max-w-xl space-y-5">
-        <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
-        <p className="text-base leading-snug text-foreground/75">
-          {t.bio.p2a}{" "}
-          <a href="https://ffforma.design" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-2 decoration-foreground/30 hover:decoration-foreground transition-colors">FFForma</a>
-          {t.bio.p2b}
-        </p>
-        <a href="mailto:pducry@gmail.com" className="inline-flex items-center gap-2 text-base text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground transition-colors">
-          {t.bio.cta} →
-        </a>
+      {/* ── Intro text — centrado no grid, stick ao topo ── */}
+      <div className={`grid ${TOP} gap-x-8 items-start pt-4 pb-16`}>
+        <span className="hidden lg:block" />
+        <span className="hidden lg:block" />
+        <div className="space-y-5 max-w-xl col-span-2 lg:col-span-1">
+          <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
+          <p className="text-base leading-snug text-foreground/75">
+            {t.bio.p2a}{" "}
+            <a href="https://ffforma.design" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-2 decoration-foreground/30 hover:decoration-foreground transition-colors">FFForma</a>
+            {t.bio.p2b}
+          </p>
+          <a href="mailto:pducry@gmail.com" className="inline-flex items-center gap-2 text-base text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground transition-colors">
+            {t.bio.cta} →
+          </a>
+        </div>
+        <span className="hidden lg:block" />
       </div>
 
       {/* ── Video FFForma ── */}
