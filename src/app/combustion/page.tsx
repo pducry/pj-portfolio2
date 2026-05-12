@@ -1,9 +1,7 @@
 "use client";
+import { SiteHeader } from "@/components/site-header";
 
 import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Navigation } from "@/components/navigation";
-import { useEntrance } from "@/components/entrance-provider";
 import { RevealMedia, type MediaItem } from "@/components/reveal-media";
 
 const media: MediaItem[] = [
@@ -19,27 +17,12 @@ const media: MediaItem[] = [
 ];
 
 export default function CombustionPage() {
-  const animate = useEntrance();
 
   return (
     <div className="w-full">
 
       {/* Fixed header */}
-      <header className={`${animate ? "animate-fade-in-down" : ""} fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 sm:px-8 md:px-12 lg:px-20 backdrop-blur-xl bg-background/70 border-b border-transparent transition-colors duration-300`}>
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-          </span>
-          <span className="text-sm font-medium tracking-widest text-foreground">
-            PJ&thinsp;&mdash;&thinsp;26
-          </span>
-        </Link>
-        <div className="flex items-center gap-3 md:gap-8">
-          <Navigation />
-          <ThemeToggle />
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Fixed left panel — desktop only */}
       <div className="hidden lg:flex fixed top-[57px] left-0 bottom-0 w-[40%] z-30 flex-col justify-end px-12 xl:px-20 pb-16 border-r border-border/40 bg-background">
