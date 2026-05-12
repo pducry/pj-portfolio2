@@ -6,28 +6,17 @@ import { asset } from "@/lib/asset";
 import { SiteHeader } from "@/components/site-header";
 
 type Entry = { company: string; role: string; years: string };
-type ResumeSection = { label: string; entries: Entry[] };
 
-const experience: ResumeSection[] = [
-  {
-    label: "Current",
-    entries: [
-      { company: "Mercado Pago",            role: "Design Manager",   years: "2020—"      },
-    ],
-  },
-  {
-    label: "Past experience",
-    entries: [
-      { company: "Rise New York & Partners",role: "Creative Director",years: "2018—2020"  },
-      { company: "Meiuca",                  role: "Head of Design",   years: "2017—2018"  },
-      { company: "Descomplica",             role: "Design Manager",   years: "2015—2017"  },
-      { company: "DDB Unlimited",           role: "Design Director",  years: "2013—2015"  },
-      { company: "Work & Co",               role: "Senior Designer",  years: "2011—2013"  },
-      { company: "Google Brand Studio",     role: "Senior Designer",  years: "2010—2011"  },
-      { company: "Y Dreams",                role: "Senior Designer",  years: "2008—2010"  },
-      { company: "Koi Factory",             role: "Senior Designer",  years: "2006—2008"  },
-    ],
-  },
+const experience: Entry[] = [
+  { company: "Mercado Pago",            role: "Design Manager",   years: "2020—"      },
+  { company: "Rise New York & Partners",role: "Creative Director",years: "2018—2020"  },
+  { company: "Meiuca",                  role: "Head of Design",   years: "2017—2018"  },
+  { company: "Descomplica",             role: "Design Manager",   years: "2015—2017"  },
+  { company: "DDB Unlimited",           role: "Design Director",  years: "2013—2015"  },
+  { company: "Work & Co",               role: "Senior Designer",  years: "2011—2013"  },
+  { company: "Google Brand Studio",     role: "Senior Designer",  years: "2010—2011"  },
+  { company: "Y Dreams",                role: "Senior Designer",  years: "2008—2010"  },
+  { company: "Koi Factory",             role: "Senior Designer",  years: "2006—2008"  },
 ];
 
 type Project = { category: string; year: string; name: string; role: string };
@@ -139,43 +128,32 @@ export default function Bio() {
 
       {/* ── Experience ── */}
       <div id="experience" className="mt-20 border-t border-border pt-4">
-        {experience.map((section, si) => (
-          <div key={section.label}>
-            {/* Cabeçalho de cada seção na sua própria linha */}
-            {si > 0 && (
-              <div className={`hidden lg:grid ${COL} gap-x-8 pt-14 pb-2`}>
-                <span className="text-base text-muted whitespace-nowrap">
-                  {t.experience.past}
-                </span>
-                <span /><span /><span />
-              </div>
-            )}
-            {section.entries.map((entry, i) => (
-              <div
-                key={entry.company}
-                className={`grid items-center border-b border-border ${COL} gap-x-8
-                    ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
-                  py-4 lg:py-12`}
-              >
-                <span className="hidden text-base text-muted lg:block whitespace-nowrap">
-                  {entry.years}
-                </span>
-                <span className="hidden lg:block" />
-                {/* Desktop: company + role inline */}
-                <div className="hidden lg:flex items-baseline gap-6 min-w-0">
-                  <p className="text-base font-medium text-foreground whitespace-nowrap">{entry.company}</p>
-                  <p className="text-base text-muted whitespace-nowrap">{t.roles[entry.role as keyof typeof t.roles]}</p>
-                </div>
-                {/* Mobile: stacked */}
-                <div className="lg:hidden">
-                  <p className="text-base font-medium text-foreground">{entry.company}</p>
-                  <p className="text-sm text-muted mt-1">{t.roles[entry.role as keyof typeof t.roles]} · {entry.years}</p>
-                </div>
-                <span className="hidden text-base lg:block text-right text-muted/40">
-                  {si === 0 ? <span className="transition-colors group-hover:text-foreground">→</span> : ""}
-                </span>
-              </div>
-            ))}
+        {/* Header do módulo */}
+        <div className={`hidden lg:grid ${COL} gap-x-8 pt-6 pb-2`}>
+          <span className="text-base text-muted whitespace-nowrap">{t.experience.past}</span>
+          <span /><span /><span />
+        </div>
+
+        {experience.map((entry) => (
+          <div
+            key={entry.company}
+            className={`group grid items-center border-b border-border ${COL} gap-x-8 transition-colors hover:bg-foreground/[0.02] py-4 lg:py-12`}
+          >
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap">
+              {entry.years}
+            </span>
+            <span className="hidden lg:block" />
+            {/* Desktop */}
+            <div className="hidden lg:flex items-baseline gap-6 min-w-0">
+              <p className="text-base font-medium text-foreground whitespace-nowrap">{entry.company}</p>
+              <p className="text-base text-muted whitespace-nowrap">{t.roles[entry.role as keyof typeof t.roles]}</p>
+            </div>
+            {/* Mobile */}
+            <div className="lg:hidden">
+              <p className="text-base font-medium text-foreground">{entry.company}</p>
+              <p className="text-sm text-muted mt-1">{t.roles[entry.role as keyof typeof t.roles]} · {entry.years}</p>
+            </div>
+            <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
           </div>
         ))}
       </div>
