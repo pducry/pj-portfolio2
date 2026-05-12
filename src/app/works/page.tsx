@@ -84,8 +84,8 @@ export default function Bio() {
 
         {/* Col 3: texto bio — alinhado com Project's Name */}
         <div className="space-y-5 max-w-xl mt-6 lg:mt-0">
-          <p className="text-base leading-relaxed text-foreground/75">{t.bio.p1}</p>
-          <p className="text-base leading-relaxed text-foreground/75">
+          <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
+          <p className="text-base leading-snug text-foreground/75">
             {t.bio.p2a}{" "}
             <span className="text-foreground font-medium">FFForma</span>
             {t.bio.p2b}

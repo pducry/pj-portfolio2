@@ -23,7 +23,7 @@ export default function Contact() {
         <div className="max-w-lg space-y-12">
           <div className="space-y-3">
             <p className="text-sm text-muted uppercase tracking-widest">{t.label}</p>
-            <p className="text-base leading-relaxed text-foreground/70">{t.subtitle}</p>
+            <p className="text-base leading-snug text-foreground/70">{t.subtitle}</p>
           </div>
           <div className="space-y-5">
             {links.map(({ label, href }) => (
