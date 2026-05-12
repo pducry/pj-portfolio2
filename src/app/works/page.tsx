@@ -187,7 +187,7 @@ export default function Bio() {
       </div>
 
       {/* ── Experience ── */}
-      <div id="experience" className="mt-20 border-t border-border pt-4">
+      <div id="experience" className="-mx-6 px-6 mt-20 border-t border-border pt-4" style={{ backgroundColor: "#FFFBF6" }}>
         {experience.map((section, si) => (
           <div key={section.label}>
             {section.entries.map((entry, i) => (
