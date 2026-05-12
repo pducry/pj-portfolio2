@@ -75,34 +75,38 @@ export default function Bio() {
       </div>
 
       {/* ── Spacer ── */}
-      <div className="h-[200px]" />
+      <div className="h-20 lg:h-[200px]" />
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
-        <div className={`grid ${PROJ_COL} gap-x-8 py-4 border-b border-border`}>
-          <span className="hidden text-base text-foreground/30 lg:block">{t.projects.type}</span>
-          <span className="hidden text-base text-foreground/30 lg:block">{t.projects.year}</span>
-          <span className="hidden text-base text-foreground/30 lg:block">{t.projects.role}</span>
-          <span className="text-base text-foreground/30">{t.projects.name}</span>
+        {/* Column headers */}
+        <div className={`grid ${PROJ_COL} gap-x-8 py-3 border-b border-border`}>
+          <span className="hidden text-sm text-foreground/30 lg:block">{t.projects.type}</span>
+          <span className="hidden text-sm text-foreground/30 lg:block">{t.projects.year}</span>
+          <span className="hidden text-sm text-foreground/30 lg:block">{t.projects.role}</span>
+          <span className="text-sm text-foreground/30">{t.projects.name}</span>
           <span className="hidden lg:block" />
         </div>
 
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-8 py-4 lg:py-12`}
+            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-8 py-5 lg:py-12`}
           >
             <span className="hidden text-base text-muted lg:block">
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
             <span className="hidden text-base text-muted lg:block">{project.year}</span>
             <span className="hidden text-base text-muted lg:block">{project.role}</span>
-            {/* Desktop: project name */}
+            {/* Desktop */}
             <p className="hidden lg:block text-base text-foreground truncate">{project.name}</p>
-            {/* Mobile: name + metadata stacked */}
-            <div className="lg:hidden">
-              <p className="text-base text-foreground">{project.name}</p>
-              <p className="text-sm text-muted mt-1">{project.role} · {project.year}</p>
+            {/* Mobile */}
+            <div className="lg:hidden flex items-start justify-between gap-3 w-full">
+              <div className="min-w-0">
+                <p className="text-base text-foreground leading-snug">{project.name}</p>
+                <p className="text-sm text-muted mt-1 leading-snug">{t.categories[project.category as keyof typeof t.categories]} · {project.year}</p>
+              </div>
+              <span className="text-base text-muted/40 shrink-0 mt-0.5">→</span>
             </div>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
           </div>
@@ -110,17 +114,17 @@ export default function Bio() {
       </div>
 
       {/* ── Experience ── */}
-      <div id="experience" className="mt-20 border-t border-border pt-4">
-        {/* Header do módulo */}
-        <div className={`hidden lg:grid ${COL} gap-x-8 pt-6 pb-2`}>
-          <span className="text-base text-muted whitespace-nowrap">{t.experience.past}</span>
-          <span /><span /><span />
+      <div id="experience" className="mt-16 lg:mt-20 border-t border-border">
+        {/* Section label */}
+        <div className={`grid ${COL} gap-x-8 pt-5 pb-3`}>
+          <span className="text-sm text-muted">{t.experience.past}</span>
+          <span className="hidden lg:block" /><span className="hidden lg:block" /><span className="hidden lg:block" />
         </div>
 
         {experience.map((entry) => (
           <div
             key={entry.company}
-            className={`group grid items-center border-b border-border ${COL} gap-x-8 transition-colors hover:bg-foreground/[0.02] py-4 lg:py-12`}
+            className={`group grid items-center border-b border-border ${COL} gap-x-8 transition-colors hover:bg-foreground/[0.02] py-5 lg:py-12`}
           >
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">
               {entry.years}
@@ -132,12 +136,12 @@ export default function Bio() {
               <p className="text-base text-muted whitespace-nowrap">{t.roles[entry.role as keyof typeof t.roles]}</p>
             </div>
             {/* Mobile */}
-            <div className="lg:hidden flex items-start justify-between gap-4 w-full">
-              <div>
-                <p className="text-base text-foreground">{entry.company}</p>
-                <p className="text-sm text-muted mt-0.5">{t.roles[entry.role as keyof typeof t.roles]}</p>
+            <div className="lg:hidden flex items-center justify-between gap-3 w-full">
+              <div className="min-w-0">
+                <p className="text-base text-foreground leading-snug">{entry.company}</p>
+                <p className="text-sm text-muted mt-1 leading-snug">{t.roles[entry.role as keyof typeof t.roles]}</p>
               </div>
-              <span className="text-sm text-muted whitespace-nowrap pt-0.5">{entry.years}</span>
+              <span className="text-sm text-muted/70 whitespace-nowrap shrink-0">{entry.years}</span>
             </div>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
           </div>
@@ -145,26 +149,26 @@ export default function Bio() {
       </div>
 
       {/* ── Footer ── */}
-      <div className="mt-32 grid grid-cols-1 gap-16 border-t border-border pt-20 lg:grid-cols-3 lg:gap-24">
+      <div className="mt-16 lg:mt-32 grid grid-cols-1 gap-12 border-t border-border pt-12 lg:pt-20 lg:grid-cols-3 lg:gap-24">
         <div>
-          <p className="text-sm text-muted uppercase tracking-widest mb-10">{t.footer.skills}</p>
-          <div className="space-y-4">
+          <p className="text-sm text-muted uppercase tracking-widest mb-6 lg:mb-10">{t.footer.skills}</p>
+          <div className="space-y-3 lg:space-y-4">
             {t.skills.map((s) => (
               <p key={s} className="text-base text-foreground/60">{s}</p>
             ))}
           </div>
         </div>
         <div>
-          <p className="text-sm text-muted uppercase tracking-widest mb-10">{t.footer.clients}</p>
-          <div className="space-y-4">
+          <p className="text-sm text-muted uppercase tracking-widest mb-6 lg:mb-10">{t.footer.clients}</p>
+          <div className="space-y-3 lg:space-y-4">
             {clients.map((c) => (
               <p key={c} className="text-base text-foreground/60">{c}</p>
             ))}
           </div>
         </div>
         <div>
-          <p className="text-sm text-muted uppercase tracking-widest mb-10">{t.footer.contact}</p>
-          <div className="space-y-4">
+          <p className="text-sm text-muted uppercase tracking-widest mb-6 lg:mb-10">{t.footer.contact}</p>
+          <div className="space-y-3 lg:space-y-4">
             {[
               { label: "Email",      href: "mailto:pducry@gmail.com" },
               { label: "Instagram",  href: "https://www.instagram.com/pedro_julien" },
@@ -186,7 +190,7 @@ export default function Bio() {
         </div>
       </div>
 
-      <p className="mt-20 text-sm text-muted pb-8">{t.copyright}</p>
+      <p className="mt-12 lg:mt-20 text-sm text-muted pb-8">{t.copyright}</p>
       </div>{/* end px-6 */}
     </div>
   );
