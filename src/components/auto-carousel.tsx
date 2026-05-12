@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { asset } from "@/lib/asset";
 
 const images = [
@@ -41,36 +39,71 @@ function shuffle(arr: string[]) {
 
 export function AutoCarousel() {
   const [list] = useState(() => shuffle(images));
-  const [index, setIndex] = useState(0);
+  const [idx, setIdx] = useState(0);
+  const [hoverSide, setHoverSide] = useState<"left" | "right" | null>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const cacheRef = useRef<HTMLImageElement[]>([]);
 
+  // Preload all images
   useEffect(() => {
-    const id = setInterval(() => {
-      setIndex(i => (i + 1) % list.length);
-    }, 460);
-    return () => clearInterval(id);
+    const srcs = list.map((s) => asset(s));
+    cacheRef.current = srcs.map((src) => {
+      const img = new window.Image();
+      img.src = src;
+      return img;
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Swap image directly on DOM node — no React re-render, no browser transition
+  useEffect(() => {
+    const el = imgRef.current;
+    if (!el) return;
+    const src = asset(list[idx]);
+    el.src = src;
+  }, [idx, list]);
+
+  const go = useCallback((dir: 1 | -1) => {
+    setIdx((i) => (i + dir + list.length) % list.length);
   }, [list.length]);
 
+  const onMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setHoverSide(e.clientX - rect.left < rect.width / 2 ? "left" : "right");
+  }, []);
+
+  const onMouseLeave = useCallback(() => setHoverSide(null), []);
+
+  const onClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    go(e.clientX - rect.left < rect.width / 2 ? -1 : 1);
+  }, [go]);
+
+  const cursor =
+    hoverSide === "right"
+      ? `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cline x1='6' y1='24' x2='42' y2='24' stroke='%23ff0000' stroke-width='2' stroke-linecap='round'/%3E%3Cpolyline points='30,12 42,24 30,36' fill='none' stroke='%23ff0000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 24 24, e-resize`
+      : hoverSide === "left"
+      ? `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cline x1='42' y1='24' x2='6' y2='24' stroke='%23ff0000' stroke-width='2' stroke-linecap='round'/%3E%3Cpolyline points='18,12 6,24 18,36' fill='none' stroke='%23ff0000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 24 24, w-resize`
+      : "default";
+
   return (
-    <div className="w-full overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={list[index]}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
-        >
-          <Image
-            src={asset(list[index])}
-            alt="Project"
-            width={1920}
-            height={1440}
-            className="w-full h-auto object-contain"
-            sizes="100vw"
-            priority
-          />
-        </motion.div>
-      </AnimatePresence>
+    <div
+      ref={wrapRef}
+      className="relative w-full overflow-hidden aspect-[4/3] select-none"
+      style={{ cursor }}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      onClick={onClick}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        ref={imgRef}
+        src={asset(list[0])}
+        alt="Project"
+        decoding="sync"
+        className="absolute inset-0 w-full h-full object-contain block"
+      />
     </div>
   );
 }
