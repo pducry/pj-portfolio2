@@ -50,6 +50,10 @@ const images = [
   { src: "/gallery/Mudethumb.png",   alt: "Mude" },
   { src: "/gallery/combustion1.png", alt: "Combustion" },
   { src: "/gallery/combustion6.png", alt: "Combustion" },
+  { src: "/gallery/11b.png",         alt: "Project" },
+  { src: "/gallery/13b.png",         alt: "Project" },
+  { src: "/gallery/96c.png",         alt: "Project" },
+  { src: "/gallery/101.png",         alt: "Project" },
   { src: "/gallery/2.png",           alt: "Project" },
   { src: "/gallery/5.png",           alt: "Project" },
   { src: "/gallery/17.png",          alt: "Project" },
@@ -149,7 +153,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
     if (!isMobile || shuffled.length === 0) return;
     const id = setInterval(() => {
       setAutoIndex(i => (i + 1) % shuffled.length);
-    }, 2500);
+    }, 460);
     return () => clearInterval(id);
   }, [isMobile, shuffled.length]);
 
@@ -202,7 +206,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.54, ease: [0.25, 1, 0.5, 1] }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               {shuffled[autoIndex] && (
                 <Image
