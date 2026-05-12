@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTheme } from "@/components/theme-provider";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
+import { asset } from "@/lib/asset";
 
 type Entry = { company: string; role: string; period?: string };
 type ResumeSection = { label: string; entries: Entry[] };
@@ -142,7 +143,7 @@ export default function Bio() {
         <span className="hidden lg:block" />
         <div className="col-span-2">
           <video
-            src="/ffforma-slideshow.mp4"
+            src={asset("/ffforma-slideshow.mp4")}
             autoPlay
             loop
             muted
