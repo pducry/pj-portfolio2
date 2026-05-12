@@ -1,0 +1,28 @@
+src/components/auto-carousel.tsx
+  s_632e2c7175d4b0::t_0aaba220ef2288 85,87
+  s_632e2c7175d4b0::t_8182a8699618cf 53
+  s_632e2c7175d4b0::t_577e3a5bc633cc 44,50,54
+  s_632e2c7175d4b0::t_d1c743010e87be 3,42-43,45-46,48,51,57-68,71-73,76-82,91-93,95-106
+  s_632e2c7175d4b0::t_2234af8852ff84 52,55
+  s_632e2c7175d4b0::t_80716c6607564b 56,74
+  s_632e2c7175d4b0::t_7695d02c92f8f3 83-84,86,88-89,94
+src/components/grid-controls.tsx
+  s_632e2c7175d4b0::t_04ecfed60b5bfd 88-89,93
+  s_632e2c7175d4b0::t_bffcc085ed3a74 13,16,20,25,31-78,92,95,97-105,107-117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.7",
+  "base_commit_sha": "51afd0e40faed23182cf33e6729e8b3c83bf6afe",
+  "prompts": {},
+  "sessions": {
+    "s_632e2c7175d4b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "23986742-6623-4403-85ca-67e40f1b3365",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
