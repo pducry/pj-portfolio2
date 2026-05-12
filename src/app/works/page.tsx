@@ -98,10 +98,10 @@ export default function Bio() {
             <span className="hidden text-base text-muted lg:block">{project.year}</span>
             <span className="hidden text-base text-muted lg:block">{project.role}</span>
             {/* Desktop: project name */}
-            <p className="hidden lg:block text-base font-medium text-foreground truncate">{project.name}</p>
+            <p className="hidden lg:block text-base text-foreground truncate">{project.name}</p>
             {/* Mobile: name + metadata stacked */}
             <div className="lg:hidden">
-              <p className="text-base font-medium text-foreground">{project.name}</p>
+              <p className="text-base text-foreground">{project.name}</p>
               <p className="text-sm text-muted mt-1">{project.role} · {project.year}</p>
             </div>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
@@ -128,13 +128,13 @@ export default function Bio() {
             <span className="hidden lg:block" />
             {/* Desktop */}
             <div className="hidden lg:flex items-baseline gap-6 min-w-0">
-              <p className="text-base font-medium text-foreground whitespace-nowrap">{entry.company}</p>
+              <p className="text-base text-foreground whitespace-nowrap">{entry.company}</p>
               <p className="text-base text-muted whitespace-nowrap">{t.roles[entry.role as keyof typeof t.roles]}</p>
             </div>
             {/* Mobile */}
             <div className="lg:hidden flex items-start justify-between gap-4 w-full">
               <div>
-                <p className="text-base font-medium text-foreground">{entry.company}</p>
+                <p className="text-base text-foreground">{entry.company}</p>
                 <p className="text-sm text-muted mt-0.5">{t.roles[entry.role as keyof typeof t.roles]}</p>
               </div>
               <span className="text-sm text-muted whitespace-nowrap pt-0.5">{entry.years}</span>
