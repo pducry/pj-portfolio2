@@ -40,14 +40,11 @@ export default function Playground() {
     <div className="animate-fade-in">
       <SiteHeader />
 
-      {/* ── Desktop intro text — mesmo grid de Works ── */}
-      <div className={`hidden lg:grid ${COL} gap-x-0 items-start px-6 pt-6 pb-20`}>
-        <span className="text-base text-muted">{t.playground.label}</span>
-        <span />
+      {/* ── Desktop intro text — alinhado à esquerda com as imagens ── */}
+      <div className="hidden lg:block px-8 lg:px-20 pt-6 pb-16">
         <p className="text-base leading-snug text-foreground/75 max-w-xl">
           {t.playground.p1}
         </p>
-        <span />
       </div>
 
       {/* ── Gallery ── */}

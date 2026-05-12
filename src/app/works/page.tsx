@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useTheme } from "@/components/theme-provider";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 import { asset } from "@/lib/asset";
-import { MobileMenu } from "@/components/mobile-menu";
+import { SiteHeader } from "@/components/site-header";
 
 type Entry = { company: string; role: string; years: string };
 type ResumeSection = { label: string; entries: Entry[] };
@@ -58,28 +56,20 @@ const COL      = "lg:grid-cols-[200px_110px_1fr_32px]";
 const PROJ_COL = "lg:grid-cols-[180px_110px_200px_1fr_32px]";
 
 export default function Bio() {
-  const { lang, toggle: toggleLang } = useLang();
-  const { theme, toggle: toggleTheme } = useTheme();
+  const { lang } = useLang();
   const t = translations[lang];
 
-  const navLinks = [
-    { href: "/works",        label: t.nav.bio },
-    { href: "/playground", label: t.nav.playground },
-    { href: "/contact",    label: t.nav.contact },
-  ];
-
   return (
-    <div className="animate-fade-in px-6">
+    <div className="animate-fade-in">
+      {/* ── Header — idêntico em todas as páginas ── */}
+      <SiteHeader />
 
-      {/* ── Mobile: header + bio ── */}
-      <div className="lg:hidden">
-        <div className="flex items-center justify-between pt-6">
-          <Link href="/works" className="text-base font-medium text-foreground">
-            Pedro Julien
-          </Link>
-          <MobileMenu />
-        </div>
-        <div className="pt-10 pb-20 space-y-5">
+      <div className="px-6">
+      {/* ── Bio text ── */}
+      <div className={`grid ${TOP} gap-x-8 items-start pt-6 pb-20`}>
+        <span className="hidden lg:block" />
+        <span className="hidden lg:block" />
+        <div className="space-y-5 max-w-xl col-span-2 lg:col-span-1">
           <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
           <p className="text-base leading-snug text-foreground/75">
             {t.bio.p2a}{" "}
@@ -90,46 +80,7 @@ export default function Bio() {
             {t.bio.cta} →
           </a>
         </div>
-      </div>
-
-      {/* ── Desktop: header + Intro na mesma row ── */}
-      <div className={`hidden lg:grid ${TOP} gap-x-8 items-start pt-6 pb-28`}>
-        <div className="pt-0.5">
-          <Link href="/works" className="text-base font-medium text-foreground hover:opacity-60 transition-opacity">
-            Pedro Julien
-          </Link>
-        </div>
-        <span />
-        <div className="space-y-5 max-w-xl">
-          <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
-          <p className="text-base leading-snug text-foreground/75">
-            {t.bio.p2a}{" "}
-            <a href="https://ffforma.design" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-2 decoration-foreground/30 hover:decoration-foreground transition-colors">FFForma</a>
-            {t.bio.p2b}
-          </p>
-          <a href="mailto:pducry@gmail.com" className="inline-flex items-center gap-2 text-base text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground transition-colors">
-            {t.bio.cta} →
-          </a>
-        </div>
-        <div className="flex items-center justify-end gap-8 pt-0.5">
-          <nav className="flex items-center gap-6">
-            {navLinks.map(({ href, label }) => (
-              <Link key={href} href={href} className="text-base text-muted hover:text-foreground transition-colors">
-                {label}
-              </Link>
-            ))}
-          </nav>
-          <div className="flex items-center gap-1 text-sm tabular-nums">
-            <button onClick={() => lang === "pt" && toggleLang()} className={`transition-colors ${lang === "en" ? "text-foreground" : "text-muted hover:text-foreground"}`}>EN</button>
-            <span className="text-muted">/</span>
-            <button onClick={() => lang === "en" && toggleLang()} className={`transition-colors ${lang === "pt" ? "text-foreground" : "text-muted hover:text-foreground"}`}>PT</button>
-          </div>
-          <div className="flex items-center gap-1 text-sm">
-            <button onClick={() => theme === "dark" && toggleTheme()} className={`transition-colors ${theme === "light" ? "text-foreground" : "text-muted hover:text-foreground"}`}>Light</button>
-            <span className="text-muted">/</span>
-            <button onClick={() => theme === "light" && toggleTheme()} className={`transition-colors ${theme === "dark" ? "text-foreground" : "text-muted hover:text-foreground"}`}>Dark</button>
-          </div>
-        </div>
+        <span className="hidden lg:block" />
       </div>
 
       {/* ── Video FFForma ── */}
@@ -272,6 +223,7 @@ export default function Bio() {
       </div>
 
       <p className="mt-20 text-sm text-muted pb-8">{t.copyright}</p>
+      </div>{/* end px-6 */}
     </div>
   );
 }
