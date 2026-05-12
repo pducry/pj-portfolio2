@@ -1,0 +1,21 @@
+src/app/works/page.tsx
+  s_ce6e1556090104::t_7b41b105e3d0b6 10,17,23-30
+  s_ce6e1556090104::t_9de9328217b334 221
+  s_ce6e1556090104::t_ee6ad0e4a02f57 209-210,212
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.7",
+  "base_commit_sha": "c4eb5f7a492a39aad151bdff25fa0c7c2060bb0d",
+  "prompts": {},
+  "sessions": {
+    "s_ce6e1556090104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "704277c8-6444-42e4-8bb9-f8b041c4e5c1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
