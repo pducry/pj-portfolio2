@@ -54,7 +54,7 @@ const clients = [
 
 const TOP      = "lg:grid-cols-[180px_110px_1fr_auto]";
 const COL      = "lg:grid-cols-[180px_110px_1fr_32px]";
-const PROJ_COL = "lg:grid-cols-[180px_110px_160px_1fr_32px]";
+const PROJ_COL = "lg:grid-cols-[180px_110px_200px_1fr_32px]";
 
 export default function Bio() {
   const { lang, toggle: toggleLang } = useLang();
@@ -166,13 +166,13 @@ export default function Bio() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-baseline border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-6`}
+            className={`group grid items-start border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-8`}
           >
-            <span className="hidden text-base text-muted lg:block self-start pt-0.5">
+            <span className="hidden text-base text-muted lg:block">
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
             <span className="hidden text-base text-muted lg:block">{project.year}</span>
-            <span className="hidden text-base text-muted lg:block self-start pt-0.5">{project.role}</span>
+            <span className="hidden text-base text-muted lg:block">{project.role}</span>
             <div>
               <p className="text-base font-medium text-foreground">{project.name}</p>
               <p className="text-sm text-muted mt-1 lg:hidden">
@@ -191,11 +191,11 @@ export default function Bio() {
             {section.entries.map((entry, i) => (
               <div
                 key={entry.company}
-                className={`grid items-baseline border-b border-border ${COL} gap-x-0
+                className={`grid items-start border-b border-border ${COL} gap-x-0
                   ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
-                  ${i === 0 && si > 0 ? "pt-12 pb-6" : "py-6"}`}
+                  ${i === 0 && si > 0 ? "pt-16 pb-8" : "py-8"}`}
               >
-                <span className="hidden text-base text-muted lg:block self-start pt-0.5">
+                <span className="hidden text-base text-muted lg:block">
                   {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
                 </span>
                 <span className="hidden text-base text-muted lg:block">{entry.period ?? ""}</span>
