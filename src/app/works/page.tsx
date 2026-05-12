@@ -158,7 +158,7 @@ export default function Bio() {
         <div className={`grid ${PROJ_COL} gap-x-0 py-3 border-b border-border`}>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.type}</span>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.year}</span>
-          <span className="hidden text-base text-foreground/30 lg:block">{t.projects.role}</span>
+          <span className="hidden text-base text-foreground/30 lg:block pr-16">{t.projects.role}</span>
           <span className="text-base text-foreground/30">{t.projects.name}</span>
           <span className="hidden lg:block" />
         </div>
@@ -172,7 +172,7 @@ export default function Bio() {
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">{project.role}</span>
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden pr-16">{project.role}</span>
             <p className="text-base font-medium text-foreground truncate">{project.name}</p>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
           </div>
