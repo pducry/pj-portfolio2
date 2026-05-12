@@ -1,0 +1,19 @@
+.github/workflows/deploy.yml
+  s_ce6e1556090104::t_c709a8530426de 27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.6",
+  "base_commit_sha": "be45ecf334c6ee8c09bf707aeb845b19cbc35699",
+  "prompts": {},
+  "sessions": {
+    "s_ce6e1556090104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "704277c8-6444-42e4-8bb9-f8b041c4e5c1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
