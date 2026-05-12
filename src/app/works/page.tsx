@@ -159,7 +159,7 @@ export default function Bio() {
         <div className={`grid ${PROJ_COL} gap-x-8 py-4 border-b border-border`}>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.type}</span>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.year}</span>
-          <span className="hidden text-base text-foreground/30 lg:block pr-16">{t.projects.role}</span>
+          <span className="hidden text-base text-foreground/30 lg:block">{t.projects.role}</span>
           <span className="text-base text-foreground/30">{t.projects.name}</span>
           <span className="hidden lg:block" />
         </div>
@@ -169,11 +169,11 @@ export default function Bio() {
             key={project.name}
             className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-8 py-4 lg:py-12`}
           >
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden">
+            <span className="hidden text-base text-muted lg:block">
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap overflow-hidden pr-16">{project.role}</span>
+            <span className="hidden text-base text-muted lg:block">{project.year}</span>
+            <span className="hidden text-base text-muted lg:block">{project.role}</span>
             {/* Desktop: project name */}
             <p className="hidden lg:block text-base font-medium text-foreground truncate">{project.name}</p>
             {/* Mobile: name + metadata stacked */}
@@ -190,6 +190,15 @@ export default function Bio() {
       <div id="experience" className="mt-20 border-t border-border pt-4">
         {experience.map((section, si) => (
           <div key={section.label}>
+            {/* Cabeçalho de cada seção na sua própria linha */}
+            {si > 0 && (
+              <div className={`hidden lg:grid ${COL} gap-x-8 pt-14 pb-2`}>
+                <span className="text-base text-muted whitespace-nowrap">
+                  {t.experience.past}
+                </span>
+                <span /><span /><span />
+              </div>
+            )}
             {section.entries.map((entry, i) => (
               <div
                 key={entry.company}
@@ -198,7 +207,7 @@ export default function Bio() {
                   py-4 lg:py-12`}
               >
                 <span className="hidden text-base text-muted lg:block">
-                  {i === 0 ? t.experience[section.label === "Current" ? "current" : "past"] : ""}
+                  {si === 0 && i === 0 ? t.experience.current : ""}
                 </span>
                 <span className="hidden text-base text-muted lg:block whitespace-nowrap">{entry.period ?? ""}</span>
                 {/* Desktop: company + role inline */}
