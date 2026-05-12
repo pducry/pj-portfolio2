@@ -31,19 +31,19 @@ const experience: ResumeSection[] = [
   },
 ];
 
-type Project = { category: string; year: string; name: string };
+type Project = { category: string; year: string; name: string; role: string };
 
 const projects: Project[] = [
-  { category: "Design System",   year: "2020", name: "Andes Design System — Mercado Pago" },
-  { category: "Brand Identity",  year: "2024", name: "FFForma — Creative Studio" },
-  { category: "Digital Product", year: "2019", name: "Rise New York & Partners — Brand Campaigns" },
-  { category: "Brand Identity",  year: "2018", name: "Descomplica — Brand Refresh" },
-  { category: "Design System",   year: "2015", name: "Royal Canin — Global Design System" },
-  { category: "Digital Product", year: "2014", name: "Adidas — Global Soccer Platform" },
-  { category: "Digital Product", year: "2013", name: "Facebook & Santander — Digital Products" },
-  { category: "Interactive",     year: "2011", name: "Performing Arts With Google" },
-  { category: "Interactive",     year: "2010", name: "Hear the City — Cisco" },
-  { category: "Digital Product", year: "2008", name: "Globosat & Esporte Interativo" },
+  { category: "Design System",   year: "2020", name: "Andes Design System — Mercado Pago",        role: "Design Director"  },
+  { category: "Brand Identity",  year: "2024", name: "FFForma — Creative Studio",                  role: "Senior Designer"  },
+  { category: "Digital Product", year: "2019", name: "Rise New York & Partners — Brand Campaigns", role: "Design Director"  },
+  { category: "Brand Identity",  year: "2018", name: "Descomplica — Brand Refresh",                role: "Senior Designer"  },
+  { category: "Design System",   year: "2015", name: "Royal Canin — Global Design System",         role: "Design Director"  },
+  { category: "Digital Product", year: "2014", name: "Adidas — Global Soccer Platform",            role: "Design Director"  },
+  { category: "Digital Product", year: "2013", name: "Facebook & Santander — Digital Products",    role: "Senior Designer"  },
+  { category: "Interactive",     year: "2011", name: "Performing Arts With Google",                role: "Senior Designer"  },
+  { category: "Interactive",     year: "2010", name: "Hear the City — Cisco",                      role: "Senior Designer"  },
+  { category: "Digital Product", year: "2008", name: "Globosat & Esporte Interativo",              role: "Senior Designer"  },
 ];
 
 const clients = [
@@ -52,9 +52,9 @@ const clients = [
   "Art Directors Club","Cisco","Descomplica","Neom",
 ];
 
-// col 1 e col 2 idênticos ao COL das tabelas, col 4 auto para o nav
-const TOP  = "lg:grid-cols-[180px_110px_1fr_auto]";
-const COL  = "lg:grid-cols-[180px_110px_1fr_32px]";
+const TOP      = "lg:grid-cols-[180px_110px_1fr_auto]";
+const COL      = "lg:grid-cols-[180px_110px_1fr_32px]";
+const PROJ_COL = "lg:grid-cols-[180px_110px_160px_1fr_32px]";
 
 export default function Bio() {
   const { lang, toggle: toggleLang } = useLang();
@@ -155,9 +155,10 @@ export default function Bio() {
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
-        <div className={`grid ${COL} gap-x-0 py-3 border-b border-border`}>
+        <div className={`grid ${PROJ_COL} gap-x-0 py-3 border-b border-border`}>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.type}</span>
           <span className="hidden text-base text-foreground/30 lg:block">{t.projects.year}</span>
+          <span className="hidden text-base text-foreground/30 lg:block">{t.projects.role}</span>
           <span className="text-base text-foreground/30">{t.projects.name}</span>
           <span className="hidden lg:block" />
         </div>
@@ -165,16 +166,17 @@ export default function Bio() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`group grid items-baseline border-b border-border transition-colors hover:bg-foreground/[0.02] ${COL} gap-x-0 py-6`}
+            className={`group grid items-baseline border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-0 py-6`}
           >
             <span className="hidden text-base text-muted lg:block self-start pt-0.5">
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
             <span className="hidden text-base text-muted lg:block">{project.year}</span>
+            <span className="hidden text-base text-muted lg:block self-start pt-0.5">{project.role}</span>
             <div>
               <p className="text-base font-medium text-foreground">{project.name}</p>
               <p className="text-sm text-muted mt-1 lg:hidden">
-                {t.categories[project.category as keyof typeof t.categories]} · {project.year}
+                {t.categories[project.category as keyof typeof t.categories]} · {project.year} · {project.role}
               </p>
             </div>
             <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
@@ -189,7 +191,8 @@ export default function Bio() {
             {section.entries.map((entry, i) => (
               <div
                 key={entry.company}
-                className={`group grid items-baseline border-b border-border transition-colors hover:bg-foreground/[0.02] ${COL} gap-x-0
+                className={`grid items-baseline border-b border-border ${COL} gap-x-0
+                  ${si === 0 ? "group transition-colors hover:bg-foreground/[0.02]" : ""}
                   ${i === 0 && si > 0 ? "pt-12 pb-6" : "py-6"}`}
               >
                 <span className="hidden text-base text-muted lg:block self-start pt-0.5">
@@ -207,7 +210,9 @@ export default function Bio() {
                     </p>
                   )}
                 </div>
-                <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
+                <span className="hidden text-base lg:block text-right text-muted/40">
+                  {si === 0 ? <span className="transition-colors group-hover:text-foreground">→</span> : ""}
+                </span>
               </div>
             ))}
           </div>

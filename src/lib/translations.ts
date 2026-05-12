@@ -10,7 +10,7 @@ export const translations = {
       p2b: ", a studio crafting new motion and visual solutions using GenAI for the creative industry.",
       cta: "Get in touch",
     },
-    projects: { type: "Type", year: "Year", name: "Project's Name" },
+    projects: { type: "Type", year: "Year", role: "Role", name: "Project's Name" },
     categories: {
       "Design System":   "Design System",
       "Brand Identity":  "Brand Identity",
@@ -52,7 +52,7 @@ export const translations = {
       p2b: ", um estúdio que cria novas soluções de motion e visuais usando GenAI para a indústria criativa.",
       cta: "Entre em contato",
     },
-    projects: { type: "Tipo", year: "Ano", name: "Nome do Projeto" },
+    projects: { type: "Tipo", year: "Ano", role: "Cargo", name: "Nome do Projeto" },
     categories: {
       "Design System":   "Sistema de Design",
       "Brand Identity":  "Identidade de Marca",
