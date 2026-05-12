@@ -51,7 +51,7 @@ export function GridControls({
       }`}
     >
       <div
-        className={`flex items-center overflow-hidden rounded-full border border-border/50 backdrop-blur-xl bg-background/50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-all duration-500 ease-out ${
+        className={`flex items-center overflow-hidden rounded-full border border-border bg-white shadow-sm transition-all duration-500 ease-out ${
           expanded ? "gap-6 px-6 py-3" : "gap-0 px-5 py-3"
         }`}
         onMouseEnter={() => setExpanded(true)}
