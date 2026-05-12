@@ -22,8 +22,7 @@ export default function Contact() {
 
       <main className="flex-1 flex flex-col justify-end px-6 pb-12">
         <div className="space-y-10">
-          <div className="space-y-2">
-            <p className="text-sm text-muted uppercase tracking-widest">{t.label}</p>
+          <div>
             <p className="text-base leading-snug text-foreground/70">{t.subtitle}</p>
           </div>
           <div className="space-y-0">
