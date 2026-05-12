@@ -1,0 +1,19 @@
+src/app/globals.css
+  s_ce6e1556090104::t_6b26beba96b003 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.6",
+  "base_commit_sha": "efa3ba59a4c604754c3942a63ed3422be0cadfb3",
+  "prompts": {},
+  "sessions": {
+    "s_ce6e1556090104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "704277c8-6444-42e4-8bb9-f8b041c4e5c1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
