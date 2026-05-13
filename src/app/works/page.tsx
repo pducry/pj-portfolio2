@@ -42,7 +42,7 @@ const clients = [
 ];
 
 const TOP      = "lg:grid-cols-[180px_110px_1fr_auto]";
-const COL      = "lg:grid-cols-[260px_110px_1fr_32px]";
+const COL      = "lg:grid-cols-[260px_180px_1fr_32px]";
 const PROJ_COL = "lg:grid-cols-[220px_110px_260px_1fr_32px]";
 
 export default function Bio() {
@@ -130,7 +130,7 @@ export default function Bio() {
         {experience.map((entry) => (
           <div
             key={entry.company}
-            className={`grid items-center border-b border-border ${COL} gap-x-8 py-3 lg:py-3`}
+            className={`grid items-center border-b border-border ${COL} gap-x-12 py-3 lg:py-3`}
           >
             {/* Desktop — order: role / years / company */}
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">
