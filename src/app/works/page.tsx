@@ -136,7 +136,7 @@ export default function Bio() {
         {experience.map((entry) => (
           <div
             key={entry.company}
-            className={`grid items-center border-b border-border ${COL} gap-x-8 py-5 lg:py-12`}
+            className={`grid items-center border-b border-border ${COL} gap-x-8 py-4 lg:py-6`}
           >
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">
               {entry.years}
