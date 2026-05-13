@@ -23,7 +23,7 @@ type Project = { category: string; year: string; name: string; role: string };
 const projects: Project[] = [
   { category: "Digital Product", year: "2025", name: "Mercado Pago Projects",                      role: "Design Manager"   },
   { category: "Brand Identity",  year: "2024", name: "FFForma — Creative Studio",                  role: "Founder"          },
-  { category: "Digital Product", year: "2019", name: "Rise New York & Partners — Brand Campaigns", role: "Design Director"  },
+  { category: "Digital Product", year: "2025", name: "Sute",                                        role: "Design Director"  },
   { category: "Brand Identity",  year: "2018", name: "Descomplica — Brand Refresh",                role: "Senior Designer"  },
   { category: "Design System",   year: "2015", name: "Royal Canin — Global Design System",         role: "Design Director"  },
   { category: "Digital Product", year: "2014", name: "Adidas — Global Soccer Platform",            role: "Design Director"  },
