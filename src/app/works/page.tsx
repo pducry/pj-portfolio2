@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 import { SiteHeader } from "@/components/site-header";
@@ -18,10 +19,11 @@ const experience: Entry[] = [
   { company: "Koi Factory",             role: "Senior Designer",  years: "2006—2008"  },
 ];
 
-type Project = { category: string; year: string; name: string; role: string };
+type Project = { category: string; year: string; name: string; role: string; href?: string };
 
 const projects: Project[] = [
   { category: "Digital Product", year: "2025", name: "Mercado Pago Projects",                      role: "Design Manager"   },
+  { category: "Digital Product", year: "2025", name: "Foracle",                                    role: "Design Director",  href: "/foracle" },
   { category: "Brand Identity",  year: "2024", name: "FFForma — Creative Studio",                  role: "Founder"          },
   { category: "Digital Product", year: "2025", name: "Sute",                                        role: "Design Director"  },
   { category: "Brand Identity",  year: "2018", name: "Descomplica — Brand Refresh",                role: "Senior Designer"  },
@@ -88,29 +90,40 @@ export default function Bio() {
           <span className="hidden lg:block" />
         </div>
 
-        {projects.map((project) => (
-          <div
-            key={project.name}
-            className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-8 py-5 lg:py-12`}
-          >
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap">
-              {t.categories[project.category as keyof typeof t.categories]}
-            </span>
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
-            <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.role}</span>
-            {/* Desktop */}
-            <p className="hidden lg:block text-base text-foreground truncate">{project.name}</p>
-            {/* Mobile */}
-            <div className="lg:hidden flex items-start justify-between gap-3 w-full">
-              <div className="min-w-0">
-                <p className="text-base text-foreground leading-snug">{project.name}</p>
-                <p className="text-sm text-muted mt-1 leading-snug">{t.categories[project.category as keyof typeof t.categories]} · {project.year}</p>
+        {projects.map((project) => {
+          const inner = (
+            <>
+              <span className="hidden text-base text-muted lg:block whitespace-nowrap">
+                {t.categories[project.category as keyof typeof t.categories]}
+              </span>
+              <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
+              <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.role}</span>
+              {/* Desktop */}
+              <p className="hidden lg:block text-base text-foreground truncate">{project.name}</p>
+              {/* Mobile */}
+              <div className="lg:hidden flex items-start justify-between gap-3 w-full">
+                <div className="min-w-0">
+                  <p className="text-base text-foreground leading-snug">{project.name}</p>
+                  <p className="text-sm text-muted mt-1 leading-snug">{t.categories[project.category as keyof typeof t.categories]} · {project.year}</p>
+                </div>
+                <span className="text-base text-muted/40 shrink-0 mt-0.5">→</span>
               </div>
-              <span className="text-base text-muted/40 shrink-0 mt-0.5">→</span>
+              <span className={`hidden text-base lg:block text-right transition-colors ${project.href ? "text-foreground/40 group-hover:text-foreground" : "text-muted/40"}`}>→</span>
+            </>
+          );
+
+          const cls = `group grid items-center border-b border-border ${PROJ_COL} gap-x-8 py-5 lg:py-12${project.href ? " transition-colors hover:bg-foreground/[0.02] cursor-pointer" : ""}`;
+
+          return project.href ? (
+            <Link key={project.name} href={project.href} className={cls}>
+              {inner}
+            </Link>
+          ) : (
+            <div key={project.name} className={cls}>
+              {inner}
             </div>
-            <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* ── Experience ── */}
