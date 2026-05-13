@@ -21,7 +21,7 @@ const experience: Entry[] = [
 type Project = { category: string; year: string; name: string; role: string };
 
 const projects: Project[] = [
-  { category: "Design System",   year: "2020", name: "Andes Design System — Mercado Pago",        role: "Design Director"  },
+  { category: "Digital Product", year: "2025", name: "Mercado Pago Projects",                      role: "Design Manager"   },
   { category: "Brand Identity",  year: "2024", name: "FFForma — Creative Studio",                  role: "Senior Designer"  },
   { category: "Digital Product", year: "2019", name: "Rise New York & Partners — Brand Campaigns", role: "Design Director"  },
   { category: "Brand Identity",  year: "2018", name: "Descomplica — Brand Refresh",                role: "Senior Designer"  },
