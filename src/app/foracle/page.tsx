@@ -55,13 +55,9 @@ export default function ForaclePage() {
           </Link>
         </div>
 
-        {/* Title row */}
-        <div className="border-t border-border py-4">
-          <h1 className="text-base text-foreground">Foracle</h1>
-        </div>
-
-        {/* Meta row */}
-        <div className="border-t border-border py-4 flex flex-wrap gap-x-12 gap-y-1">
+        {/* Title + meta — same line */}
+        <div className="border-t border-border py-4 flex flex-wrap items-baseline gap-x-10 gap-y-1">
+          <span className="text-base text-foreground whitespace-nowrap">Foracle</span>
           <span className="text-sm text-muted whitespace-nowrap">Digital Product</span>
           <span className="text-sm text-muted whitespace-nowrap">2025</span>
           <span className="text-sm text-muted whitespace-nowrap">Design Director</span>
