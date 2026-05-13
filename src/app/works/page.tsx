@@ -67,17 +67,11 @@ export default function Bio() {
           <a href="mailto:pducry@gmail.com" className="inline-flex items-center gap-2 text-base text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground transition-colors">
             {t.bio.cta} →
           </a>
-          <div className="pt-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" className="animate-bounce text-foreground/60">
-              <line x1="9" y1="1" x2="9" y2="14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              <polyline points="3,9 9,15 15,9" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
         </div>
       </div>
 
       {/* ── Spacer ── */}
-      <div className="h-20 lg:h-[200px]" />
+      <div className="h-10 lg:h-[100px]" />
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
