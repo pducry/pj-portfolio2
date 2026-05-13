@@ -41,7 +41,7 @@ const clients = [
 
 const TOP      = "lg:grid-cols-[180px_110px_1fr_auto]";
 const COL      = "lg:grid-cols-[200px_110px_1fr_32px]";
-const PROJ_COL = "lg:grid-cols-[180px_110px_200px_1fr_32px]";
+const PROJ_COL = "lg:grid-cols-[220px_110px_260px_1fr_32px]";
 
 export default function Bio() {
   const { lang } = useLang();
@@ -93,11 +93,11 @@ export default function Bio() {
             key={project.name}
             className={`group grid items-center border-b border-border transition-colors hover:bg-foreground/[0.02] ${PROJ_COL} gap-x-8 py-5 lg:py-12`}
           >
-            <span className="hidden text-base text-muted lg:block">
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap">
               {t.categories[project.category as keyof typeof t.categories]}
             </span>
-            <span className="hidden text-base text-muted lg:block">{project.year}</span>
-            <span className="hidden text-base text-muted lg:block">{project.role}</span>
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
+            <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.role}</span>
             {/* Desktop */}
             <p className="hidden lg:block text-base text-foreground truncate">{project.name}</p>
             {/* Mobile */}
