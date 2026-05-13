@@ -42,7 +42,6 @@ const clients = [
 ];
 
 const TOP      = "lg:grid-cols-[180px_110px_1fr_auto]";
-const COL      = "lg:grid-cols-[260px_180px_1fr_32px]";
 const PROJ_COL = "lg:grid-cols-[220px_110px_260px_1fr_32px]";
 
 export default function Bio() {
@@ -130,22 +129,22 @@ export default function Bio() {
         {experience.map((entry) => (
           <div
             key={entry.company}
-            className={`grid items-center border-b border-border ${COL} gap-x-12 py-3 lg:py-3`}
+            className={`grid items-center border-b border-border ${PROJ_COL} gap-x-8 py-3 lg:py-3`}
           >
-            {/* Desktop — order: role / years / company */}
+            {/* Desktop — Role (col 1) | empty (col 2) | Years (col 3) | Company (col 4) | empty (col 5) */}
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">
               {t.roles[entry.role as keyof typeof t.roles]}
             </span>
+            <span className="hidden lg:block" />
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">{entry.years}</span>
             <p className="hidden text-base text-foreground lg:block whitespace-nowrap truncate">{entry.company}</p>
             <span className="hidden lg:block" />
-            {/* Mobile — order: role on top, company below, years on right */}
-            <div className="lg:hidden flex items-center justify-between gap-3 w-full">
+            {/* Mobile — same pattern as Projects: primary on top, meta below */}
+            <div className="lg:hidden flex items-start justify-between gap-3 w-full">
               <div className="min-w-0">
-                <p className="text-sm text-muted leading-snug">{t.roles[entry.role as keyof typeof t.roles]}</p>
-                <p className="text-base text-foreground mt-1 leading-snug">{entry.company}</p>
+                <p className="text-base text-foreground leading-snug">{entry.company}</p>
+                <p className="text-sm text-muted mt-1 leading-snug">{t.roles[entry.role as keyof typeof t.roles]} · {entry.years}</p>
               </div>
-              <span className="text-sm text-muted/70 whitespace-nowrap shrink-0">{entry.years}</span>
             </div>
           </div>
         ))}
