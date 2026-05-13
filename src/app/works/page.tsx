@@ -123,7 +123,7 @@ export default function Bio() {
         {experience.map((entry) => (
           <div
             key={entry.company}
-            className={`group grid items-center border-b border-border ${COL} gap-x-8 transition-colors hover:bg-foreground/[0.02] py-5 lg:py-12`}
+            className={`grid items-center border-b border-border ${COL} gap-x-8 py-5 lg:py-12`}
           >
             <span className="hidden text-base text-muted lg:block whitespace-nowrap">
               {entry.years}
@@ -142,7 +142,7 @@ export default function Bio() {
               </div>
               <span className="text-sm text-muted/70 whitespace-nowrap shrink-0">{entry.years}</span>
             </div>
-            <span className="hidden text-base text-muted/40 transition-colors group-hover:text-foreground lg:block text-right">→</span>
+            <span className="hidden text-base text-muted/40 lg:block text-right">→</span>
           </div>
         ))}
       </div>
