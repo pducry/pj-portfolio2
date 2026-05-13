@@ -60,7 +60,7 @@ export default function Bio() {
           <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
           <p className="text-base leading-snug text-foreground/75">
             {t.bio.p2a}{" "}
-            <a href="https://ffforma.design" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-2 decoration-foreground/30 hover:decoration-foreground transition-colors">FFForma</a>
+            <a href="https://ffforma.design/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-2 decoration-foreground/30 hover:decoration-foreground transition-colors">FFForma</a>
             {t.bio.p2b}
           </p>
           <a href="mailto:pducry@gmail.com" className="inline-flex items-center gap-2 text-base text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground transition-colors">
