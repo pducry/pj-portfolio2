@@ -177,7 +177,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
   }, [selected, close, prev, next]);
 
   return (
-    <section className="px-8 py-16 md:px-12 lg:px-20">
+    <section className="px-6 py-16">
       <LayoutGroup>
         <motion.div
           layout
