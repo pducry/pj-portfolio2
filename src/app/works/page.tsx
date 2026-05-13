@@ -54,7 +54,7 @@ export default function Bio() {
 
       <div className="px-6">
       {/* ── Intro text — centrado no grid, stick ao topo ── */}
-      <div className="pt-4 pb-8">
+      <div className="pt-1 pb-8">
         <div className="space-y-5 max-w-xl">
           <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
           <p className="text-base leading-snug text-foreground/75">
