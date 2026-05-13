@@ -44,32 +44,37 @@ export default function ForaclePage() {
 
       {/* ── Intro ── */}
       <div className="px-6">
-        <div className="pt-1 pb-10 border-b border-border">
 
-          {/* Back link */}
+        {/* Back link */}
+        <div className="pt-1 pb-4">
           <Link
             href="/works"
-            className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-foreground transition-colors mb-8"
+            className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-foreground transition-colors"
           >
             ← Works
           </Link>
+        </div>
 
-          {/* Title + meta */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <h1 className="text-base text-foreground">Foracle</h1>
-            <div className="flex gap-8 text-sm text-muted">
-              <span>Digital Product</span>
-              <span>2025</span>
-              <span>Design Director</span>
-            </div>
-          </div>
+        {/* Title row */}
+        <div className="border-t border-border py-4">
+          <h1 className="text-base text-foreground">Foracle</h1>
+        </div>
 
-          {/* Description */}
-          <p className="mt-6 text-base leading-snug text-foreground/70 max-w-xl">
+        {/* Meta row */}
+        <div className="border-t border-border py-4 flex flex-wrap gap-x-12 gap-y-1">
+          <span className="text-sm text-muted whitespace-nowrap">Digital Product</span>
+          <span className="text-sm text-muted whitespace-nowrap">2025</span>
+          <span className="text-sm text-muted whitespace-nowrap">Design Director</span>
+        </div>
+
+        {/* Description row */}
+        <div className="border-t border-border py-6 border-b border-border">
+          <p className="text-base leading-snug text-foreground/70 max-w-xl">
             Foracle is a design exploration at the intersection of data visualization and editorial
             design — building a new visual language for information density and clarity.
           </p>
         </div>
+
       </div>
 
       {/* ── Image sections ── */}
