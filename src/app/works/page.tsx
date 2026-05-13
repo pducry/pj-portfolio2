@@ -116,9 +116,8 @@ export default function Bio() {
       {/* ── Experience ── */}
       <div id="experience" className="mt-16 lg:mt-20">
         {/* Module header — border above and below, aligned with Projects */}
-        <div className={`grid ${COL} gap-x-8 py-3 border-t border-b border-border`}>
-          <span className="text-sm text-foreground/30 whitespace-nowrap col-span-full lg:col-span-1">{t.experience.past}</span>
-          <span className="hidden lg:block" /><span className="hidden lg:block" /><span className="hidden lg:block" />
+        <div className="py-3 border-t border-b border-border">
+          <span className="text-sm text-foreground/30 whitespace-nowrap">{t.experience.past}</span>
         </div>
 
         {experience.map((entry) => (
@@ -151,7 +150,7 @@ export default function Bio() {
       {/* ── Footer ── */}
       <div className="mt-16 lg:mt-32 grid grid-cols-1 gap-12 border-t border-border pt-12 lg:pt-20 lg:grid-cols-3 lg:gap-24">
         <div>
-          <p className="text-sm text-muted uppercase tracking-widest mb-6 lg:mb-10">{t.footer.skills}</p>
+          <p className="text-sm text-muted mb-6 lg:mb-10">{t.footer.skills}</p>
           <div className="space-y-3 lg:space-y-4">
             {t.skills.map((s) => (
               <p key={s} className="text-base text-foreground/60">{s}</p>
@@ -159,7 +158,7 @@ export default function Bio() {
           </div>
         </div>
         <div>
-          <p className="text-sm text-muted uppercase tracking-widest mb-6 lg:mb-10">{t.footer.clients}</p>
+          <p className="text-sm text-muted mb-6 lg:mb-10">{t.footer.clients}</p>
           <div className="space-y-3 lg:space-y-4">
             {clients.map((c) => (
               <p key={c} className="text-base text-foreground/60">{c}</p>
@@ -167,7 +166,7 @@ export default function Bio() {
           </div>
         </div>
         <div>
-          <p className="text-sm text-muted uppercase tracking-widest mb-6 lg:mb-10">{t.footer.contact}</p>
+          <p className="text-sm text-muted mb-6 lg:mb-10">{t.footer.contact}</p>
           <div className="space-y-3 lg:space-y-4">
             {[
               { label: "Email",      href: "mailto:pducry@gmail.com" },

@@ -9,7 +9,7 @@ import { translations } from "@/lib/translations";
 
 
 export default function Playground() {
-  const [columns, setColumns] = useState(3);
+  const [columns, setColumns] = useState(1);
   const [gap, setGap] = useState(8);
   const [galleryInView, setGalleryInView] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -18,7 +18,11 @@ export default function Playground() {
   const t = translations[lang];
 
   useEffect(() => {
-    const check = () => setIsDesktop(window.innerWidth >= 1024);
+    const check = () => {
+      const desktop = window.innerWidth >= 1024;
+      setIsDesktop(desktop);
+      setColumns(desktop ? 3 : 1);
+    };
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
