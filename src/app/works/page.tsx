@@ -106,7 +106,7 @@ export default function Bio() {
             </>
           );
 
-          const cls = `group grid items-center border-b border-border ${PROJ_COL} gap-x-8 py-5 lg:py-12${project.href ? " transition-colors hover:bg-foreground/[0.02] cursor-pointer" : ""}`;
+          const cls = `group grid items-center border-b border-border ${PROJ_COL} gap-x-8 py-6 lg:py-20${project.href ? " transition-colors hover:bg-foreground/[0.02] cursor-pointer" : ""}`;
 
           return project.href ? (
             <Link key={project.name} href={project.href} className={cls}>
