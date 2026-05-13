@@ -1,0 +1,19 @@
+src/app/works/page.tsx
+  s_632e2c7175d4b0::t_3252812b91ebf6 132,134,138,142-143,145-146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "c8c1f71d2b53c0949215fd94dc5bf0c6930bf9e5",
+  "prompts": {},
+  "sessions": {
+    "s_632e2c7175d4b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "23986742-6623-4403-85ca-67e40f1b3365",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
