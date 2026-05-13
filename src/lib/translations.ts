@@ -17,7 +17,7 @@ export const translations = {
       "Digital Product": "Digital Product",
       "Interactive":     "Interactive",
     },
-    experience: { current: "Current", past: "Work Experience" },
+    experience: { current: "Current", past: "Professional Experience" },
     roles: {
       "Design Manager":   "Design Manager",
       "Creative Director":"Creative Director",

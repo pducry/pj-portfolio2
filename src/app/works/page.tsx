@@ -114,10 +114,10 @@ export default function Bio() {
       </div>
 
       {/* ── Experience ── */}
-      <div id="experience" className="mt-16 lg:mt-20 border-t border-border">
-        {/* Section label */}
-        <div className={`grid ${COL} gap-x-8 pt-5 pb-3`}>
-          <span className="text-sm text-muted">{t.experience.past}</span>
+      <div id="experience" className="mt-16 lg:mt-20">
+        {/* Module header — border above and below, aligned with Projects */}
+        <div className={`grid ${COL} gap-x-8 py-3 border-t border-b border-border`}>
+          <span className="text-sm text-foreground/30 col-span-full lg:col-span-1">{t.experience.past}</span>
           <span className="hidden lg:block" /><span className="hidden lg:block" /><span className="hidden lg:block" />
         </div>
 
