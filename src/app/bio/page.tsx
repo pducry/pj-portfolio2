@@ -73,7 +73,7 @@ export default function Bio() {
           <div>
             <p className="text-sm text-muted">Bio</p>
           </div>
-          <div className="max-w-2xl space-y-5">
+          <div className="space-y-5">
             <p className="text-sm leading-relaxed text-foreground/80">
               Designer based in São Paulo, Brazil. Pedro is a Brazilian/Swiss
               designer and creative director working at the intersection of
