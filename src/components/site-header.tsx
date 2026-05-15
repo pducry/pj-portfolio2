@@ -34,7 +34,7 @@ export function SiteHeader() {
               <Link
                 key={href}
                 href={href}
-                className={`text-base transition-colors ${
+                className={`text-sm transition-colors ${
                   isActive ? "text-foreground" : "text-muted hover:text-foreground"
                 }`}
               >
