@@ -21,7 +21,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 flex items-center justify-between px-6 py-8 bg-background">
-      <Link href="/works" className="text-base font-medium text-foreground transition-opacity hover:opacity-60">
+      <Link href="/works" className="text-[14px] font-medium text-foreground transition-opacity hover:opacity-60">
         Pedro Julien
       </Link>
 
@@ -44,16 +44,52 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="flex items-center gap-1 text-sm tabular-nums">
-          <button onClick={() => lang === "pt" && toggleLang()} className={`transition-colors ${lang === "en" ? "text-foreground" : "text-muted hover:text-foreground"}`}>EN</button>
-          <span className="text-muted">/</span>
-          <button onClick={() => lang === "en" && toggleLang()} className={`transition-colors ${lang === "pt" ? "text-foreground" : "text-muted hover:text-foreground"}`}>PT</button>
+        {/* Lang pill */}
+        <div className="flex items-center bg-foreground/[0.06] rounded-full p-0.5">
+          <button
+            onClick={() => lang !== "en" && toggleLang()}
+            className={`text-[12px] px-3 py-1 rounded-full transition-all ${
+              lang === "en"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            EN
+          </button>
+          <button
+            onClick={() => lang !== "pt" && toggleLang()}
+            className={`text-[12px] px-3 py-1 rounded-full transition-all ${
+              lang === "pt"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            PT
+          </button>
         </div>
 
-        <div className="flex items-center gap-1 text-sm">
-          <button onClick={() => theme === "dark" && toggleTheme()} className={`transition-colors ${theme === "light" ? "text-foreground" : "text-muted hover:text-foreground"}`}>Light</button>
-          <span className="text-muted">/</span>
-          <button onClick={() => theme === "light" && toggleTheme()} className={`transition-colors ${theme === "dark" ? "text-foreground" : "text-muted hover:text-foreground"}`}>Dark</button>
+        {/* Theme pill */}
+        <div className="flex items-center bg-foreground/[0.06] rounded-full p-0.5">
+          <button
+            onClick={() => theme !== "light" && toggleTheme()}
+            className={`text-[12px] px-3 py-1 rounded-full transition-all ${
+              theme === "light"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            Light
+          </button>
+          <button
+            onClick={() => theme !== "dark" && toggleTheme()}
+            className={`text-[12px] px-3 py-1 rounded-full transition-all ${
+              theme === "dark"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            Dark
+          </button>
         </div>
       </div>
 
