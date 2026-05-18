@@ -31,7 +31,7 @@ html {
 
 @media (min-width: 1024px) {
   html {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
@@ -41,7 +41,11 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-y: scroll;
   scrollbar-width: none;
-  cursor: auto;
+  cursor: none;
+}
+
+* {
+  cursor: none !important;
 }
 
 body::-webkit-scrollbar {

@@ -36,7 +36,7 @@ const projects: Project[] = [
 ];
 
 const clients = [
-  "Google","Facebook","Nike","Isadore","Royal Canin",
+  "Mercado Pago","Google","Facebook","Nike","Isadore","Royal Canin",
   "KLM","Heineken","Globosat","Adidas","Shutterstock",
   "Art Directors Club","Cisco","Descomplica","Neom",
 ];
@@ -55,7 +55,7 @@ export default function Bio() {
 
       <div className="px-6">
       {/* ── Intro text — centrado no grid, stick ao topo ── */}
-      <div className="pt-1 pb-8">
+      <div className="pt-6 pb-8">
         <div className="space-y-5 max-w-xl">
           <p className="text-base leading-snug text-foreground/75">{t.bio.p1}</p>
           <p className="text-base leading-snug text-foreground/75">
@@ -70,7 +70,7 @@ export default function Bio() {
       </div>
 
       {/* ── Spacer ── */}
-      <div className="h-10 lg:h-[150px]" />
+      <div className="h-20 lg:h-[160px]" />
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
@@ -86,26 +86,26 @@ export default function Bio() {
         {projects.map((project) => {
           const inner = (
             <>
-              <span className="hidden text-base text-muted lg:block whitespace-nowrap">
+              <span className="hidden text-base text-muted group-hover:text-background lg:block whitespace-nowrap">
                 {t.categories[project.category as keyof typeof t.categories]}
               </span>
-              <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.year}</span>
-              <span className="hidden text-base text-muted lg:block whitespace-nowrap">{project.role}</span>
+              <span className="hidden text-base text-muted group-hover:text-background lg:block whitespace-nowrap">{project.year}</span>
+              <span className="hidden text-base text-muted group-hover:text-background lg:block whitespace-nowrap">{project.role}</span>
               {/* Desktop */}
-              <p className="hidden lg:block text-base text-foreground truncate">{project.name}</p>
+              <p className="hidden lg:block text-base text-foreground group-hover:text-background truncate">{project.name}</p>
               {/* Mobile */}
               <div className="lg:hidden flex items-start justify-between gap-3 w-full">
                 <div className="min-w-0">
-                  <p className="text-base text-foreground leading-snug">{project.name}</p>
-                  <p className="text-sm text-muted mt-1 leading-snug">{t.categories[project.category as keyof typeof t.categories]} · {project.year}</p>
+                  <p className="text-base text-foreground group-hover:text-background leading-snug">{project.name}</p>
+                  <p className="text-sm text-muted group-hover:text-background mt-1 leading-snug">{t.categories[project.category as keyof typeof t.categories]} · {project.year}</p>
                 </div>
-                <span className="text-base text-muted/40 shrink-0 mt-0.5">→</span>
+                <span className="text-base text-muted/40 group-hover:text-background shrink-0 mt-0.5">→</span>
               </div>
-              <span className={`hidden text-base lg:block text-right transition-colors ${project.href ? "text-foreground/40 group-hover:text-foreground" : "text-muted/40"}`}>→</span>
+              <span className={`hidden text-base lg:block text-right transition-colors ${project.href ? "text-foreground/40 group-hover:text-background" : "text-muted/40"}`}>→</span>
             </>
           );
 
-          const cls = `group grid items-center border-b border-border ${PROJ_COL} gap-x-8 py-6 lg:py-20${project.href ? " transition-colors hover:bg-foreground/[0.02] cursor-pointer" : ""}`;
+          const cls = `grid items-center border-b border-border ${PROJ_COL} gap-x-8 py-6 lg:py-20${project.href ? " group transition-colors hover:bg-foreground cursor-pointer" : ""}`;
 
           return project.href ? (
             <Link key={project.name} href={project.href} className={cls}>
