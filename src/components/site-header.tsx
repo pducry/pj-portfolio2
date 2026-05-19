@@ -26,7 +26,7 @@ export function SiteHeader() {
         <Link href="/works" className="text-[14px] font-medium text-foreground transition-opacity hover:opacity-60">
           Pedro Julien
         </Link>
-        <span className="text-[12px] text-muted">Portfolio Version 26.2</span>
+        <span className="text-[14px] text-muted">Portfolio Version 26.2</span>
       </div>
 
       {/* Desktop nav */}

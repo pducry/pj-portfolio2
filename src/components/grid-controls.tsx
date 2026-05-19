@@ -51,7 +51,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
           }}
         >
           <div className="overflow-hidden">
-            <span className="text-sm tabular-nums text-white/40 whitespace-nowrap pl-1 pr-2">
+            <span className="text-[14px] tabular-nums text-white/40 whitespace-nowrap pl-1 pr-2">
               {columns} · {gap}
             </span>
           </div>
@@ -71,7 +71,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
 
               {/* Col slider */}
               <div className="flex items-center gap-3 shrink-0">
-                <span className="text-sm font-medium uppercase tracking-wide text-white/50">Col</span>
+                <span className="text-[14px] font-medium uppercase tracking-wide text-white/50">Col</span>
                 <input
                   type="range"
                   min={1} max={6} step={1}
@@ -85,14 +85,14 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
                     [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-100
                     [&::-webkit-slider-thumb]:hover:scale-110"
                 />
-                <span className="w-4 text-right text-sm tabular-nums text-white/70">{columns}</span>
+                <span className="w-4 text-right text-[14px] tabular-nums text-white/70">{columns}</span>
               </div>
 
               <div className="h-4 w-px bg-white/15 shrink-0" />
 
               {/* Gap slider */}
               <div className="flex items-center gap-3 shrink-0">
-                <span className="text-sm font-medium uppercase tracking-wide text-white/50">Gap</span>
+                <span className="text-[14px] font-medium uppercase tracking-wide text-white/50">Gap</span>
                 <input
                   type="range"
                   min={0} max={48} step={4}
@@ -106,7 +106,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
                     [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-100
                     [&::-webkit-slider-thumb]:hover:scale-110"
                 />
-                <span className="w-6 text-right text-sm tabular-nums text-white/70">{gap}</span>
+                <span className="w-6 text-right text-[14px] tabular-nums text-white/70">{gap}</span>
               </div>
             </div>
           </div>
