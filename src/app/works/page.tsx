@@ -151,49 +151,60 @@ export default function Bio() {
       </div>
 
       {/* ── Footer ── */}
-      <div className="mt-16 lg:mt-20 grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24">
-        <div>
-          <div className="py-3 border-t border-b border-border">
+      <div className="mt-16 lg:mt-20">
+        {/* Desktop module header — one continuous line spanning all 3 columns */}
+        <div className="hidden lg:block border-t border-b border-border">
+          <div className="grid grid-cols-3 gap-24 py-3">
             <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.skills}</span>
-          </div>
-          <div className="space-y-3 lg:space-y-4 mt-6 lg:mt-10">
-            {t.skills.map((s) => (
-              <p key={s} className="text-base text-foreground/60">{s}</p>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="py-3 border-t border-b border-border">
             <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.clients}</span>
-          </div>
-          <div className="space-y-3 lg:space-y-4 mt-6 lg:mt-10">
-            {clients.map((c) => (
-              <p key={c} className="text-base text-foreground/60">{c}</p>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="py-3 border-t border-b border-border">
             <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.contact}</span>
           </div>
-          <div className="space-y-3 lg:space-y-4 mt-6 lg:mt-10">
-            {[
-              { label: "Email",      href: "mailto:pducry@gmail.com" },
-              { label: "Instagram",  href: "https://www.instagram.com/pedro_julien" },
-              { label: "LinkedIn",   href: "https://www.linkedin.com/in/pedro_julien" },
-              { label: "Foundation", href: "https://foundation.app/@ixaser" },
-              { label: "Objkt",      href: "https://objkt.com/users/tz1VZcpNZW6W8D2hGXvTDqJqwGjmjPKRYwRM" },
-            ].map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                className="block text-base text-foreground/60 transition-colors hover:text-foreground"
-              >
-                {label}
-              </a>
-            ))}
+        </div>
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24 lg:mt-10">
+          <div>
+            <div className="lg:hidden py-3 border-t border-b border-border mb-6">
+              <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.skills}</span>
+            </div>
+            <div className="space-y-3 lg:space-y-4">
+              {t.skills.map((s) => (
+                <p key={s} className="text-base text-foreground/60">{s}</p>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="lg:hidden py-3 border-t border-b border-border mb-6">
+              <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.clients}</span>
+            </div>
+            <div className="space-y-3 lg:space-y-4">
+              {clients.map((c) => (
+                <p key={c} className="text-base text-foreground/60">{c}</p>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="lg:hidden py-3 border-t border-b border-border mb-6">
+              <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.contact}</span>
+            </div>
+            <div className="space-y-3 lg:space-y-4">
+              {[
+                { label: "Email",      href: "mailto:pducry@gmail.com" },
+                { label: "Instagram",  href: "https://www.instagram.com/pedro_julien" },
+                { label: "LinkedIn",   href: "https://www.linkedin.com/in/pedro_julien" },
+                { label: "Foundation", href: "https://foundation.app/@ixaser" },
+                { label: "Objkt",      href: "https://objkt.com/users/tz1VZcpNZW6W8D2hGXvTDqJqwGjmjPKRYwRM" },
+              ].map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("mailto") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="block text-base text-foreground/60 transition-colors hover:text-foreground"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
