@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 
 export function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const mouse = useRef({ x: -40, y: -40 });
   const dotPos = useRef({ x: -40, y: -40 });
   const raf = useRef<number>(0);
+  const [hidden, setHidden] = useState(false);
 
   const animate = useCallback(() => {
     dotPos.current.x += (mouse.current.x - dotPos.current.x) * 0.35;
@@ -43,6 +44,11 @@ export function CustomCursor() {
       }
     };
 
+    const syncLightbox = () => setHidden(document.body.hasAttribute("data-lightbox-open"));
+    syncLightbox();
+    const mo = new MutationObserver(syncLightbox);
+    mo.observe(document.body, { attributes: true, attributeFilter: ["data-lightbox-open"] });
+
     window.addEventListener("mousemove", onMove);
     document.addEventListener("mouseover", onOver);
     document.addEventListener("mouseout", onOut);
@@ -52,9 +58,12 @@ export function CustomCursor() {
       window.removeEventListener("mousemove", onMove);
       document.removeEventListener("mouseover", onOver);
       document.removeEventListener("mouseout", onOut);
+      mo.disconnect();
       cancelAnimationFrame(raf.current);
     };
   }, [animate]);
+
+  if (hidden) return null;
 
   return (
     <div

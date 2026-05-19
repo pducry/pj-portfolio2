@@ -128,6 +128,10 @@ body::-webkit-scrollbar {
   animation-delay: 0.9s;
 }
 
-body[data-lightbox-open] .custom-cursor {
-  display: none;
+body[data-lightbox-open] .custom-cursor,
+body[data-lightbox-open] .custom-cursor::before,
+body[data-lightbox-open] .custom-cursor::after {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
