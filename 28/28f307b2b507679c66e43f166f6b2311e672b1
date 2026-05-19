@@ -1,0 +1,20 @@
+src/lib/translations.ts
+  s_42df78b563cfeb::t_9d0e7904899408 92
+  s_42df78b563cfeb::t_434ab6f472c90c 46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "2828f307b2b507679c66e43f166f6b2311e672b1",
+  "prompts": {},
+  "sessions": {
+    "s_42df78b563cfeb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "53346d42-4fdf-4a67-a482-afe0cd7306c2",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
