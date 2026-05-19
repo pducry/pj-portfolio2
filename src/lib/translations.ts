@@ -43,7 +43,7 @@ export const translations = {
     },
     contact: {
       label: "Contact",
-      subtitle: "Open to collaborations, consulting, and conversations.",
+      subtitle: "Best way to reach me is below. I read everything that lands in my inbox.",
     },
     copyright: "© Pedro Julien 2026",
   },
@@ -89,7 +89,7 @@ export const translations = {
     },
     contact: {
       label: "Contato",
-      subtitle: "Aberto a colaborações, consultorias e conversas.",
+      subtitle: "Melhor jeito de falar comigo é por aqui embaixo. Leio tudo que cai na minha caixa de entrada.",
     },
     copyright: "© Pedro Julien 2026",
   },
