@@ -1,0 +1,20 @@
+src/components/horizontal-gallery.tsx
+  s_42df78b563cfeb::t_a7aa045a5c6230 263-266,268-269
+  s_42df78b563cfeb::t_4ee1009c19b313 228,230
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "0bd36fbefb0239bceb6fe07a6fdc5bf1243042bb",
+  "prompts": {},
+  "sessions": {
+    "s_42df78b563cfeb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "53346d42-4fdf-4a67-a482-afe0cd7306c2",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
