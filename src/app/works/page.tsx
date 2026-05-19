@@ -151,26 +151,32 @@ export default function Bio() {
       </div>
 
       {/* ── Footer ── */}
-      <div className="mt-16 lg:mt-32 grid grid-cols-1 gap-12 border-t border-border pt-12 lg:pt-20 lg:grid-cols-3 lg:gap-24">
+      <div className="mt-16 lg:mt-20 grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24">
         <div>
-          <p className="text-sm text-muted mb-6 lg:mb-10">{t.footer.skills}</p>
-          <div className="space-y-3 lg:space-y-4">
+          <div className="py-3 border-t border-b border-border">
+            <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.skills}</span>
+          </div>
+          <div className="space-y-3 lg:space-y-4 mt-6 lg:mt-10">
             {t.skills.map((s) => (
               <p key={s} className="text-base text-foreground/60">{s}</p>
             ))}
           </div>
         </div>
         <div>
-          <p className="text-sm text-muted mb-6 lg:mb-10">{t.footer.clients}</p>
-          <div className="space-y-3 lg:space-y-4">
+          <div className="py-3 border-t border-b border-border">
+            <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.clients}</span>
+          </div>
+          <div className="space-y-3 lg:space-y-4 mt-6 lg:mt-10">
             {clients.map((c) => (
               <p key={c} className="text-base text-foreground/60">{c}</p>
             ))}
           </div>
         </div>
         <div>
-          <p className="text-sm text-muted mb-6 lg:mb-10">{t.footer.contact}</p>
-          <div className="space-y-3 lg:space-y-4">
+          <div className="py-3 border-t border-b border-border">
+            <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.contact}</span>
+          </div>
+          <div className="space-y-3 lg:space-y-4 mt-6 lg:mt-10">
             {[
               { label: "Email",      href: "mailto:pducry@gmail.com" },
               { label: "Instagram",  href: "https://www.instagram.com/pedro_julien" },
