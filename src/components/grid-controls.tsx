@@ -16,7 +16,7 @@ function MiniGrid({ columns, gap }: { columns: number; gap: number }) {
   return (
     <div
       className="grid shrink-0"
-      style={{ gridTemplateColumns: `repeat(${columns}, 1fr)`, gap: cellGap, width: 28, height: 22 }}
+      style={{ gridTemplateColumns: `repeat(${columns}, 1fr)`, gap: cellGap, width: 20, height: 14 }}
     >
       {Array.from({ length: cells }).map((_, i) => (
         <div key={i} className="rounded-[1px] bg-white/80" />
@@ -35,7 +35,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
       }`}
     >
       <div
-        className="flex items-center gap-[12px] rounded-full bg-neutral-900 px-[18px] py-[12px] shadow-xl ring-1 ring-white/10"
+        className="flex items-center gap-[12px] rounded-full bg-neutral-900 px-[16px] py-[8px] shadow-xl ring-1 ring-white/10"
         onMouseEnter={() => setExpanded(true)}
         onMouseLeave={() => setExpanded(false)}
       >
@@ -51,7 +51,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
           }}
         >
           <div className="overflow-hidden">
-            <span className="text-[13px] tabular-nums text-white/40 whitespace-nowrap pl-[4px] pr-[6px]">
+            <span className="text-[13px] tabular-nums leading-none text-white/40 whitespace-nowrap pl-[2px] pr-[6px]">
               {columns} · {gap}
             </span>
           </div>
@@ -67,11 +67,11 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
         >
           <div className="overflow-hidden">
             <div className="flex items-center gap-[18px] pl-[4px] pr-[4px]">
-              <div className="h-[18px] w-px bg-white/15 shrink-0" />
+              <div className="h-[14px] w-px bg-white/15 shrink-0" />
 
               {/* Col slider */}
               <div className="flex items-center gap-[12px] shrink-0">
-                <span className="text-[13px] font-medium uppercase tracking-wide text-white/50">Col</span>
+                <span className="text-[13px] font-medium uppercase tracking-wide leading-none text-white/50">Col</span>
                 <input
                   type="range"
                   min={1} max={6} step={1}
@@ -85,14 +85,14 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
                     [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-100
                     [&::-webkit-slider-thumb]:hover:scale-110"
                 />
-                <span className="w-[16px] text-right text-[13px] tabular-nums text-white/70">{columns}</span>
+                <span className="w-[16px] text-right text-[13px] tabular-nums leading-none text-white/70">{columns}</span>
               </div>
 
-              <div className="h-[18px] w-px bg-white/15 shrink-0" />
+              <div className="h-[14px] w-px bg-white/15 shrink-0" />
 
               {/* Gap slider */}
               <div className="flex items-center gap-[12px] shrink-0">
-                <span className="text-[13px] font-medium uppercase tracking-wide text-white/50">Gap</span>
+                <span className="text-[13px] font-medium uppercase tracking-wide leading-none text-white/50">Gap</span>
                 <input
                   type="range"
                   min={0} max={48} step={4}
@@ -106,7 +106,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
                     [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-100
                     [&::-webkit-slider-thumb]:hover:scale-110"
                 />
-                <span className="w-[22px] text-right text-[13px] tabular-nums text-white/70">{gap}</span>
+                <span className="w-[22px] text-right text-[13px] tabular-nums leading-none text-white/70">{gap}</span>
               </div>
             </div>
           </div>
