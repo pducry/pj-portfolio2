@@ -225,9 +225,9 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
           {/* Custom cursor */}
           <div
             className="pointer-events-none fixed z-[60]"
-            style={{ left: cursorPos.x - 16, top: cursorPos.y - 16 }}
+            style={{ left: cursorPos.x - 10, top: cursorPos.y - 10 }}
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               {onImage ? (
                 cursorSide === "left"
                   ? <polyline points="15 18 9 12 15 6" />
@@ -260,19 +260,13 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
           </div>
 
           {/* Hint bar */}
-          <div className="pointer-events-none mt-8 flex items-center gap-8 text-sm text-white/50">
-            <span className="flex items-center gap-2">
-              <kbd className="inline-flex items-center justify-center rounded border border-white/20 bg-white/10 px-2.5 py-1 font-mono text-xs leading-none">←</kbd>
-              <kbd className="inline-flex items-center justify-center rounded border border-white/20 bg-white/10 px-2.5 py-1 font-mono text-xs leading-none">→</kbd>
-              <span className="ml-1">navigate</span>
+          <div className="pointer-events-none mt-6 flex items-center gap-5 text-[11px] text-white/40">
+            <span className="flex items-center gap-1.5">
+              <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-1.5 py-[2px] font-mono text-[10px] leading-none">←</kbd>
+              <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-1.5 py-[2px] font-mono text-[10px] leading-none">→</kbd>
             </span>
-            <span className="flex items-center gap-2">
-              <kbd className="inline-flex items-center justify-center rounded border border-white/20 bg-white/10 px-2.5 py-1 font-mono text-xs leading-none">esc</kbd>
-              <span className="ml-1">close</span>
-            </span>
-            <span className="text-white/30">
-              {selected + 1} / {shuffled.length}
-            </span>
+            <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-1.5 py-[2px] font-mono text-[10px] leading-none">esc</kbd>
+            <span className="text-white/25">{selected + 1} / {shuffled.length}</span>
           </div>
         </motion.div>
       )}
