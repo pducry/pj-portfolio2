@@ -22,7 +22,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 flex items-center justify-between px-6 py-4 bg-background/70 backdrop-blur-md border-b border-border/40">
       <div className="flex items-center gap-3">
-        <span className="sphere-pulse w-[3px] h-[3px] rounded-full bg-red-500 text-red-500 shrink-0" />
+        <span className="sphere-pulse w-1.5 h-1.5 rounded-full bg-red-500 text-red-500 shrink-0" />
         <Link href="/works" className="text-[14px] font-medium text-foreground transition-opacity hover:opacity-60">
           Pedro Julien
         </Link>
