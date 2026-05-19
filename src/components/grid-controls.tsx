@@ -15,8 +15,8 @@ function MiniGrid({ columns, gap }: { columns: number; gap: number }) {
   const cellGap = Math.max(1, Math.round(gap / 10));
   return (
     <div
-      className="grid shrink-0"
-      style={{ gridTemplateColumns: `repeat(${columns}, 1fr)`, gap: cellGap, width: 14, height: 10 }}
+      className="grid shrink-0 self-center"
+      style={{ gridTemplateColumns: `repeat(${columns}, 1fr)`, gap: cellGap, width: 13, height: 9 }}
     >
       {Array.from({ length: cells }).map((_, i) => (
         <div key={i} className="rounded-[1px] bg-white/80" />
@@ -44,13 +44,14 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
 
         {/* Collapsed label */}
         <div
+          className="leading-none"
           style={{
             display: "grid",
             gridTemplateColumns: expanded ? "0fr" : "1fr",
             transition: "grid-template-columns 280ms ease",
           }}
         >
-          <div className="overflow-hidden">
+          <div className="overflow-hidden flex items-center leading-none">
             <span className="text-[12px] tabular-nums leading-none text-white/50 whitespace-nowrap pr-[4px]">
               {columns} · {gap}
             </span>
@@ -59,13 +60,14 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
 
         {/* Expanded controls */}
         <div
+          className="leading-none"
           style={{
             display: "grid",
             gridTemplateColumns: expanded ? "1fr" : "0fr",
             transition: "grid-template-columns 280ms ease",
           }}
         >
-          <div className="overflow-hidden">
+          <div className="overflow-hidden flex items-center leading-none">
             <div className="flex items-center gap-[14px] pl-[2px] pr-[2px]">
               <div className="h-[12px] w-px bg-white/15 shrink-0" />
 
