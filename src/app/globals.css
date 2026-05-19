@@ -97,3 +97,33 @@ body::-webkit-scrollbar {
 .sphere-pulse::after {
   animation-delay: 1.2s;
 }
+
+@keyframes cursor-pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 1;   }
+  50%      { transform: translate(-50%, -50%) scale(1.4);  opacity: 0.9; }
+}
+
+@keyframes cursor-ring {
+  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.5; }
+  80%  { opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(4.5); opacity: 0; }
+}
+
+.cursor-hovering {
+  animation: cursor-pulse 1.8s ease-in-out infinite;
+}
+
+.cursor-hovering::before,
+.cursor-hovering::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: cursor-ring 1.8s ease-out infinite;
+  pointer-events: none;
+}
+
+.cursor-hovering::after {
+  animation-delay: 0.9s;
+}

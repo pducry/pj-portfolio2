@@ -25,11 +25,33 @@ export function CustomCursor() {
       mouse.current = { x: e.clientX, y: e.clientY };
     };
 
+    const isInteractive = (el: Element | null): boolean => {
+      if (!el || !(el instanceof Element)) return false;
+      return !!el.closest('a, button, [role="button"], label, summary, input, select, textarea, [data-hoverable]');
+    };
+
+    const onOver = (e: MouseEvent) => {
+      if (isInteractive(e.target as Element) && dotRef.current) {
+        dotRef.current.classList.add("cursor-hovering");
+      }
+    };
+
+    const onOut = (e: MouseEvent) => {
+      const to = e.relatedTarget as Element | null;
+      if (!isInteractive(to) && dotRef.current) {
+        dotRef.current.classList.remove("cursor-hovering");
+      }
+    };
+
     window.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseover", onOver);
+    document.addEventListener("mouseout", onOut);
     raf.current = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseover", onOver);
+      document.removeEventListener("mouseout", onOut);
       cancelAnimationFrame(raf.current);
     };
   }, [animate]);
@@ -37,7 +59,7 @@ export function CustomCursor() {
   return (
     <div
       ref={dotRef}
-      className="custom-cursor pointer-events-none fixed z-[9999] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500"
+      className="custom-cursor pointer-events-none fixed z-[9999] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500 text-red-500"
       style={{ left: -40, top: -40 }}
     />
   );
