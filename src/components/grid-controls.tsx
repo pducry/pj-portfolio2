@@ -35,7 +35,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
       }`}
     >
       <div
-        className="flex items-center gap-3 rounded-full bg-neutral-900 px-4 py-3 shadow-xl ring-1 ring-white/10"
+        className="flex items-center gap-[10px] rounded-full bg-neutral-900 px-[14px] py-[8px] shadow-xl ring-1 ring-white/10"
         onMouseEnter={() => setExpanded(true)}
         onMouseLeave={() => setExpanded(false)}
       >
@@ -51,7 +51,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
           }}
         >
           <div className="overflow-hidden">
-            <span className="text-[14px] tabular-nums text-white/40 whitespace-nowrap pl-1 pr-2">
+            <span className="text-[12px] tabular-nums text-white/40 whitespace-nowrap pl-[4px] pr-[6px]">
               {columns} · {gap}
             </span>
           </div>
@@ -66,47 +66,47 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
           }}
         >
           <div className="overflow-hidden">
-            <div className="flex items-center gap-4 pl-1 pr-1">
-              <div className="h-4 w-px bg-white/15 shrink-0" />
+            <div className="flex items-center gap-[14px] pl-[4px] pr-[4px]">
+              <div className="h-[14px] w-px bg-white/15 shrink-0" />
 
               {/* Col slider */}
-              <div className="flex items-center gap-3 shrink-0">
-                <span className="text-[14px] font-medium uppercase tracking-wide text-white/50">Col</span>
+              <div className="flex items-center gap-[10px] shrink-0">
+                <span className="text-[11px] font-medium uppercase tracking-wide text-white/50">Col</span>
                 <input
                   type="range"
                   min={1} max={6} step={1}
                   value={columns}
                   onChange={(e) => onColumnsChange(Number(e.target.value))}
-                  className="h-[2px] w-24 cursor-pointer appearance-none rounded-full bg-white/25
-                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4
-                    [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full
+                  className="h-[2px] w-[80px] cursor-pointer appearance-none rounded-full bg-white/25
+                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[11px]
+                    [&::-webkit-slider-thumb]:w-[11px] [&::-webkit-slider-thumb]:rounded-full
                     [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md
                     [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing
                     [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-100
                     [&::-webkit-slider-thumb]:hover:scale-110"
                 />
-                <span className="w-4 text-right text-[14px] tabular-nums text-white/70">{columns}</span>
+                <span className="w-[14px] text-right text-[11px] tabular-nums text-white/70">{columns}</span>
               </div>
 
-              <div className="h-4 w-px bg-white/15 shrink-0" />
+              <div className="h-[14px] w-px bg-white/15 shrink-0" />
 
               {/* Gap slider */}
-              <div className="flex items-center gap-3 shrink-0">
-                <span className="text-[14px] font-medium uppercase tracking-wide text-white/50">Gap</span>
+              <div className="flex items-center gap-[10px] shrink-0">
+                <span className="text-[11px] font-medium uppercase tracking-wide text-white/50">Gap</span>
                 <input
                   type="range"
                   min={0} max={48} step={4}
                   value={gap}
                   onChange={(e) => onGapChange(Number(e.target.value))}
-                  className="h-[2px] w-24 cursor-pointer appearance-none rounded-full bg-white/25
-                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4
-                    [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full
+                  className="h-[2px] w-[80px] cursor-pointer appearance-none rounded-full bg-white/25
+                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[11px]
+                    [&::-webkit-slider-thumb]:w-[11px] [&::-webkit-slider-thumb]:rounded-full
                     [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md
                     [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing
                     [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-100
                     [&::-webkit-slider-thumb]:hover:scale-110"
                 />
-                <span className="w-6 text-right text-[14px] tabular-nums text-white/70">{gap}</span>
+                <span className="w-[20px] text-right text-[11px] tabular-nums text-white/70">{gap}</span>
               </div>
             </div>
           </div>
