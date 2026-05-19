@@ -1,0 +1,20 @@
+src/components/grid-controls.tsx
+  s_42df78b563cfeb::t_ecf23e8cb94640 18-19
+  s_42df78b563cfeb::t_32a4f10497a295 47,54,63,70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "347cb9483da9d6add2ab53ed7def85e85cae0cb5",
+  "prompts": {},
+  "sessions": {
+    "s_42df78b563cfeb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "53346d42-4fdf-4a67-a482-afe0cd7306c2",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
