@@ -161,7 +161,7 @@ export default function Bio() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24 lg:mt-10">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24 lg:mt-3">
           <div>
             <div className="lg:hidden py-3 border-t border-b border-border mb-6">
               <span className="text-sm text-foreground/30 whitespace-nowrap">{t.footer.skills}</span>
