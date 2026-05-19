@@ -127,3 +127,7 @@ body::-webkit-scrollbar {
 .cursor-hovering::after {
   animation-delay: 0.9s;
 }
+
+body[data-lightbox-open] .custom-cursor {
+  display: none;
+}
