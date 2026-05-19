@@ -65,3 +65,35 @@ body::-webkit-scrollbar {
 .animate-fade-in {
   animation: fade-in 0.4s ease-out both;
 }
+
+@keyframes sphere-pulse {
+  0%, 100% { transform: scale(1);    opacity: 1;   }
+  50%      { transform: scale(1.15); opacity: 0.9; }
+}
+
+@keyframes sphere-ring {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  80%  { opacity: 0; }
+  100% { transform: scale(3.5); opacity: 0; }
+}
+
+.sphere-pulse {
+  position: relative;
+  display: inline-block;
+  animation: sphere-pulse 2.4s ease-in-out infinite;
+}
+
+.sphere-pulse::before,
+.sphere-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: sphere-ring 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+.sphere-pulse::after {
+  animation-delay: 1.2s;
+}
