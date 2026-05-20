@@ -25,6 +25,7 @@ export const translations = {
       "Design Director":  "Design Director",
       "Senior Designer":  "Senior Designer",
       "Founder":          "Founder",
+      "Designer":         "Designer",
     },
     footer: { skills: "Professional Skills", clients: "Clients", contact: "Contact" },
     skills: [
@@ -71,6 +72,7 @@ export const translations = {
       "Design Director":  "Diretor de Design",
       "Senior Designer":  "Designer Sênior",
       "Founder":          "Fundador",
+      "Designer":         "Designer",
     },
     footer: { skills: "Habilidades", clients: "Clientes", contact: "Contato" },
     skills: [

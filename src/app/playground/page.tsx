@@ -44,8 +44,10 @@ export default function Playground() {
       <SiteHeader />
 
       <div className="px-6">
-        <div className="pt-4 pb-16">
-          <p className="text-base leading-snug text-foreground/75 max-w-xl">{t.playground.p1}</p>
+        <div className="pt-6 pb-8">
+          <div className="space-y-5 max-w-xl">
+            <p className="text-base leading-snug text-foreground/75">{t.playground.p1}</p>
+          </div>
         </div>
       </div>
 

@@ -22,17 +22,13 @@ const experience: Entry[] = [
 type Project = { category: string; year: string; name: string; role: string; href?: string };
 
 const projects: Project[] = [
-  { category: "Digital Product", year: "2025", name: "Mercado Pago Projects",                      role: "Design Manager"   },
-  { category: "Digital Product", year: "2025", name: "Foracle",                                    role: "Design Director",  href: "/foracle" },
-  { category: "Brand Identity",  year: "2024", name: "FFForma — Creative Studio",                  role: "Founder"          },
-  { category: "Digital Product", year: "2025", name: "Sute",                                        role: "Design Director"  },
-  { category: "Brand Identity",  year: "2018", name: "Descomplica — Brand Refresh",                role: "Senior Designer"  },
-  { category: "Design System",   year: "2015", name: "Royal Canin — Global Design System",         role: "Design Director"  },
-  { category: "Digital Product", year: "2014", name: "Adidas — Global Soccer Platform",            role: "Design Director"  },
-  { category: "Digital Product", year: "2013", name: "Facebook & Santander — Digital Products",    role: "Senior Designer"  },
-  { category: "Interactive",     year: "2011", name: "Performing Arts With Google",                role: "Senior Designer"  },
-  { category: "Interactive",     year: "2010", name: "Hear the City — Cisco",                      role: "Senior Designer"  },
-  { category: "Digital Product", year: "2008", name: "Globosat & Esporte Interativo",              role: "Senior Designer"  },
+  { category: "Digital Product", year: "2026", name: "Mercado Pago",              role: "Design Manager" },
+  { category: "Digital Product", year: "2026", name: "Artas",                     role: "Designer"       },
+  { category: "Digital Product", year: "2025", name: "Sute",                      role: "Head of Design" },
+  { category: "Digital Product", year: "2024", name: "Caju",                      role: "Head of Design" },
+  { category: "Digital Product", year: "2024", name: "Mude",                      role: "Head of Design" },
+  { category: "Brand Identity",  year: "2020", name: "FFForma",                   role: "Founder"        },
+  { category: "Design System",   year: "2018", name: "Royal Canin Design System", role: "Head of Design" },
 ];
 
 const clients = [
