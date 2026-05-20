@@ -1,0 +1,46 @@
+src/app/globals.css
+  s_1f59f1f40f27fc::t_45506bfa68e4ff 43,52-54
+src/components/password-gate.tsx
+  s_1f59f1f40f27fc::t_a42d989e2db097 38-39,46,52
+src/lib/translations.ts
+  s_1f59f1f40f27fc::t_41de209b7335b1 47
+  s_1f59f1f40f27fc::t_a7a48120c3e9a0 94
+src/app/contact/page.tsx
+  s_1f59f1f40f27fc::t_5d38d66a7c25d1 24-28,31,33-34
+  s_1f59f1f40f27fc::t_5601b3cb4c9125 35
+  s_1f59f1f40f27fc::t_40d239afe0eaca 9,32,36-49
+src/app/works/page.tsx
+  s_1f59f1f40f27fc::t_857b12985dd1c7 73
+  s_1f59f1f40f27fc::t_339ef199a3fbac 251,253
+  s_1f59f1f40f27fc::t_11e4e11ae0b098 4-5,9-28,30-48
+  s_1f59f1f40f27fc::t_d9b200d0e34a70 29
+  s_1f59f1f40f27fc::t_2627224990542d 252,254
+src/components/custom-cursor.tsx
+  s_1f59f1f40f27fc::t_706d314fe31588 11-18
+  s_1f59f1f40f27fc::t_1be4679bdca2a3 74
+src/components/horizontal-gallery.tsx
+  s_1f59f1f40f27fc::t_62e9c4fa03eeef 272-275,277
+  s_1f59f1f40f27fc::t_092ace4f8b2756 233-251
+  s_1f59f1f40f27fc::t_d1d97541317371 172
+  s_1f59f1f40f27fc::t_0cbba12f128805 232
+  s_1f59f1f40f27fc::t_3000b66a506764 204
+  s_1f59f1f40f27fc::t_48a0a84ebc661f 122,126-130
+src/app/playground/page.tsx
+  s_1f59f1f40f27fc::t_eeb9005488a17b 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "d8fbdd395dc7692b7a5454d69afb3bb654c310a6",
+  "prompts": {},
+  "sessions": {
+    "s_1f59f1f40f27fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "23dfa52e-195e-43f9-a275-ca83ae9bf9c5",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
