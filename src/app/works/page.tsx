@@ -66,7 +66,7 @@ export default function Bio() {
       </div>
 
       {/* ── Spacer ── */}
-      <div className="h-20 lg:h-[160px]" />
+      <div className="h-[120px] lg:h-[200px]" />
 
       {/* ── Projects ── */}
       <div id="projects" className="border-t border-border">
