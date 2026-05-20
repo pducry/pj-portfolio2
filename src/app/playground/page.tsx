@@ -21,7 +21,7 @@ export default function Playground() {
     const check = () => {
       const desktop = window.innerWidth >= 1024;
       setIsDesktop(desktop);
-      setColumns(desktop ? 3 : 1);
+      setColumns(desktop ? 4 : 1);
     };
     check();
     window.addEventListener("resize", check);

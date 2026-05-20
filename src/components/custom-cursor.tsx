@@ -8,6 +8,14 @@ export function CustomCursor() {
   const dotPos = useRef({ x: -40, y: -40 });
   const raf = useRef<number>(0);
   const [hidden, setHidden] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const animate = useCallback(() => {
     dotPos.current.x += (mouse.current.x - dotPos.current.x) * 0.35;
@@ -63,7 +71,7 @@ export function CustomCursor() {
     };
   }, [animate]);
 
-  if (hidden) return null;
+  if (hidden || !isDesktop) return null;
 
   return (
     <div

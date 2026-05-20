@@ -40,12 +40,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-y: scroll;
+  overflow-x: hidden;
   scrollbar-width: none;
   cursor: none;
 }
 
 * {
   cursor: none !important;
+}
+
+@media (max-width: 1023px) {
+  body { cursor: auto; }
+  * { cursor: auto !important; }
 }
 
 body::-webkit-scrollbar {

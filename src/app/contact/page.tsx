@@ -6,6 +6,7 @@ import { translations } from "@/lib/translations";
 
 const links = [
   { label: "Email",      href: "mailto:pducry@gmail.com" },
+  { label: "GitHub",     href: "https://github.com/pducry" },
   { label: "Instagram",  href: "https://www.instagram.com/pedro_julien" },
   { label: "LinkedIn",   href: "https://www.linkedin.com/in/pedro_julien" },
   { label: "Foundation", href: "https://foundation.app/@ixaser" },
@@ -20,27 +21,32 @@ export default function Contact() {
     <div className="animate-fade-in flex flex-col min-h-svh">
       <SiteHeader />
 
-      <main className="flex-1 flex flex-col justify-end px-6 pb-12">
-        <div className="space-y-10">
-          <div>
-            <p className="text-base leading-snug text-foreground/70">{t.subtitle}</p>
-          </div>
-          <div className="space-y-0">
-            {links.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                className="flex items-center justify-between border-b border-border py-4 text-base text-foreground/70 transition-colors hover:text-foreground group"
-              >
-                <span>{label}</span>
-                <span className="text-muted/40 transition-colors group-hover:text-foreground">→</span>
-              </a>
-            ))}
+      {/* Intro — identical positioning to works/playground */}
+      <div className="px-6">
+        <div className="pt-6 pb-8">
+          <div className="space-y-5 max-w-xl">
+            <p className="text-base leading-snug text-foreground/75 whitespace-pre-line">{t.subtitle}</p>
           </div>
         </div>
-      </main>
+      </div>
+
+      {/* Links — anchored bottom-left */}
+      <div className="flex-1 flex flex-col justify-end px-6 pb-8">
+        <div className="grid grid-cols-2 gap-x-12 max-w-xl">
+          {links.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("mailto") ? undefined : "_blank"}
+              rel="noopener noreferrer"
+              className="flex items-center justify-between border-b border-border py-4 text-base text-foreground/70 transition-colors hover:text-foreground group"
+            >
+              <span>{label}</span>
+              <span className="text-muted/40 transition-colors group-hover:text-foreground">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

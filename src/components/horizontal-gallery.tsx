@@ -119,8 +119,15 @@ interface HorizontalGalleryProps {
 export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryProps) {
   const [shuffled, setShuffled] = useState(images);
   const [selected, setSelected] = useState<number | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
     setShuffled(shuffle(images));
+  }, []);
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
   }, []);
 
   const effectiveColumns = columns;
@@ -162,7 +169,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
   }, [selected, close, prev, next]);
 
   return (
-    <section className="px-6 py-16">
+    <section className="px-6 pt-6 pb-16 lg:pt-16">
       <LayoutGroup>
         <motion.div
           layout
@@ -194,7 +201,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm cursor-none select-none"
+          className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm select-none ${isDesktop ? "cursor-none" : ""}`}
           onMouseDown={(e) => e.preventDefault()}
           onMouseMove={(e) => {
             setCursorPos({ x: e.clientX, y: e.clientY });
@@ -222,24 +229,26 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
             close();
           }}
         >
-          {/* Custom cursor */}
-          <div
-            className="pointer-events-none fixed z-[60]"
-            style={{ left: cursorPos.x - 13, top: cursorPos.y - 13 }}
-          >
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              {onImage ? (
-                cursorSide === "left"
-                  ? <polyline points="15 18 9 12 15 6" />
-                  : <polyline points="9 6 15 12 9 18" />
-              ) : (
-                <>
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </>
-              )}
-            </svg>
-          </div>
+          {/* Custom cursor — desktop only */}
+          {isDesktop && (
+            <div
+              className="pointer-events-none fixed z-[60]"
+              style={{ left: cursorPos.x - 13, top: cursorPos.y - 13 }}
+            >
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {onImage ? (
+                  cursorSide === "left"
+                    ? <polyline points="15 18 9 12 15 6" />
+                    : <polyline points="9 6 15 12 9 18" />
+                ) : (
+                  <>
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </>
+                )}
+              </svg>
+            </div>
+          )}
 
           {/* Image */}
           <div
@@ -260,12 +269,12 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
           </div>
 
           {/* Hint bar */}
-          <div className="pointer-events-none mt-7 flex items-center gap-6 text-[12px] text-white/45">
-            <span className="flex items-center gap-2">
-              <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-2 py-0.5 font-mono text-[11px] leading-none">←</kbd>
-              <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-2 py-0.5 font-mono text-[11px] leading-none">→</kbd>
+          <div className="pointer-events-none mt-10 flex items-center gap-8 text-[15px] text-white/45">
+            <span className="flex items-center gap-3">
+              <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-3 py-1.5 font-mono text-[14px] leading-none">←</kbd>
+              <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-3 py-1.5 font-mono text-[14px] leading-none">→</kbd>
             </span>
-            <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-2 py-0.5 font-mono text-[11px] leading-none">esc</kbd>
+            <kbd className="inline-flex items-center justify-center rounded border border-white/15 bg-white/5 px-3 py-1.5 font-mono text-[14px] leading-none">esc</kbd>
             <span className="text-white/30">{selected + 1} / {shuffled.length}</span>
           </div>
         </motion.div>

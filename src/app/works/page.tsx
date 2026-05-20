@@ -1,9 +1,51 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 import { SiteHeader } from "@/components/site-header";
+import { asset } from "@/lib/asset";
+
+const carouselImages = [
+  "/gallery/pj_001.png", "/gallery/pj_002.png", "/gallery/pj_003.png",
+  "/gallery/pj_004.png", "/gallery/pj_005.png", "/gallery/pj_006.png",
+  "/gallery/pj_007.png", "/gallery/pj_008.png", "/gallery/pj_009.png",
+  "/gallery/pj_010.png", "/gallery/pj_011.png", "/gallery/pj_012.png",
+  "/gallery/pj_013.png", "/gallery/pj_014.png", "/gallery/pj_015.png",
+  "/gallery/pj_016.png", "/gallery/pj_017.png", "/gallery/pj_018.png",
+  "/gallery/pj_020.png", "/gallery/pj_021.png", "/gallery/pj_023.png",
+  "/gallery/pj_026.png", "/gallery/pj_027.png", "/gallery/pj_028.png",
+];
+
+function WorksCarousel() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setCurrent((c) => (c + 1) % carouselImages.length), 400);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
+      {carouselImages.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 transition-opacity duration-150"
+          style={{ opacity: i === current ? 1 : 0 }}
+        >
+          <Image
+            src={asset(src)}
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority={i === 0}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 type Entry = { company: string; role: string; years: string };
 
@@ -28,6 +70,7 @@ const projects: Project[] = [
   { category: "Digital Product", year: "2024", name: "Caju",                      role: "Head of Design" },
   { category: "Digital Product", year: "2024", name: "Mude",                      role: "Head of Design" },
   { category: "Brand Identity",  year: "2020", name: "FFForma",                   role: "Founder"        },
+  { category: "Brand Identity",  year: "2020", name: "My Phone",                  role: "Designer"       },
   { category: "Design System",   year: "2018", name: "Royal Canin Design System", role: "Head of Design" },
 ];
 
@@ -205,7 +248,10 @@ export default function Bio() {
         </div>
       </div>
 
-      <p className="mt-12 lg:mt-20 text-sm text-muted pb-8">{t.copyright}</p>
+      </div>{/* end px-6 */}
+      <div className="mt-16"><WorksCarousel /></div>
+      <div className="px-6">
+      <p className="mt-16 text-sm text-muted pb-8">{t.copyright}</p>
       </div>{/* end px-6 */}
     </div>
   );

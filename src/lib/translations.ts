@@ -44,7 +44,7 @@ export const translations = {
     },
     contact: {
       label: "Contact",
-      subtitle: "Best way to reach me is below. I read everything that lands in my inbox.",
+      subtitle: "The best way to reach me is right here below.\nI personally read everything that lands in my inbox.",
     },
     copyright: "© Pedro Julien 2026",
   },
@@ -91,7 +91,7 @@ export const translations = {
     },
     contact: {
       label: "Contato",
-      subtitle: "Melhor jeito de falar comigo é por aqui embaixo. Leio tudo que cai na minha caixa de entrada.",
+      subtitle: "A melhor forma de falar comigo está aqui embaixo.\nLeio pessoalmente tudo que chega na minha caixa de entrada.",
     },
     copyright: "© Pedro Julien 2026",
   },
