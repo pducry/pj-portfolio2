@@ -22,7 +22,7 @@ const carouselImages = [
 function WorksCarousel() {
   const [current, setCurrent] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setCurrent((c) => (c + 1) % carouselImages.length), 400);
+    const t = setInterval(() => setCurrent((c) => (c + 1) % carouselImages.length), 350);
     return () => clearInterval(t);
   }, []);
   return (
@@ -66,7 +66,7 @@ type Project = { category: string; year: string; name: string; role: string; hre
 const projects: Project[] = [
   { category: "Digital Product", year: "2026", name: "Mercado Pago",              role: "Design Manager" },
   { category: "Digital Product", year: "2026", name: "Artas",                     role: "Designer"       },
-  { category: "Digital Product", year: "2025", name: "Sute",                      role: "Head of Design" },
+  { category: "Digital Product", year: "2025", name: "Sute",                      role: "Head of Design", href: "/sute" },
   { category: "Digital Product", year: "2024", name: "Caju",                      role: "Head of Design" },
   { category: "Digital Product", year: "2024", name: "Mude",                      role: "Head of Design" },
   { category: "Brand Identity",  year: "2020", name: "FFForma",                   role: "Founder"        },
