@@ -1,0 +1,30 @@
+src/app/sute/page.tsx
+  s_42df78b563cfeb::t_401831edd86c21 1-99
+src/app/works/page.tsx
+  s_1f59f1f40f27fc::t_a4d2210ca7b6a5 25
+  s_42df78b563cfeb::t_6c0c5861b2ceb5 69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "10f0a0d920dc3ea1cb751f071d621e2a22815720",
+  "prompts": {},
+  "sessions": {
+    "s_1f59f1f40f27fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "23dfa52e-195e-43f9-a275-ca83ae9bf9c5",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    },
+    "s_42df78b563cfeb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "53346d42-4fdf-4a67-a482-afe0cd7306c2",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Pedro Julien <pducry@gmail.com>"
+    }
+  }
+}
