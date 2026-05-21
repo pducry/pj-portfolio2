@@ -2,7 +2,18 @@
 import { SiteHeader } from "@/components/site-header";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { RevealMedia, type MediaItem } from "@/components/reveal-media";
+import { asset } from "@/lib/asset";
+
+const carouselImages: string[] = [
+  "/gallery/pj_021.png",
+  "/gallery/pj_023.png",
+  "/gallery/pj_026.png",
+  "/gallery/pj_028.png",
+  "/gallery/pj_031.png",
+  "/gallery/pj_033.png",
+];
 
 const media: MediaItem[] = [
   { type: "image", src: "/gallery/pj_021.png", alt: "Sute — 1" },
@@ -16,8 +27,45 @@ const media: MediaItem[] = [
   { type: "image", src: "/gallery/pj_035.png", alt: "Sute — 9" },
 ];
 
-export default function SutePage() {
+function SuteCarousel() {
+  const [idx, setIdx] = useState(0);
 
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIdx((i) => (i + 1) % carouselImages.length);
+    }, 3000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="relative w-full overflow-hidden bg-card aspect-[16/9]">
+      {carouselImages.map((src, i) => (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          key={src}
+          src={asset(src)}
+          alt={`Sute — slide ${i + 1}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${
+            i === idx ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+      {/* Slide indicators */}
+      <div className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+        {carouselImages.map((_, i) => (
+          <span
+            key={i}
+            className={`h-1 rounded-full bg-white transition-all duration-500 ${
+              i === idx ? "w-6 opacity-80" : "w-1 opacity-40"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function SutePage() {
   return (
     <div className="w-full">
 
@@ -49,16 +97,25 @@ export default function SutePage() {
           {/* Description */}
           <div className="space-y-3 text-sm leading-relaxed text-muted border-t border-border/40 pt-6">
             <p>
-              Sute is a digital product crafted to bring clarity to complex information
-              architectures — pairing editorial rigor with a fluid interaction model.
+              Sute is a digital product built to bring order to complex information
+              landscapes — taking what is normally dense, fragmented data and making it
+              feel calm, navigable, and human.
             </p>
             <p>
-              Designed end-to-end with a small, focused team — from research and product
-              vision to interface, motion, and the visual system that holds it together.
+              I led the design end-to-end alongside a small, focused team. The work spanned
+              foundational research and product strategy, information architecture, the full
+              UI system, motion principles, and the editorial tone that runs through every
+              screen.
             </p>
             <p>
-              Restrained typography, deliberate negative space, and a calm palette anchor
-              the experience and let the content lead.
+              The interface centers around a fluid navigation model that lets people pivot
+              between high-level overviews and granular detail without losing their place —
+              built on a typographic system designed to give hierarchy without shouting.
+            </p>
+            <p>
+              Restrained type, deliberate negative space, and a quiet palette anchor the
+              product. The visual language stays intentionally subdued so that the data,
+              decisions, and the people using it remain the loudest voices in the room.
             </p>
           </div>
 
@@ -92,7 +149,8 @@ export default function SutePage() {
             </div>
           </div>
           <p className="text-sm text-muted leading-relaxed">
-            A digital product crafted to bring clarity to complex information architectures.
+            A digital product built to bring order to complex information landscapes —
+            calm, navigable, and human.
           </p>
           <Link href="/works" className="inline-flex items-center gap-2 text-xs text-muted">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -100,6 +158,11 @@ export default function SutePage() {
             </svg>
             Back to Works
           </Link>
+        </div>
+
+        {/* Hero carousel */}
+        <div className="px-4 pt-10 sm:px-8 lg:px-12">
+          <SuteCarousel />
         </div>
 
         {/* Images */}
