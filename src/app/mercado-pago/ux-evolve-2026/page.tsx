@@ -84,6 +84,30 @@ function UxEvolveContent() {
           </div>
         </Reveal>
 
+        {/* Separator video 2 */}
+        <Reveal>
+          <div className="border-b border-border">
+            <video
+              src={asset("/videos/uxevolve/separator-03.mp4")}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto"
+            />
+          </div>
+        </Reveal>
+
+        {/* Evolution text */}
+        <Reveal>
+          <div className="px-6 border-b border-border py-6">
+            <div className="max-w-xl space-y-2">
+              <p className="text-xs text-muted">{ux.evolutionLabel}</p>
+              <p className="text-base leading-snug text-foreground/70">{ux.evolutionText}</p>
+            </div>
+          </div>
+        </Reveal>
+
         {/* Slide backgrounds, automatic side-scrolling carousel */}
         <Reveal>
           <div className="overflow-hidden border-b border-border">
