@@ -81,10 +81,10 @@ function VisualDesignContent() {
         <Reveal>
           <div className="border-b border-border">
             <GalleryImage
-              src="/projects/visual-design/vd_03.png"
+              src="/projects/visual-design/vd_04.png"
               alt="Visual Design — Mercado Pago visual"
               width={1920}
-              height={1732}
+              height={1227}
             />
           </div>
         </Reveal>
@@ -92,10 +92,10 @@ function VisualDesignContent() {
         <Reveal>
           <div className="border-b border-border">
             <GalleryImage
-              src="/projects/visual-design/vd_04.png"
+              src="/projects/visual-design/vd_03.png"
               alt="Visual Design — Mercado Pago visual"
               width={1920}
-              height={1227}
+              height={1732}
             />
           </div>
         </Reveal>
