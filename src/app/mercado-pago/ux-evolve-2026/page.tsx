@@ -43,7 +43,7 @@ function UxEvolveContent() {
         </div>
       </div>
 
-      {/* Highlight reel */}
+      {/* Video 1 — highlight reel */}
       <Reveal>
         <div className="mt-16 border-t border-b border-border">
           <video
@@ -60,20 +60,6 @@ function UxEvolveContent() {
       {/* Visual identity */}
       <div className="mt-16 border-t border-border">
 
-        {/* Separator video 1 */}
-        <Reveal>
-          <div className="border-b border-border">
-            <video
-              src={asset("/videos/uxevolve/separator-01.mp4")}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-auto"
-            />
-          </div>
-        </Reveal>
-
         {/* Concept text */}
         <Reveal>
           <div className="px-6 border-b border-border py-6">
@@ -84,13 +70,17 @@ function UxEvolveContent() {
           </div>
         </Reveal>
 
-        {/* Evolution text */}
+        {/* Video 2 — separator */}
         <Reveal>
-          <div className="px-6 border-b border-border py-6">
-            <div className="max-w-xl space-y-2">
-              <p className="text-xs text-muted">{ux.evolutionLabel}</p>
-              <p className="text-base leading-snug text-foreground/70">{ux.evolutionText}</p>
-            </div>
+          <div className="border-b border-border">
+            <video
+              src={asset("/videos/uxevolve/separator-01.mp4")}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto"
+            />
           </div>
         </Reveal>
 
