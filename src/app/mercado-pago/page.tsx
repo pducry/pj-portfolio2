@@ -10,15 +10,8 @@ import { translations } from "@/lib/translations";
 const subProjects = [
   {
     year: "2026",
-    category: "Design System",
-    name: "Motion Foundations",
-    role: "Design Manager",
-    href: "/mercado-pago/motion-foundations",
-  },
-  {
-    year: "2026",
     category: "Creative",
-    name: "Visual Design",
+    name: "New UI Kit",
     role: "Design Manager",
     href: "/mercado-pago/visual-design",
   },
@@ -30,18 +23,25 @@ const subProjects = [
     href: "/mercado-pago/art-direction",
   },
   {
-    year: "2025",
-    category: "Leadership",
-    name: "MPCraft",
-    role: "Design Manager",
-    href: "/mercado-pago/mpcraft",
-  },
-  {
     year: "2026",
     category: "Culture",
     name: "UxEvolve 2026",
     role: "Design Manager",
     href: "/mercado-pago/ux-evolve-2026",
+  },
+  {
+    year: "2026",
+    category: "Design System",
+    name: "Motion Foundations",
+    role: "Design Manager",
+    href: "/mercado-pago/motion-foundations",
+  },
+  {
+    year: "2025",
+    category: "Leadership",
+    name: "MPCraft",
+    role: "Design Manager",
+    href: "/mercado-pago/mpcraft",
   },
 ];
 

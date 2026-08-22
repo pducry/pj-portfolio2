@@ -53,7 +53,7 @@ function VisualDesignContent() {
       </div>
 
       <div className="px-6 border-t border-border py-4 flex flex-wrap items-baseline gap-x-10 gap-y-1">
-        <span className="text-base text-foreground whitespace-nowrap">Visual Design</span>
+        <span className="text-base text-foreground whitespace-nowrap">New UI Kit</span>
         <span className="text-sm text-muted whitespace-nowrap">{t.categories["Creative"]}</span>
         <span className="text-sm text-muted whitespace-nowrap">2026</span>
         <span className="text-sm text-muted whitespace-nowrap">{t.roles["Design Manager"]}</span>
