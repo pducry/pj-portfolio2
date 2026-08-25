@@ -99,6 +99,17 @@ function VisualDesignContent() {
             />
           </div>
         </Reveal>
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage
+              src="/projects/visual-design/vd_06.png"
+              alt="Visual Design — Mercado Pago visual"
+              width={2880}
+              height={1841}
+            />
+          </div>
+        </Reveal>
       </div>
 
       <WorksFooter current="Mercado Pago" />
