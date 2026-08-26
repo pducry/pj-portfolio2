@@ -34,38 +34,16 @@ export function CustomCursor() {
       mouse.current = { x: e.clientX, y: e.clientY };
     };
 
-    const isInteractive = (el: Element | null): boolean => {
-      if (!el || !(el instanceof Element)) return false;
-      return !!el.closest('a, button, [role="button"], label, summary, input, select, textarea, [data-hoverable]');
-    };
-
-    const onOver = (e: MouseEvent) => {
-      if (isInteractive(e.target as Element) && dotRef.current) {
-        dotRef.current.classList.add("cursor-hovering");
-      }
-    };
-
-    const onOut = (e: MouseEvent) => {
-      const to = e.relatedTarget as Element | null;
-      if (!isInteractive(to) && dotRef.current) {
-        dotRef.current.classList.remove("cursor-hovering");
-      }
-    };
-
     const syncLightbox = () => setHidden(document.body.hasAttribute("data-lightbox-open"));
     syncLightbox();
     const mo = new MutationObserver(syncLightbox);
     mo.observe(document.body, { attributes: true, attributeFilter: ["data-lightbox-open"] });
 
     window.addEventListener("mousemove", onMove);
-    document.addEventListener("mouseover", onOver);
-    document.addEventListener("mouseout", onOut);
     raf.current = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", onMove);
-      document.removeEventListener("mouseover", onOver);
-      document.removeEventListener("mouseout", onOut);
       mo.disconnect();
       cancelAnimationFrame(raf.current);
     };
