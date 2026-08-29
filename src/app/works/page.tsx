@@ -146,7 +146,7 @@ export default function Bio() {
         </div>
       </div>
 
-      <div className="h-16 lg:h-[200px]" />
+      <div className="h-12 lg:h-[140px]" />
 
       {/* Works */}
       <div id="projects" className="border-t border-border">
