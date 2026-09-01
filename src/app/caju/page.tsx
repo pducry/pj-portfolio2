@@ -12,10 +12,10 @@ import { translations } from "@/lib/translations";
 const images = [
   { src: "/projects/caju/Caju1.png", width: 2320, height: 1536 },
   { src: "/projects/caju/Caju4.png", width: 2320, height: 1536 },
+  { src: "/projects/caju/Caju8.png", width: 3840, height: 2160 },
   { src: "/projects/caju/Caju5.png", width: 3000, height: 3000 },
   { src: "/projects/caju/Caju6.png", width: 2320, height: 1536 },
   { src: "/projects/caju/Caju7.png", width: 1920, height: 1080 },
-  { src: "/projects/caju/Caju8.png", width: 3840, height: 2160 },
 ];
 
 function GalleryImage({
