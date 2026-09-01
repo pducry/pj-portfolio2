@@ -294,6 +294,12 @@ export const translations = {
         desc3b: "AI and Claude Code",
         desc3c: " as the primary development tool, an experiment in human + AI co-creation at every stage, from concept to shipped product.",
       },
+      caju: {
+        desc1:      "Caju is one of Brazil's leading corporate benefits platforms. Working through Meiuca, we led the redesign of its app and web portal, evolving the product experience to match the energy of the brand.",
+        desc2:      "The work established a new visual language and design system foundations: color, typography, iconography, spacing and component tokens, bringing consistency across the employee app and the corporate dashboard.",
+        desc3:      "The system was built for personalization, with theming capabilities that let the interface flex across brand moments and contexts without losing coherence, from onboarding to daily transactions.",
+        descMobile: "Redesign of Caju's benefits app: new visual language, design system foundations and a themeable, personalizable interface.",
+      },
       combustion: {
         desc:       "Rebranding of a São Paulo-based sound design studio with a strong international presence. A new visual identity built to match the weight and reach of their work, bold, precise and unmistakably sonic.",
         descMobile: "Rebranding of a São Paulo-based sound design studio, bold, precise and unmistakably sonic.",
@@ -606,6 +612,12 @@ export const translations = {
         desc3a: "Todo o projeto foi projetado e construído usando ",
         desc3b: "IA e Claude Code",
         desc3c: " como ferramenta principal de desenvolvimento, um experimento de co-criação humano + IA em cada etapa, do conceito ao produto entregue.",
+      },
+      caju: {
+        desc1:      "A Caju é uma das principais plataformas de benefícios corporativos do Brasil. Através da Meiuca, lideramos o redesign do app e do portal web, evoluindo a experiência do produto para acompanhar a energia da marca.",
+        desc2:      "O trabalho estabeleceu uma nova linguagem visual e as fundações do design system: tokens de cor, tipografia, iconografia, espaçamento e componentes, trazendo consistência entre o app do colaborador e o painel corporativo.",
+        desc3:      "O sistema foi construído para personalização, com capacidade de tematização que permite à interface flexionar entre momentos de marca e contextos sem perder coerência, do onboarding às transações do dia a dia.",
+        descMobile: "Redesign do app de benefícios da Caju: nova linguagem visual, fundações de design system e uma interface tematizável e personalizável.",
       },
       combustion: {
         desc:       "Rebranding de um estúdio de sound design de São Paulo com forte presença internacional. Uma nova identidade visual construída para corresponder ao peso e alcance de seu trabalho: precisa, ousada e inconfundivelmente sônica.",
