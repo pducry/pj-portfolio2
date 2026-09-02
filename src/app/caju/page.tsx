@@ -9,11 +9,17 @@ import { asset } from "@/lib/asset";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 
-const images = [
+const imagesLead = [
   { src: "/projects/caju/Caju1.png", width: 2320, height: 1536 },
   { src: "/projects/caju/Caju4.png", width: 2320, height: 1536 },
+];
+
+const imagesDynamics = [
   { src: "/projects/caju/Caju8.png", width: 3840, height: 2160 },
   { src: "/projects/caju/Caju5.png", width: 3000, height: 3000 },
+];
+
+const imagesScale = [
   { src: "/projects/caju/Caju6.png", width: 2320, height: 1536 },
   { src: "/projects/caju/Caju7.png", width: 1920, height: 1080 },
 ];
@@ -40,6 +46,43 @@ function GalleryImage({
         sizes="100vw"
       />
     </div>
+  );
+}
+
+function TextBlock({ paragraphs }: { paragraphs: readonly string[] }) {
+  return (
+    <div className="px-6 border-b border-border py-6">
+      <div className="max-w-xl space-y-3">
+        {paragraphs.map((p) => (
+          <p key={p} className="text-base leading-snug text-foreground/70">
+            {p}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function GalleryBlock({
+  images,
+}: {
+  images: readonly { src: string; width: number; height: number }[];
+}) {
+  return (
+    <>
+      {images.map((img, i) => (
+        <Reveal key={img.src}>
+          <div className="border-b border-border">
+            <GalleryImage
+              src={img.src}
+              alt={`Caju — app redesign ${i + 1}`}
+              width={img.width}
+              height={img.height}
+            />
+          </div>
+        </Reveal>
+      ))}
+    </>
   );
 }
 
@@ -90,18 +133,28 @@ function CajuContent() {
           </div>
         </Reveal>
 
-        {images.map((img, i) => (
-          <Reveal key={img.src}>
-            <div className="border-b border-border">
-              <GalleryImage
-                src={img.src}
-                alt={`Caju — app redesign ${i + 1}`}
-                width={img.width}
-                height={img.height}
-              />
-            </div>
-          </Reveal>
-        ))}
+        <TextBlock paragraphs={[c.lead1, c.lead2]} />
+        <GalleryBlock images={imagesLead} />
+
+        <TextBlock paragraphs={[c.dyn1, c.dyn2]} />
+
+        {/* KPIs */}
+        <div className="px-6 border-b border-border py-6">
+          <span className="text-sm text-muted">{c.kpisTitle}</span>
+          <div className="mt-3 flex flex-wrap gap-x-10 gap-y-3">
+            {c.kpis.map((kpi) => (
+              <div key={kpi.label} className="flex flex-col gap-0.5">
+                <span className="text-base text-foreground whitespace-nowrap">{kpi.value}</span>
+                <span className="text-sm text-muted whitespace-nowrap">{kpi.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <GalleryBlock images={imagesDynamics} />
+
+        <TextBlock paragraphs={[c.scale1]} />
+        <GalleryBlock images={imagesScale} />
       </div>
 
       <WorksFooter current="Caju" />
