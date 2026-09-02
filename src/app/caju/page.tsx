@@ -149,6 +149,7 @@ function CajuContent() {
               </div>
             ))}
           </div>
+          <p className="mt-4 max-w-xl text-sm text-muted">{c.kpisNote}</p>
         </div>
 
         <GalleryBlock images={imagesDynamics} />

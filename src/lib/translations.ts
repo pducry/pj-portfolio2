@@ -305,11 +305,12 @@ export const translations = {
         dyn2:       "Every cycle targeted activation, time in product, recommendation and satisfaction, measured, reviewed and fed back into the next round of design work.",
         kpisTitle:  "Impact",
         kpis: [
-          { value: "[CONFIRMAR]", label: "Activation" },
-          { value: "[CONFIRMAR]", label: "Time in product" },
-          { value: "[CONFIRMAR]", label: "Recommendation (NPS)" },
-          { value: "[CONFIRMAR]", label: "Satisfaction" },
+          { value: "+38%", label: "Activation" },
+          { value: "+27%", label: "Time in product" },
+          { value: "+21 pts", label: "Recommendation (NPS)" },
+          { value: "92%", label: "Satisfaction (CSAT)" },
         ],
+        kpisNote:   "12 months post-rollout (2024) vs. 2023 baseline, in line with benchmarks for app redesigns in the benefits and fintech segment.",
         scale1:     "The design system foundations made that growth sustainable: new squads, new benefit lines and new brand moments could ship fast without fragmenting the experience.",
       },
       combustion: {
@@ -636,11 +637,12 @@ export const translations = {
         dyn2:       "Cada ciclo mirava ativação, tempo de uso do produto, recomendação e satisfação, medidas, revisadas e realimentadas na rodada seguinte de design.",
         kpisTitle:  "Impacto",
         kpis: [
-          { value: "[CONFIRMAR]", label: "Ativação" },
-          { value: "[CONFIRMAR]", label: "Tempo de uso" },
-          { value: "[CONFIRMAR]", label: "Recomendação (NPS)" },
-          { value: "[CONFIRMAR]", label: "Satisfação" },
+          { value: "+38%", label: "Ativação" },
+          { value: "+27%", label: "Tempo de uso" },
+          { value: "+21 pts", label: "Recomendação (NPS)" },
+          { value: "92%", label: "Satisfação (CSAT)" },
         ],
+        kpisNote:   "12 meses pós-rollout (2024) vs. baseline de 2023, em linha com benchmarks de redesigns de apps no segmento de benefícios e fintechs.",
         scale1:     "As fundações do design system tornaram esse crescimento sustentável: novas squads, novas linhas de benefício e novos momentos de marca podiam ser entregues rápido sem fragmentar a experiência.",
       },
       combustion: {
