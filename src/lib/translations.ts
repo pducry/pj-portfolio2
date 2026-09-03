@@ -5,7 +5,7 @@ export const translations = {
     nav: { bio: "Works", playground: "Playground", contact: "About & Contact" },
     bio: {
       label: "Bio",
-      p1: "Design direction driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams — leading by doing, from strategy to execution.",
+      p1: "Design direction driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams. Leading by doing, from strategy to execution.",
       p4a: "Founder of",
       p4b: ".",
       cta: "Get in touch",
@@ -59,12 +59,12 @@ export const translations = {
     },
     about: {
       intro1:
-        "With 18+ years of professional experience, Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience — from understanding business strategy to delivering final prototypes.",
+        "With 18+ years of professional experience, Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience, from understanding business strategy to delivering final prototypes.",
       intro2a: "Fueled by curiosity, founder of",
       intro2b:
         ", a studio crafting new motion and visual solutions using GenAI for the creative industry.",
       quote:
-        "I do believe in the power of craft leading by business needs, always collaborating with teams to achieve better results — whether it's concept design, a user-centered approach or leading creative teams.",
+        "I do believe in the power of craft leading by business needs, always collaborating with teams to achieve better results, whether it's concept design, a user-centered approach or leading creative teams.",
       experienceLabel: "Main experiences",
       recognitionLabel: "Recognition",
       skills: [
@@ -86,13 +86,13 @@ export const translations = {
         meiuca:
           "Pushed the boundaries of digital design and product vision, creating visually stunning and functional products that resonate with users. Led the team in delivering exceptional digital experiences through a strategic mindset and collaborative creative environment.",
         descomplica:
-          "Conducted thorough industry research to determine the direction of branding experiences and digital products. Created and led the first branding refresh, setting new positioning and values. Designed and built design systems, modular and scalable design patterns — hired and built design teams, setting process and culture.",
+          "Conducted thorough industry research to determine the direction of branding experiences and digital products. Created and led the first branding refresh, setting new positioning and values. Designed and built design systems, modular and scalable design patterns. Hired and built design teams, setting process and culture.",
         ddb:
           "Led the design team to push conventional boundaries with unique concepts and identities. Responsible for the digital global soccer account of Adidas, creating part of the design modular system. Developed the global design system for Royal Canin, including photography, iconography, and digital assets.",
         workCo:
           "Led digital product design projects for clients including Facebook and Santander. Responsible for ensuring the team's work communicates effectively with the highest quality, solving business challenges and meeting user needs across all stages of design development.",
         google:
-          "Created interactive digital projects for Google's Cultural Institute, including Performing Arts With Google — a fully immersive 360° experience allowing anyone to step on stage with world-renowned actors, singers, and dancers.",
+          "Created interactive digital projects for Google's Cultural Institute, including Performing Arts With Google, a fully immersive 360° experience allowing anyone to step on stage with world-renowned actors, singers, and dancers.",
       },
     },
     common: {
@@ -164,16 +164,16 @@ export const translations = {
         ],
       },
       artDirection: {
-        intro1: "A unified visual identity for Mercado Pago, built simultaneously across photography, iconography, and 3D. The work consolidates and evolves the brand's creative language across formats and markets — ensuring every touchpoint feels coherent, intentional, and unmistakably on-brand at the scale of Latin America's largest fintech.",
-        intro2: "Art direction operating across live campaign photography, AI-assisted 3D assets, and iconographic systems. Spanning 11 verticals and 7 countries, the project defines how the brand looks and feels wherever it appears — from product screens to campaign visuals.",
+        intro1: "A unified visual identity for Mercado Pago, built simultaneously across photography, iconography, and 3D. The work consolidates and evolves the brand's creative language across formats and markets, ensuring every touchpoint feels coherent, intentional, and unmistakably on-brand at the scale of Latin America's largest fintech.",
+        intro2: "Art direction operating across live campaign photography, AI-assisted 3D assets, and iconographic systems. Spanning 11 verticals and 7 countries, the project defines how the brand looks and feels wherever it appears, from product screens to campaign visuals.",
       },
       visualDesign: {
-        intro1: "The visual and creative evolution of Mercado Pago's aesthetic language — from product surfaces to campaign pages to the hardware itself. A shift toward a louder, more confident brand: yellow as the field, type as the voice, and the Point as a designed object.",
-        intro2: "The work tightens how the brand looks and feels at the scale of Latin America's largest fintech. Bold headlines, saturated yellow fields, and a product UI that treats rates, devices, and checkout as one system — so every surface, from a rates page to a Point Smart screen, speaks with the same weight.",
+        intro1: "The visual and creative evolution of Mercado Pago's aesthetic language, from product surfaces to campaign pages to the hardware itself. A shift toward a louder, more confident brand: yellow as the field, type as the voice, and the Point as a designed object.",
+        intro2: "The work tightens how the brand looks and feels at the scale of Latin America's largest fintech. Bold headlines, saturated yellow fields, and a product UI that treats rates, devices, and checkout as one system, so every surface, from a rates page to a Point Smart screen, speaks with the same weight.",
       },
       mpcraft: {
-        intro1: "A leadership development program designed for Mercado Pago's design team leads, built on a simple conviction: collective quality is a system, not a talent. MPCraft creates the conditions — rituals, language, and shared practice — for design excellence to emerge consistently, not occasionally.",
-        intro2: "The program operates across two tracks. The craft track develops visual judgment and AI fluency across the full team. The leadership track shapes how design leads build, prototype, and influence — grounding the builder archetype not in aspiration but in daily practice.",
+        intro1: "A leadership development program designed for Mercado Pago's design team leads, built on a simple conviction: collective quality is a system, not a talent. MPCraft creates the conditions for design excellence to emerge consistently, not occasionally: rituals, language, and shared practice.",
+        intro2: "The program operates across two tracks. The craft track develops visual judgment and AI fluency across the full team. The leadership track shapes how design leads build, prototype, and influence, grounding the builder archetype not in aspiration but in daily practice.",
         pillarsLabel: "Leadership Pillars",
         initiativesLabel: "Initiatives",
         ritualsLabel: "Rituals",
@@ -184,21 +184,21 @@ export const translations = {
           },
           {
             label: "Hands-On Leadership",
-            body: "Design leaders who stop designing lose context and credibility. Prototyping, AI exploration, and proof-of-concept building are leadership acts — leading through example, not discourse.",
+            body: "Design leaders who stop designing lose context and credibility. Prototyping, AI exploration, and proof-of-concept building are leadership acts: leading through example, not discourse.",
           },
           {
             label: "Radical Collaboration",
-            body: "The best work emerges from perspective collision. Leadership creates environments where design, product, engineering, and data intersect — shifting from who had the idea to how to build the best solution.",
+            body: "The best work emerges from perspective collision. Leadership creates environments where design, product, engineering, and data intersect, shifting from who had the idea to how to build the best solution.",
           },
           {
             label: "Innovation Through Making",
-            body: "Innovation is a consequence of experimentation. More doing, less discussing. Leaders build clarity by building — using uncertainty as motivation, not as an excuse for inaction.",
+            body: "Innovation is a consequence of experimentation. More doing, less discussing. Leaders build clarity by building, using uncertainty as motivation, not as an excuse for inaction.",
           },
         ],
         initiatives: [
           {
             label: "AIAD",
-            body: "AI-driven art direction with rational foundations. Structured briefing, reference mapping, intentional prompting, and rational validation — a repeatable framework for AI-assisted creative decisions.",
+            body: "AI-driven art direction with rational foundations. Structured briefing, reference mapping, intentional prompting, and rational validation: a repeatable framework for AI-assisted creative decisions.",
           },
           {
             label: "AIUD",
@@ -210,7 +210,7 @@ export const translations = {
           },
         ],
         agenticLabel: "Agentic Leadership",
-        agenticIntro: "The next layer of MPCraft is operational: AI agents embedded in how leadership works day-to-day — not as productivity tools, but as co-pilots that extend the design leader's thinking, speed, and reach.",
+        agenticIntro: "The next layer of MPCraft is operational: AI agents embedded in how leadership works day-to-day: not as productivity tools, but as co-pilots that extend the design leader's thinking, speed, and reach.",
         agentic: [
           {
             label: "Systemic Thinking",
@@ -218,7 +218,7 @@ export const translations = {
           },
           {
             label: "Framework Generation",
-            body: "Moving from blank-canvas frameworks to AI-assisted scaffolding. Agents generate starting structures grounded in real project data, challenge inherited assumptions, and propose new mental models before the team commits to a direction. The goal is not to remove thinking — it's to start further ahead.",
+            body: "Moving from blank-canvas frameworks to AI-assisted scaffolding. Agents generate starting structures grounded in real project data, challenge inherited assumptions, and propose new mental models before the team commits to a direction. The goal is not to remove thinking but to start further ahead.",
           },
           {
             label: "Handoff Acceleration",
@@ -226,34 +226,34 @@ export const translations = {
           },
           {
             label: "Ideation at Volume",
-            body: "Leaders who use AI to dramatically increase the density of ideas before converging. Not to replace judgment — to multiply the starting surface area so the best ideas have a real chance of emerging. The constraint shifts from how many ideas can we generate to which ones are actually worth pursuing.",
+            body: "Leaders who use AI to dramatically increase the density of ideas before converging. Not to replace judgment, but to multiply the starting surface area so the best ideas have a real chance of emerging. The constraint shifts from how many ideas can we generate to which ones are actually worth pursuing.",
           },
         ],
         rituals: [
           {
             label: "Design Tasting",
-            duration: "45 min — weekly",
-            body: "One reference. One guided discussion. One shared criterion — applied to real work. Not an inspiration board: a weekly session where the team dissects a single piece across typography, photography, motion, or editorial design. The question is never 'do you like it?' but 'why does it work, and what does it teach us?' Over time, the accumulated vocabulary becomes the team's shared creative language — the standard the work is measured against.",
+            duration: "45 min · weekly",
+            body: "One reference. One guided discussion. One shared criterion, applied to real work. Not an inspiration board: a weekly session where the team dissects a single piece across typography, photography, motion, or editorial design. The question is never 'do you like it?' but 'why does it work, and what does it teach us?' Over time, the accumulated vocabulary becomes the team's shared creative language: the standard the work is measured against.",
           },
           {
             label: "UX Critique",
-            duration: "45 min — monthly",
-            body: "Team work meets structured diagnosis. Before each session, AI runs a category-based analysis of the work under review — heuristics, benchmarks, accessibility, business rationale, assumptions. The critique itself converts subjective reactions into defensible, documented decisions. Over time, patterns emerge across projects: feedback stops being individual opinion and becomes institutional knowledge the team can build on.",
+            duration: "45 min · monthly",
+            body: "Team work meets structured diagnosis. Before each session, AI runs a category-based analysis of the work under review: heuristics, benchmarks, accessibility, business rationale, assumptions. The critique itself converts subjective reactions into defensible, documented decisions. Over time, patterns emerge across projects: feedback stops being individual opinion and becomes institutional knowledge the team can build on.",
           },
           {
             label: "Skill Drop",
-            duration: "Async — monthly",
-            body: "10 minutes of context, live demonstration, and measurable result — via Loom, posted directly to Slack. No slides, no meetings. Each drop shows a real workflow improvement from an active project: what the problem was, how AI changed the approach, what the outcome looked like. The format compounds: a growing library of team-built techniques anyone can adapt. Evidence of fluency, not performance of fluency.",
+            duration: "Async · monthly",
+            body: "10 minutes of context, live demonstration, and measurable result. Via Loom, posted directly to Slack. No slides, no meetings. Each drop shows a real workflow improvement from an active project: what the problem was, how AI changed the approach, what the outcome looked like. The format compounds: a growing library of team-built techniques anyone can adapt. Evidence of fluency, not performance of fluency.",
           },
           {
             label: "AI Workflows Clinic",
-            duration: "Monthly — Team Leads",
-            body: "Each Team Lead documents and shares a real AI-assisted workflow from a live project. Not a tutorial — a transparent account of how AI changed how they worked, where it helped, and where it didn't. Leadership through example: the goal is to show AI fluency in practice, building a shared evidence base of what AI actually changes at this scale, with these constraints.",
+            duration: "Monthly · Team Leads",
+            body: "Each Team Lead documents and shares a real AI-assisted workflow from a live project. Not a tutorial, but a transparent account of how AI changed how they worked, where it helped, and where it didn't. Leadership through example: the goal is to show AI fluency in practice, building a shared evidence base of what AI actually changes at this scale, with these constraints.",
           },
           {
             label: "AI Pair Design",
-            duration: "Monthly — Team Leads",
-            body: "Leaders prototype directly with AI and make the process visible to their teams. A raw working session — not a polished demo. The output is both the artifact and the thinking behind it: teams see how a leader breaks down a problem, prompts, iterates, and decides. Builder spirit in practice: building to learn, not building to present.",
+            duration: "Monthly · Team Leads",
+            body: "Leaders prototype directly with AI and make the process visible to their teams. A raw working session, not a polished demo. The output is both the artifact and the thinking behind it: teams see how a leader breaks down a problem, prompts, iterates, and decides. Builder spirit in practice: building to learn, not building to present.",
           },
         ],
       },
@@ -264,9 +264,9 @@ export const translations = {
         agendaLabel: "Agenda",
         visualLabel: "Visual Identity",
         conceptLabel: "The Concept",
-        conceptText: "The visual concept started by mapping the event's themes and translating them into a single system built to move at the pace of the summit itself: a dynamic grid and generous negative space, flexible enough to hold seven different talks under one voice. The result reads as dynamism and modernity — a language designed to energize a team of roughly 500 people.",
+        conceptText: "The visual concept started by mapping the event's themes and translating them into a single system built to move at the pace of the summit itself: a dynamic grid and generous negative space, flexible enough to hold seven different talks under one voice. The result reads as dynamism and modernity: a language designed to energize a team of roughly 500 people.",
         evolutionLabel: "The Evolution",
-        evolutionText: "Beyond the event itself, UxEvolve marks a shift in how the team works: raising the bar for craft quality and sharpening design taste across every deliverable. It also signals the evolution toward a unified design role — no longer separating content from visual design, but encouraging every designer to own both as a single practice.",
+        evolutionText: "Beyond the event itself, UxEvolve marks a shift in how the team works: raising the bar for craft quality and sharpening design taste across every deliverable. It also signals the evolution toward a unified design role: no longer separating content from visual design, but encouraging every designer to own both as a single practice.",
         hosts: [
           { name: "Julia Lima", role: "Expert" },
           { name: "Leandro Di Pasquale", role: "Sr. Director" },
@@ -337,7 +337,7 @@ export const translations = {
     nav: { bio: "Works", playground: "Playground", contact: "About & Contact" },
     bio: {
       label: "Bio",
-      p1: "Direção de design guiada por taste e craft, impulsionada por IA. Mais de 20 anos moldando produtos digitais e experiências de branding, formando e conduzindo times de design — liderando fazendo, da estratégia à execução.",
+      p1: "Direção de design guiada por taste e craft, impulsionada por IA. Mais de 20 anos moldando produtos digitais e experiências de branding, formando e conduzindo times de design. Liderando fazendo, da estratégia à execução.",
       p4a: "Fundador da",
       p4b: ".",
       cta: "Entre em contato",
@@ -391,12 +391,12 @@ export const translations = {
     },
     about: {
       intro1:
-        "Com mais de 18 anos de experiência profissional, Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção de produtos digitais e experiências de branding — desde a compreensão da estratégia de negócio até a entrega de protótipos finais.",
+        "Com mais de 18 anos de experiência profissional, Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção de produtos digitais e experiências de branding, desde a compreensão da estratégia de negócio até a entrega de protótipos finais.",
       intro2a: "Movido pela curiosidade, fundador da",
       intro2b:
         ", um estúdio que cria novas soluções de motion e visual usando GenAI para a indústria criativa.",
       quote:
-        "Acredito no poder do craft guiado pelas necessidades do negócio, sempre colaborando com os times para alcançar melhores resultados — seja no design conceitual, em uma abordagem centrada no usuário ou na liderança de times criativos.",
+        "Acredito no poder do craft guiado pelas necessidades do negócio, sempre colaborando com os times para alcançar melhores resultados, seja no design conceitual, em uma abordagem centrada no usuário ou na liderança de times criativos.",
       experienceLabel: "Principais experiências",
       recognitionLabel: "Reconhecimento",
       skills: [
@@ -418,13 +418,13 @@ export const translations = {
         meiuca:
           "Empurrou os limites do design digital e da visão de produto, criando produtos visualmente impressionantes e funcionais que ressoam com os usuários. Liderou o time na entrega de experiências digitais excepcionais através de uma mentalidade estratégica e ambiente criativo colaborativo.",
         descomplica:
-          "Conduziu pesquisas aprofundadas do setor para determinar a direção das experiências de branding e produtos digitais. Criou e liderou o primeiro rebranding da empresa, estabelecendo novo posicionamento e valores. Projetou e construiu design systems, padrões modulares e escaláveis — contratou e construiu times de design, estabelecendo processos e cultura.",
+          "Conduziu pesquisas aprofundadas do setor para determinar a direção das experiências de branding e produtos digitais. Criou e liderou o primeiro rebranding da empresa, estabelecendo novo posicionamento e valores. Projetou e construiu design systems, padrões modulares e escaláveis. Contratou e construiu times de design, estabelecendo processos e cultura.",
         ddb:
           "Liderou o time de design para ultrapassar limites convencionais com conceitos e identidades únicos. Responsável pela conta global de futebol digital da Adidas, criando parte da estrutura do sistema de design modular. Desenvolveu o design system global para a Royal Canin, incluindo fotografia, iconografia e assets digitais.",
         workCo:
           "Liderou projetos de design de produto digital para clientes como Facebook e Santander. Responsável por garantir que o trabalho do time comunicasse com efetividade e alta qualidade, solucionando desafios de negócio e atendendo às necessidades dos usuários em todas as etapas do desenvolvimento.",
         google:
-          "Criou projetos digitais interativos para o Instituto Cultural do Google, incluindo o Performing Arts With Google — uma experiência imersiva em 360° que permite a qualquer pessoa subir ao palco com atores, cantores e dançarinos de renome mundial.",
+          "Criou projetos digitais interativos para o Instituto Cultural do Google, incluindo o Performing Arts With Google, uma experiência imersiva em 360° que permite a qualquer pessoa subir ao palco com atores, cantores e dançarinos de renome mundial.",
       },
     },
     common: {
@@ -496,21 +496,21 @@ export const translations = {
         ],
       },
       artDirection: {
-        intro1: "Uma identidade visual unificada para o Mercado Pago, construída simultaneamente em fotografia, iconografia e 3D. O trabalho consolida e evolui a linguagem criativa da marca em formatos e mercados — garantindo que cada ponto de contato seja coerente, intencional e inegavelmente alinhado à marca na escala da maior fintech da América Latina.",
-        intro2: "Direção de arte atuando em fotografia de campanha ao vivo, assets 3D assistidos por IA e sistemas iconográficos. Abrangendo 11 verticais e 7 países, o projeto define como a marca se apresenta onde quer que apareça — das telas do produto aos visuais de campanha.",
+        intro1: "Uma identidade visual unificada para o Mercado Pago, construída simultaneamente em fotografia, iconografia e 3D. O trabalho consolida e evolui a linguagem criativa da marca em formatos e mercados, garantindo que cada ponto de contato seja coerente, intencional e inegavelmente alinhado à marca na escala da maior fintech da América Latina.",
+        intro2: "Direção de arte atuando em fotografia de campanha ao vivo, assets 3D assistidos por IA e sistemas iconográficos. Abrangendo 11 verticais e 7 países, o projeto define como a marca se apresenta onde quer que apareça, das telas do produto aos visuais de campanha.",
       },
       visualDesign: {
-        intro1: "A evolução visual e criativa da linguagem estética do Mercado Pago — das superfícies de produto às páginas de campanha até o hardware. Um movimento em direção a uma identidade mais assertiva: o amarelo como campo, a tipografia como voz, e o Point como objeto de design.",
-        intro2: "O trabalho aperta como a marca se apresenta na escala da maior fintech da América Latina. Títulos ousados, campos de amarelo saturado e uma UI de produto que trata taxas, dispositivos e checkout como um só sistema — para que cada superfície, de uma página de taxas à tela do Point Smart, fale com o mesmo peso.",
+        intro1: "A evolução visual e criativa da linguagem estética do Mercado Pago, das superfícies de produto às páginas de campanha até o hardware. Um movimento em direção a uma identidade mais assertiva: o amarelo como campo, a tipografia como voz, e o Point como objeto de design.",
+        intro2: "O trabalho aperta como a marca se apresenta na escala da maior fintech da América Latina. Títulos ousados, campos de amarelo saturado e uma UI de produto que trata taxas, dispositivos e checkout como um só sistema, para que cada superfície, de uma página de taxas à tela do Point Smart, fale com o mesmo peso.",
       },
       mpcraft: {
-        intro1: "Um programa de desenvolvimento de liderança criado para os design leads do Mercado Pago, construído sobre uma convicção simples: qualidade coletiva é sistema, não talento. O MPCraft cria as condições — rituais, linguagem e prática compartilhada — para que a excelência em design emerja de forma consistente, não ocasional.",
-        intro2: "O programa opera em duas frentes. A trilha de craft desenvolve julgamento visual e fluência em IA em todo o time. A trilha de liderança forma como os design leads constroem, prototipam e influenciam — ancorando o arquétipo de builder não em aspiração, mas em prática diária.",
+        intro1: "Um programa de desenvolvimento de liderança criado para os design leads do Mercado Pago, construído sobre uma convicção simples: qualidade coletiva é sistema, não talento. O MPCraft cria as condições para que a excelência em design emerja de forma consistente, não ocasional: rituais, linguagem e prática compartilhada.",
+        intro2: "O programa opera em duas frentes. A trilha de craft desenvolve julgamento visual e fluência em IA em todo o time. A trilha de liderança forma como os design leads constroem, prototipam e influenciam, ancorando o arquétipo de builder não em aspiração, mas em prática diária.",
         pillarsLabel: "Pilares de Liderança",
         initiativesLabel: "Iniciativas",
         ritualsLabel: "Rituais",
         agenticLabel: "Liderança Agêntica",
-        agenticIntro: "A próxima camada do MPCraft é operacional: agentes de IA integrados ao dia a dia da liderança — não como ferramentas de produtividade, mas como co-pilotos que ampliam o pensamento, a velocidade e o alcance do design leader.",
+        agenticIntro: "A próxima camada do MPCraft é operacional: agentes de IA integrados ao dia a dia da liderança: não como ferramentas de produtividade, mas como co-pilotos que ampliam o pensamento, a velocidade e o alcance do design leader.",
         agentic: [
           {
             label: "Pensamento Sistêmico",
@@ -518,7 +518,7 @@ export const translations = {
           },
           {
             label: "Geração de Frameworks",
-            body: "Sair de frameworks de tela em branco para scaffolding assistido por IA. Agentes geram estruturas de partida fundamentadas em dados reais do projeto, desafiam premissas herdadas e propõem novos modelos mentais antes de o time se comprometer com uma direção. O objetivo não é remover o pensamento — é começar mais à frente.",
+            body: "Sair de frameworks de tela em branco para scaffolding assistido por IA. Agentes geram estruturas de partida fundamentadas em dados reais do projeto, desafiam premissas herdadas e propõem novos modelos mentais antes de o time se comprometer com uma direção. O objetivo não é remover o pensamento, e sim começar mais à frente.",
           },
           {
             label: "Aceleração de Handoff",
@@ -526,7 +526,7 @@ export const translations = {
           },
           {
             label: "Ideação em Volume",
-            body: "Líderes que usam IA para aumentar dramaticamente a densidade de ideias antes de convergir. Não para substituir o julgamento — para multiplicar a superfície de partida e dar às melhores ideias uma chance real de emergir. O constraint muda: não mais quantas ideias conseguimos gerar, mas quais delas valem de fato a pena perseguir.",
+            body: "Líderes que usam IA para aumentar dramaticamente a densidade de ideias antes de convergir. Não para substituir o julgamento, mas para multiplicar a superfície de partida e dar às melhores ideias uma chance real de emergir. O constraint muda: não mais quantas ideias conseguimos gerar, mas quais delas valem de fato a pena perseguir.",
           },
         ],
         pillars: [
@@ -536,21 +536,21 @@ export const translations = {
           },
           {
             label: "Liderança Hands-On",
-            body: "Design leads que param de projetar perdem contexto e credibilidade. Prototipar, explorar IA e construir proofs-of-concept são atos de liderança — liderar pelo exemplo, não pelo discurso.",
+            body: "Design leads que param de projetar perdem contexto e credibilidade. Prototipar, explorar IA e construir proofs-of-concept são atos de liderança: liderar pelo exemplo, não pelo discurso.",
           },
           {
             label: "Colaboração Radical",
-            body: "O melhor trabalho nasce da colisão de perspectivas. A liderança cria ambientes onde design, produto, engenharia e dados se cruzam — deslocando o foco de quem teve a ideia para como construir a melhor solução.",
+            body: "O melhor trabalho nasce da colisão de perspectivas. A liderança cria ambientes onde design, produto, engenharia e dados se cruzam, deslocando o foco de quem teve a ideia para como construir a melhor solução.",
           },
           {
             label: "Inovação pelo Fazer",
-            body: "Inovação é consequência da experimentação. Mais fazendo, menos discutindo. Líderes constroem clareza construindo — usando a incerteza como motivação, não como desculpa para a inação.",
+            body: "Inovação é consequência da experimentação. Mais fazendo, menos discutindo. Líderes constroem clareza construindo, usando a incerteza como motivação, não como desculpa para a inação.",
           },
         ],
         initiatives: [
           {
             label: "AIAD",
-            body: "Direção de arte orientada por IA com fundamentos racionais. Briefing estruturado, mapeamento de referências, prompts intencionais e validação racional — um framework repetível para decisões criativas assistidas por IA.",
+            body: "Direção de arte orientada por IA com fundamentos racionais. Briefing estruturado, mapeamento de referências, prompts intencionais e validação racional: um framework repetível para decisões criativas assistidas por IA.",
           },
           {
             label: "AIUD",
@@ -564,27 +564,27 @@ export const translations = {
         rituals: [
           {
             label: "Design Tasting",
-            duration: "45 min — semanal",
-            body: "Uma referência. Uma discussão guiada. Um critério compartilhado — aplicado ao trabalho real. Não é um mural de inspiração: é uma sessão semanal onde o time disseca uma única peça em tipografia, fotografia, motion ou design editorial. A pergunta não é 'você gostou?' mas 'por que funciona e o que isso nos ensina?' Com o tempo, o vocabulário acumulado se torna a linguagem criativa compartilhada do time — o padrão pelo qual o trabalho é medido.",
+            duration: "45 min · semanal",
+            body: "Uma referência. Uma discussão guiada. Um critério compartilhado, aplicado ao trabalho real. Não é um mural de inspiração: é uma sessão semanal onde o time disseca uma única peça em tipografia, fotografia, motion ou design editorial. A pergunta não é 'você gostou?' mas 'por que funciona e o que isso nos ensina?' Com o tempo, o vocabulário acumulado se torna a linguagem criativa compartilhada do time: o padrão pelo qual o trabalho é medido.",
           },
           {
             label: "UX Critique",
-            duration: "45 min — mensal",
-            body: "O trabalho do time encontra diagnóstico estruturado. Antes de cada sessão, a IA executa uma análise por categorias do trabalho em revisão — heurísticas, benchmarks, acessibilidade, racional de negócio, premissas. A crítica em si converte reações subjetivas em decisões defensáveis e documentadas. Com o tempo, padrões emergem entre projetos: o feedback deixa de ser opinião individual e se torna conhecimento institucional que o time pode evoluir.",
+            duration: "45 min · mensal",
+            body: "O trabalho do time encontra diagnóstico estruturado. Antes de cada sessão, a IA executa uma análise por categorias do trabalho em revisão: heurísticas, benchmarks, acessibilidade, racional de negócio, premissas. A crítica em si converte reações subjetivas em decisões defensáveis e documentadas. Com o tempo, padrões emergem entre projetos: o feedback deixa de ser opinião individual e se torna conhecimento institucional que o time pode evoluir.",
           },
           {
             label: "Skill Drop",
-            duration: "Async — mensal",
-            body: "10 minutos de contexto, demonstração ao vivo e resultado mensurável — via Loom, direto no Slack. Sem slides, sem reunião. Cada drop mostra uma melhoria real de fluxo de trabalho de um projeto ativo: qual era o problema, como a IA mudou a abordagem, como ficou o resultado. O formato se acumula: uma biblioteca crescente de técnicas do próprio time que qualquer pessoa pode adaptar. Evidência de fluência, não performance de fluência.",
+            duration: "Async · mensal",
+            body: "10 minutos de contexto, demonstração ao vivo e resultado mensurável. Via Loom, direto no Slack. Sem slides, sem reunião. Cada drop mostra uma melhoria real de fluxo de trabalho de um projeto ativo: qual era o problema, como a IA mudou a abordagem, como ficou o resultado. O formato se acumula: uma biblioteca crescente de técnicas do próprio time que qualquer pessoa pode adaptar. Evidência de fluência, não performance de fluência.",
           },
           {
             label: "AI Workflows Clinic",
-            duration: "Mensal — Team Leads",
-            body: "Cada Team Lead documenta e compartilha um fluxo de trabalho real assistido por IA de um projeto ativo. Não é tutorial — é um relato transparente de como a IA mudou como trabalharam, onde ajudou e onde não ajudou. Liderança pelo exemplo: o objetivo é mostrar fluência em IA na prática, construindo uma base de evidências compartilhada sobre o que a IA de fato transforma nessa escala, com essas restrições.",
+            duration: "Mensal · Team Leads",
+            body: "Cada Team Lead documenta e compartilha um fluxo de trabalho real assistido por IA de um projeto ativo. Não é tutorial, e sim um relato transparente de como a IA mudou como trabalharam, onde ajudou e onde não ajudou. Liderança pelo exemplo: o objetivo é mostrar fluência em IA na prática, construindo uma base de evidências compartilhada sobre o que a IA de fato transforma nessa escala, com essas restrições.",
           },
           {
             label: "AI Pair Design",
-            duration: "Mensal — Team Leads",
+            duration: "Mensal · Team Leads",
             body: "Líderes prototipam diretamente com IA e tornam o processo visível para o time. Uma sessão de trabalho bruta, não uma demo polida. O output é o artefato e o pensamento por trás dele: o time vê como o líder quebra um problema, constrói prompts, itera e decide. Espírito builder na prática: construir para aprender, não para apresentar.",
           },
         ],
@@ -596,9 +596,9 @@ export const translations = {
         agendaLabel: "Agenda",
         visualLabel: "Identidade Visual",
         conceptLabel: "O Conceito",
-        conceptText: "O conceito visual partiu do mapeamento dos temas do evento, traduzidos em um único sistema construído para acompanhar o ritmo do próprio encontro: grid dinâmica e espaço negativo generoso, flexível o suficiente para sustentar sete talks diferentes sob uma só voz. O resultado é dinamismo e modernidade — uma linguagem pensada para inspirar um time de cerca de 500 pessoas.",
+        conceptText: "O conceito visual partiu do mapeamento dos temas do evento, traduzidos em um único sistema construído para acompanhar o ritmo do próprio encontro: grid dinâmica e espaço negativo generoso, flexível o suficiente para sustentar sete talks diferentes sob uma só voz. O resultado é dinamismo e modernidade: uma linguagem pensada para inspirar um time de cerca de 500 pessoas.",
         evolutionLabel: "A Evolução",
-        evolutionText: "Mais do que o evento em si, o UxEvolve marca uma mudança na forma de trabalhar do time: elevando a régua de qualidade do craft e refinando o taste de design em cada entrega. Também sinaliza a evolução para um role unificado — sem separar conteúdo de desenho, e sim estimulando que cada designer domine os dois como uma prática só.",
+        evolutionText: "Mais do que o evento em si, o UxEvolve marca uma mudança na forma de trabalhar do time: elevando a régua de qualidade do craft e refinando o taste de design em cada entrega. Também sinaliza a evolução para um role unificado: sem separar conteúdo de desenho, e sim estimulando que cada designer domine os dois como uma prática só.",
         hosts: [
           { name: "Julia Lima", role: "Expert" },
           { name: "Leandro Di Pasquale", role: "Sr. Director" },

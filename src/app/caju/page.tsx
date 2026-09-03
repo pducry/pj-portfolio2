@@ -75,7 +75,7 @@ function GalleryBlock({
           <div className="border-b border-border">
             <GalleryImage
               src={img.src}
-              alt={`Caju — app redesign ${i + 1}`}
+              alt={`Caju: app redesign ${i + 1}`}
               width={img.width}
               height={img.height}
             />

@@ -29,7 +29,7 @@ const subProjects = [
     role: "Design Manager",
     href: "/mercado-pago/ux-evolve-2026",
   },
-  // Unpublished — kept in src/app/mercado-pago/_motion-foundations
+  // Unpublished: kept in src/app/mercado-pago/_motion-foundations
   // {
   //   year: "2026",
   //   category: "Design System",

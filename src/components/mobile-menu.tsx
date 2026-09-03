@@ -135,7 +135,7 @@ export function MobileMenu() {
 
   return (
     <>
-      {/* Hamburger — lg:hidden keeps it mobile-only; no display in inline style to avoid override */}
+      {/* Hamburger: lg:hidden keeps it mobile-only; no display in inline style to avoid override */}
       <button
         onClick={() => setOpen((v) => !v)}
         className="lg:hidden flex flex-col justify-center items-center"
@@ -148,7 +148,7 @@ export function MobileMenu() {
         <span style={{ display: "block", height: 1, width: 20, backgroundColor: fg, transformOrigin: "center", transition: "all 0.3s", transform: open ? "translateY(-9px) rotate(-45deg)" : "none" }} />
       </button>
 
-      {/* Portal — renders directly in document.body, bypasses all stacking contexts */}
+      {/* Portal: renders directly in document.body, bypasses all stacking contexts */}
       {domReady && open && createPortal(menu, document.body)}
     </>
   );

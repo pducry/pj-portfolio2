@@ -43,7 +43,7 @@ function UxEvolveContent() {
         </div>
       </div>
 
-      {/* Video 1 — highlight reel */}
+      {/* Video 1: highlight reel */}
       <Reveal>
         <div className="mt-16 border-t border-b border-border">
           <video
@@ -70,7 +70,7 @@ function UxEvolveContent() {
           </div>
         </Reveal>
 
-        {/* Video 2 — separator */}
+        {/* Video 2: separator */}
         <Reveal>
           <div className="border-b border-border">
             <video

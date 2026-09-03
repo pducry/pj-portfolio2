@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-// Inertia scroll — lerp-based, frame-rate independent.
+// Inertia scroll: lerp-based, frame-rate independent.
 // The viewport smoothly "chases" the wheel target each frame,
 // giving a weighted, drifting feel. SMOOTHING: 0.06 heavy → 0.13 snappy.
 const SMOOTHING = 0.09;

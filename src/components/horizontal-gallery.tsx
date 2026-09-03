@@ -252,7 +252,7 @@ export function HorizontalGallery({ columns = 3, gap = 12 }: HorizontalGalleryPr
             close();
           }}
         >
-          {/* Custom cursor — desktop only */}
+          {/* Custom cursor: desktop only */}
           {isDesktop && (
             <div
               className="pointer-events-none fixed z-[60]"

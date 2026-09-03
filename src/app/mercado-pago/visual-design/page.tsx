@@ -84,7 +84,7 @@ function VisualDesignContent() {
           <div className="border-b border-border">
             <GalleryImage
               src="/projects/visual-design/vd_02.png"
-              alt="Visual Design — Mercado Pago visual"
+              alt="Visual Design: Mercado Pago visual"
               width={1920}
               height={1227}
             />
@@ -95,7 +95,7 @@ function VisualDesignContent() {
           <div className="border-b border-border">
             <GalleryImage
               src="/projects/visual-design/vd_04.png"
-              alt="Visual Design — Mercado Pago visual"
+              alt="Visual Design: Mercado Pago visual"
               width={1920}
               height={1227}
             />
@@ -106,7 +106,7 @@ function VisualDesignContent() {
           <div className="border-b border-border">
             <GalleryImage
               src="/projects/visual-design/vd_06.png"
-              alt="Visual Design — Mercado Pago visual"
+              alt="Visual Design: Mercado Pago visual"
               width={2880}
               height={1841}
             />
@@ -117,7 +117,7 @@ function VisualDesignContent() {
           <div className="border-b border-border">
             <GalleryImage
               src="/projects/visual-design/vd_07.png"
-              alt="Visual Design — Mercado Pago visual"
+              alt="Visual Design: Mercado Pago visual"
               width={1920}
               height={1080}
             />
@@ -128,7 +128,7 @@ function VisualDesignContent() {
           <div className="border-b border-border">
             <GalleryImage
               src="/projects/visual-design/vd_08.png"
-              alt="Visual Design — Mercado Pago visual"
+              alt="Visual Design: Mercado Pago visual"
               width={1920}
               height={1080}
             />

@@ -56,7 +56,7 @@ export function AutoCarousel() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Swap image directly on DOM node — no React re-render, no browser transition
+  // Swap image directly on DOM node: no React re-render, no browser transition
   useEffect(() => {
     const el = imgRef.current;
     if (!el) return;
