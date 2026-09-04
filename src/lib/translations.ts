@@ -326,6 +326,15 @@ export const translations = {
         desc3:      "Clean space, deliberate typography, and a soft color system that signals calm without being passive. Built for real life.",
         descMobile: "A wellness app designed to help people build sustainable mindfulness habits.",
       },
+      descomplica: {
+        desc1:      "Descomplica is one of Brazil's leading education startups, born to democratize access to quality learning through technology. What started as online exam prep grew into a full education platform, reaching students at scale across the country with an approach that challenges how traditional education looks, sounds and feels.",
+        desc2:      "As Design Manager from 2019 to 2024, I was responsible for the direction of branding experiences and digital products, from research and positioning to design systems and the teams that build them.",
+        brand1:     "The work began with thorough industry research to understand where the brand should stand, what education in Brazil was missing and what it could become.",
+        brand2:     "From that research I created and led the company's first branding refresh: a new positioning and a new set of values, translated into a visual world that is bold, diverse and unapologetically young.",
+        campaign1:  "The brand had to live where students live: on the street, on the phone, on the way to somewhere. The campaign imagery embraces color, movement and real people, turning studying into something that belongs to everyday life rather than to a classroom.",
+        system1:    "To keep that energy consistent across products, I designed and built the design systems behind it: modular, scalable patterns that let branding and digital product teams move fast without losing coherence.",
+        system2:    "Along the way I hired and built the design teams, setting the process and culture that allowed the brand and the product to keep evolving together.",
+      },
       myPhone: {
         desc1: "My Phone is a branding project exploring the visual identity of a personal device brand, built around the idea that technology should feel human, tactile, and distinctly yours.",
         desc2: "The work covers brand identity, visual language, typography, and art direction, designed to feel bold and minimal at the same time.",
@@ -657,6 +666,15 @@ export const translations = {
         desc2:      "Organiza práticas diárias de bem-estar em rotinas digeríveis usando prompts gentis e feedback visual claro. Cada interação reduz o atrito para que hábitos saudáveis pareçam fáceis de iniciar e manter.",
         desc3:      "Espaço limpo, tipografia deliberada e um sistema de cores suave que sinaliza calma sem ser passivo. Construído para a vida real.",
         descMobile: "Um app de bem-estar projetado para ajudar pessoas a construir hábitos sustentáveis de mindfulness.",
+      },
+      descomplica: {
+        desc1:      "A Descomplica é uma das principais startups de educação do Brasil, nascida para democratizar o acesso a um ensino de qualidade por meio da tecnologia. O que começou como preparação online para vestibulares cresceu para uma plataforma completa de educação, alcançando estudantes em escala por todo o país com uma abordagem que desafia a forma como a educação tradicional se apresenta.",
+        desc2:      "Como Design Manager de 2019 a 2024, fui responsável pela direção das experiências de marca e dos produtos digitais, da pesquisa e do posicionamento aos design systems e aos times que os constroem.",
+        brand1:     "O trabalho começou com uma pesquisa aprofundada do setor para entender onde a marca deveria se posicionar, o que faltava na educação brasileira e no que ela poderia se transformar.",
+        brand2:     "A partir dessa pesquisa, criei e liderei o primeiro rebranding da empresa: um novo posicionamento e um novo conjunto de valores, traduzidos em um universo visual ousado, diverso e assumidamente jovem.",
+        campaign1:  "A marca precisava viver onde os estudantes vivem: na rua, no celular, a caminho de algum lugar. As imagens de campanha abraçam cor, movimento e pessoas reais, transformando o estudo em algo que pertence ao dia a dia, e não apenas à sala de aula.",
+        system1:    "Para manter essa energia consistente entre os produtos, projetei e construí os design systems por trás dela: padrões modulares e escaláveis que permitem aos times de marca e de produto digital avançar rápido sem perder coerência.",
+        system2:    "Ao longo do caminho, contratei e construí os times de design, estabelecendo o processo e a cultura que permitiram que marca e produto continuassem evoluindo juntos.",
       },
       myPhone: {
         desc1: "My Phone é um projeto de branding que explora a identidade visual de uma marca de dispositivo pessoal, construído em torno da ideia de que a tecnologia deve parecer humana, tátil e inconfundivelmente sua.",
