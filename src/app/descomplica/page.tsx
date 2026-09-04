@@ -124,7 +124,7 @@ function DescomplicaContent() {
           </div>
         </Reveal>
 
-        <TextBlock paragraphs={[c.campaign1]} />
+        <TextBlock paragraphs={[c.campaign1, c.campaign2]} />
 
         {/* Two portrait shots side by side on desktop, stacked on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
