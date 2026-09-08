@@ -9,14 +9,24 @@ import { asset } from "@/lib/asset";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 
-function GalleryImage({ src, alt }: { src: string; alt: string }) {
+function GalleryImage({
+  src,
+  alt,
+  width = 1920,
+  height = 1080,
+}: {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}) {
   return (
     <div className="overflow-hidden w-full">
       <Image
         src={asset(src)}
         alt={alt}
-        width={1920}
-        height={1080}
+        width={width}
+        height={height}
         className="w-full h-auto object-cover"
         sizes="(max-width: 1024px) 100vw, 50vw"
       />
@@ -59,7 +69,7 @@ function ArtDirectionContent() {
         </div>
       </div>
 
-      {/* Gallery: rhythm: full / 2col / full / 2col / full / full */}
+      {/* Gallery: rhythm: full / 2col / full / 2col / full / full / 2col / 2col */}
       <div className="mt-16 border-t border-border">
 
         {/* 7: full width hero */}
@@ -111,6 +121,30 @@ function ArtDirectionContent() {
         <Reveal>
           <div className="border-b border-border">
             <GalleryImage src="/projects/art-direction/ad_08.png" alt="Art Direction: MP app splash" />
+          </div>
+        </Reveal>
+
+        {/* 9+10: two columns */}
+        <Reveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
+            <div className="border-b lg:border-b-0 lg:border-r border-border">
+              <GalleryImage src="/projects/art-direction/ad_09.jpg" alt="Art Direction: Card pulled from a handbag" width={1384} height={1032} />
+            </div>
+            <div>
+              <GalleryImage src="/projects/art-direction/ad_10.jpg" alt="Art Direction: Phone on a packed suitcase" width={1385} height={969} />
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 11+12: two columns */}
+        <Reveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
+            <div className="border-b lg:border-b-0 lg:border-r border-border">
+              <GalleryImage src="/projects/art-direction/ad_11.jpg" alt="Art Direction: Laptop at the airport window" width={1372} height={959} />
+            </div>
+            <div>
+              <GalleryImage src="/projects/art-direction/ad_12.jpg" alt="Art Direction: App in hand inside a car" width={1380} height={964} />
+            </div>
           </div>
         </Reveal>
 
