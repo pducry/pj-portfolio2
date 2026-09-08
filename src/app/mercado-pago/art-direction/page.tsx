@@ -69,7 +69,7 @@ function ArtDirectionContent() {
         </div>
       </div>
 
-      {/* Gallery: rhythm: full / 2col / full / 2col / full / 2col / 2col */}
+      {/* Gallery: rhythm: full / 2col / 2col / full / 2col / 2col */}
       <div className="mt-16 border-t border-border">
 
         {/* 7: full width hero */}
@@ -88,13 +88,6 @@ function ArtDirectionContent() {
             <div>
               <GalleryImage src="/projects/art-direction/ad_02.png" alt="Art Direction: Card on plate" />
             </div>
-          </div>
-        </Reveal>
-
-        {/* 3: full width */}
-        <Reveal>
-          <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_03.png" alt="Art Direction: Pix transfer" />
           </div>
         </Reveal>
 
