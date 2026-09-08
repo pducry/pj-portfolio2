@@ -69,7 +69,7 @@ function ArtDirectionContent() {
         </div>
       </div>
 
-      {/* Gallery: rhythm: full / 2col / 2col / full / 2col / 2col */}
+      {/* Gallery: rhythm: full / 2col / 2col / full / 2col / 2col / text / full x3 */}
       <div className="mt-16 border-t border-border">
 
         {/* 7: full width hero */}
@@ -131,6 +131,34 @@ function ArtDirectionContent() {
             <div>
               <GalleryImage src="/projects/art-direction/ad_12.jpg" alt="Art Direction: App in hand inside a car" width={1380} height={964} />
             </div>
+          </div>
+        </Reveal>
+
+        {/* Image generator: rationale + three interface screens */}
+        <div className="px-6 border-b border-border py-6">
+          <span className="text-sm text-muted">{ad.toolLabel}</span>
+          <div className="mt-3 max-w-xl space-y-3">
+            <p className="text-base leading-snug text-foreground/70">{ad.tool1}</p>
+            <p className="text-base leading-snug text-foreground/70">{ad.tool2}</p>
+            <p className="text-base leading-snug text-foreground/70">{ad.tool3}</p>
+          </div>
+        </div>
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_tool_01.jpg" alt="Image generator: category, audience and theme for individuals" width={2400} height={1296} />
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_tool_02.jpg" alt="Image generator: category, audience and theme for sellers" width={2400} height={1296} />
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_tool_03.jpg" alt="Image generator: advanced filters for camera angles and framing" width={2400} height={1296} />
           </div>
         </Reveal>
 
