@@ -146,19 +146,19 @@ function ArtDirectionContent() {
 
         <Reveal>
           <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_tool_01.jpg" alt="Image generator: category, audience and theme for individuals" width={2400} height={1296} />
+            <GalleryImage src="/projects/art-direction/ad_ui_01.jpg" alt="Image generator: category, audience and theme for individuals" width={1600} height={900} />
           </div>
         </Reveal>
 
         <Reveal>
           <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_tool_02.jpg" alt="Image generator: category, audience and theme for sellers" width={2400} height={1296} />
+            <GalleryImage src="/projects/art-direction/ad_ui_02.jpg" alt="Image generator: category, audience and theme for sellers" width={1600} height={900} />
           </div>
         </Reveal>
 
         <Reveal>
           <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_tool_03.jpg" alt="Image generator: advanced filters for camera angles and framing" width={2400} height={1296} />
+            <GalleryImage src="/projects/art-direction/ad_ui_03.jpg" alt="Image generator: advanced filters for camera angles and framing" width={1600} height={900} />
           </div>
         </Reveal>
 
