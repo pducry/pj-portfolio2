@@ -74,12 +74,19 @@ const images = [
   { src: "/gallery/pj_061.png", alt: "Project" },
   { src: "/gallery/pj_062.png", alt: "Project" },
   { src: "/gallery/pj_063.png", alt: "Project" },
-  { src: "/gallery/pj_064.png", alt: "Project" },
   { src: "/gallery/pj_065.png", alt: "Project" },
   { src: "/gallery/pj_067.png", alt: "Project" },
   { src: "/gallery/pj_068.png", alt: "Project" },
   { src: "/gallery/Play3.png", alt: "Project" },
   { src: "/gallery/Play4.png", alt: "Project" },
+  { src: "/gallery/my-phone-1.png", alt: "My Phone" },
+  { src: "/gallery/my-phone-2.png", alt: "My Phone" },
+  { src: "/gallery/my-phone-3.png", alt: "My Phone" },
+  { src: "/gallery/my-phone-4.png", alt: "My Phone" },
+  { src: "/gallery/my-phone-5.png", alt: "My Phone" },
+  { src: "/gallery/my-phone-6.png", alt: "My Phone" },
+  { src: "/gallery/my-phone-7.jpg", alt: "My Phone" },
+  { src: "/gallery/my-phone-8.jpg", alt: "My Phone" },
 ];
 
 function shuffle<T>(arr: T[]): T[] {

@@ -344,10 +344,6 @@ export const translations = {
         desc1: "Estapar is one of Brazil's largest parking and urban mobility companies, operating parking facilities, on-street solutions and digital services for drivers, businesses and cities across the country.",
         desc2: "Redesign of the company's website. The work brings a clearer structure to a broad portfolio of services, a more confident visual language and a mobile-first experience, turning the site into a real entry point for drivers, partners and businesses.",
       },
-      myPhone: {
-        desc1: "My Phone is a branding project exploring the visual identity of a personal device brand, built around the idea that technology should feel human, tactile, and distinctly yours.",
-        desc2: "The work covers brand identity, visual language, typography, and art direction, designed to feel bold and minimal at the same time.",
-      },
     },
     copyright: "© Pedro Julien 2026",
   },
@@ -693,10 +689,6 @@ export const translations = {
       estapar: {
         desc1: "A Estapar é uma das maiores empresas de estacionamento e mobilidade urbana do Brasil, operando estacionamentos, soluções de rua e serviços digitais para motoristas, empresas e cidades em todo o país.",
         desc2: "Redesign do website da empresa. O trabalho traz uma estrutura mais clara para um portfólio amplo de serviços, uma linguagem visual mais confiante e uma experiência mobile-first, transformando o site em uma porta de entrada real para motoristas, parceiros e empresas.",
-      },
-      myPhone: {
-        desc1: "My Phone é um projeto de branding que explora a identidade visual de uma marca de dispositivo pessoal, construído em torno da ideia de que a tecnologia deve parecer humana, tátil e inconfundivelmente sua.",
-        desc2: "O trabalho abrange identidade de marca, linguagem visual, tipografia e direção de arte, projetado para parecer ao mesmo tempo ousado e mínimo.",
       },
     },
     copyright: "© Pedro Julien 2026",
