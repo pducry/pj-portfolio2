@@ -85,11 +85,9 @@ export default function Contact() {
             <span className="text-foreground font-medium">FFForma</span>
             {a.intro2b}
           </p>
-          <blockquote className="border-l border-border pl-4 pt-1">
-            <p className="text-lg lg:text-[22px] leading-relaxed text-muted italic">
-              "{a.quote}"
-            </p>
-          </blockquote>
+          <p className="pt-1 text-lg lg:text-[22px] leading-relaxed text-muted italic">
+            {a.quote}
+          </p>
         </div>
       </div>
 
