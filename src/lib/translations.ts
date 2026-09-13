@@ -340,6 +340,10 @@ export const translations = {
         system1:    "On the product side, I drove the design of the learning platform and built the design systems behind it: modular, scalable patterns that let branding, landing pages and digital product move fast without losing coherence.",
         system2:    "None of it holds without people. I hired, created and organized the design teams, defining roles, rituals and critique culture, so that the level of craft kept rising as the company grew, and brand and product kept evolving together.",
       },
+      estapar: {
+        desc1: "Estapar is one of Brazil's largest parking and urban mobility companies, operating parking facilities, on-street solutions and digital services for drivers, businesses and cities across the country.",
+        desc2: "Redesign of the company's website. The work brings a clearer structure to a broad portfolio of services, a more confident visual language and a mobile-first experience, turning the site into a real entry point for drivers, partners and businesses.",
+      },
       myPhone: {
         desc1: "My Phone is a branding project exploring the visual identity of a personal device brand, built around the idea that technology should feel human, tactile, and distinctly yours.",
         desc2: "The work covers brand identity, visual language, typography, and art direction, designed to feel bold and minimal at the same time.",
@@ -685,6 +689,10 @@ export const translations = {
         campaign2:  "Essa mesma linguagem precisava converter. Fui responsável pela estratégia e execução das landing pages, o ponto onde a marca encontra a aquisição: estrutura, hierarquia de mensagem, sistema visual e ciclos de iteração construídos em torno do que de fato movia as matrículas.",
         system1:    "No lado do produto, conduzi o design da plataforma de ensino e construí os design systems por trás dela: padrões modulares e escaláveis que permitem que marca, landing pages e produto digital avancem rápido sem perder coerência.",
         system2:    "Nada disso se sustenta sem pessoas. Contratei, criei e organizei os times de design, definindo papéis, rituais e cultura de crítica, para que o nível de craft continuasse subindo conforme a empresa crescia, e marca e produto seguissem evoluindo juntos.",
+      },
+      estapar: {
+        desc1: "A Estapar é uma das maiores empresas de estacionamento e mobilidade urbana do Brasil, operando estacionamentos, soluções de rua e serviços digitais para motoristas, empresas e cidades em todo o país.",
+        desc2: "Redesign do website da empresa. O trabalho traz uma estrutura mais clara para um portfólio amplo de serviços, uma linguagem visual mais confiante e uma experiência mobile-first, transformando o site em uma porta de entrada real para motoristas, parceiros e empresas.",
       },
       myPhone: {
         desc1: "My Phone é um projeto de branding que explora a identidade visual de uma marca de dispositivo pessoal, construído em torno da ideia de que a tecnologia deve parecer humana, tátil e inconfundivelmente sua.",
