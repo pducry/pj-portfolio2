@@ -325,10 +325,11 @@ export const translations = {
         desc: "Foracle is a free font recommendation platform built on human and AI curation. Designed to give back to the design community, type designers, typographers, and font enthusiasts, by surfacing and amplifying the best free typefaces from around the world.",
       },
       mude: {
-        desc1:      "Mude is a wellness app designed to help people build sustainable mindfulness habits. Motivating and calm, encouraging consistency without adding pressure.",
-        desc2:      "Organizes daily wellness practices into digestible routines using gentle prompts and clear visual feedback. Every interaction reduces friction so healthy habits feel effortless to start and maintain.",
-        desc3:      "Clean space, deliberate typography, and a soft color system that signals calm without being passive. Built for real life.",
-        descMobile: "A wellness app designed to help people build sustainable mindfulness habits.",
+        desc1:       "Mude is a Brazilian well-being ecosystem built around one idea: turning cities into spaces for wellness. Through the app and its outdoor spaces it offers free yoga, fitness, meditation and sports, live and on demand, funded by partner brands rather than by the people who practice.",
+        desc2:       "As Head of Design, I led the redesign of the app experience: a calmer, more editorial product that organizes practice into journeys and seasons, connects people to in-person experiences, and makes healthy habits feel effortless to start and to keep.",
+        experience1: "Onboarding asks for a commitment before it asks for data. Press and hold for five seconds, say what matters most right now, and the experience is customized from there. Journeys, seasons and live experiences give practice a narrative instead of a checklist.",
+        identity1:   "The identity sets the tone. A soft serif for the moments that ask for presence, a plain grotesk for everything functional, and a single vivid yellow reserved for the next step. Light surfaces for orientation, dark surfaces for immersion.",
+        system1:     "Underneath, a component system keeps the product consistent across light and dark: navigation, cards, players and calls to action defined once and reused everywhere, so the team can ship new journeys without redesigning the app.",
       },
       descomplica: {
         desc1:      "Descomplica is one of Brazil's leading education startups, born to democratize access to quality learning through technology. What started as online exam prep grew into a full education platform, reaching students at scale across the country with an approach that challenges how traditional education looks, sounds and feels.",
@@ -671,10 +672,11 @@ export const translations = {
         desc: "Foracle é uma plataforma gratuita de recomendação de fontes construída sobre curadoria humana e de IA. Criada para retribuir à comunidade de design, tipógrafos, designers de tipos e entusiastas de fontes, divulgando e amplificando as melhores typefaces gratuitas do mundo.",
       },
       mude: {
-        desc1:      "Mude é um app de bem-estar projetado para ajudar pessoas a construir hábitos sustentáveis de mindfulness. Motivador e calmo, encorajando consistência sem adicionar pressão.",
-        desc2:      "Organiza práticas diárias de bem-estar em rotinas digeríveis usando prompts gentis e feedback visual claro. Cada interação reduz o atrito para que hábitos saudáveis pareçam fáceis de iniciar e manter.",
-        desc3:      "Espaço limpo, tipografia deliberada e um sistema de cores suave que sinaliza calma sem ser passivo. Construído para a vida real.",
-        descMobile: "Um app de bem-estar projetado para ajudar pessoas a construir hábitos sustentáveis de mindfulness.",
+        desc1:       "A Mude é um ecossistema brasileiro de bem-estar construído em torno de uma ideia: transformar cidades em espaços de bem-estar. Pelo app e por seus espaços ao ar livre, oferece yoga, fitness, meditação e esportes gratuitos, ao vivo e on demand, financiados por marcas parceiras e não por quem pratica.",
+        desc2:       "Como Head of Design, liderei o redesign da experiência do app: um produto mais calmo e editorial, que organiza a prática em jornadas e temporadas, conecta pessoas a experiências presenciais e faz hábitos saudáveis parecerem fáceis de começar e de manter.",
+        experience1: "O onboarding pede um compromisso antes de pedir dados. Pressione por cinco segundos, diga o que mais importa agora, e a experiência é personalizada a partir daí. Jornadas, temporadas e experiências ao vivo dão à prática uma narrativa em vez de uma lista de tarefas.",
+        identity1:   "A identidade dá o tom. Uma serifa suave para os momentos que pedem presença, uma grotesca simples para tudo que é funcional, e um único amarelo vivo reservado ao próximo passo. Superfícies claras para orientação, escuras para imersão.",
+        system1:     "Por baixo, um sistema de componentes mantém o produto consistente entre claro e escuro: navegação, cards, players e chamadas para ação definidos uma vez e reutilizados em tudo, para que o time lance novas jornadas sem redesenhar o app.",
       },
       descomplica: {
         desc1:      "A Descomplica é uma das principais startups de educação do Brasil, nascida para democratizar o acesso a um ensino de qualidade por meio da tecnologia. O que começou como preparação online para vestibulares cresceu para uma plataforma completa de educação, alcançando estudantes em escala por todo o país com uma abordagem que desafia a forma como a educação tradicional se apresenta.",
