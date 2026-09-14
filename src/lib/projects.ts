@@ -14,5 +14,4 @@ export const projects: Project[] = [
   { category: "Product Design", year: "2024", name: "Estapar",                   role: "Head of Design",  href: "/estapar"   },
   { category: "Product Design", year: "2026", name: "Artas",                     role: "Designer",        href: "/artas"     },
   { category: "Branding",       year: "2022", name: "Descomplica",              role: "Design Manager",  href: "/descomplica" },
-  { category: "Design System",  year: "2018", name: "Royal Canin Design System", role: "Head of Design"  },
 ];

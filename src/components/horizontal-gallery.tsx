@@ -87,6 +87,10 @@ const images = [
   { src: "/gallery/my-phone-6.png", alt: "My Phone" },
   { src: "/gallery/my-phone-7.jpg", alt: "My Phone" },
   { src: "/gallery/my-phone-8.jpg", alt: "My Phone" },
+  { src: "/gallery/rc-1.jpg", alt: "Royal Canin" },
+  { src: "/gallery/rc-2.jpg", alt: "Royal Canin" },
+  { src: "/gallery/rc-3.jpg", alt: "Royal Canin" },
+  { src: "/gallery/rc-4.jpg", alt: "Royal Canin" },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
