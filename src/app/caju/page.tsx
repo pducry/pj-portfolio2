@@ -11,7 +11,7 @@ import { translations } from "@/lib/translations";
 
 const imagesLead = [
   { src: "/projects/caju/Caju1.png", width: 2320, height: 1536 },
-  { src: "/projects/caju/caju-spacing.webp", width: 2320, height: 1536 },
+  { src: "/projects/caju/Caju4.png", width: 2320, height: 1536 },
 ];
 
 const imagesDynamics = [
