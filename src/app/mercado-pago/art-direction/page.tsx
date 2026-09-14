@@ -117,7 +117,7 @@ function ArtDirectionContent() {
               <GalleryImage src="/projects/art-direction/ad_09.jpg" alt="Art Direction: Card pulled from a handbag" width={1384} height={1032} />
             </div>
             <div>
-              <GalleryImage src="/projects/art-direction/ad_10.jpg" alt="Art Direction: Phone on a packed suitcase" width={1385} height={969} />
+              <GalleryImage src="/projects/art-direction/ad_10.jpg" alt="Art Direction: Phone on a packed suitcase" width={1299} height={969} />
             </div>
           </div>
         </Reveal>
