@@ -14,20 +14,23 @@ function GalleryImage({
   alt,
   width = 1920,
   height = 1080,
+  fillCell = false,
 }: {
   src: string;
   alt: string;
   width?: number;
   height?: number;
+  /** In two-column rows: stretch to the cell height and crop, so both images align. */
+  fillCell?: boolean;
 }) {
   return (
-    <div className="overflow-hidden w-full">
+    <div className={fillCell ? "overflow-hidden w-full h-full" : "overflow-hidden w-full"}>
       <Image
         src={asset(src)}
         alt={alt}
         width={width}
         height={height}
-        className="w-full h-auto object-cover"
+        className={fillCell ? "w-full h-full object-cover" : "w-full h-auto object-cover"}
         sizes="(max-width: 1024px) 100vw, 50vw"
       />
     </div>
@@ -83,10 +86,10 @@ function ArtDirectionContent() {
         <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
             <div className="border-b lg:border-b-0 lg:border-r border-border">
-              <GalleryImage src="/projects/art-direction/ad_01.png" alt="Art Direction: NFC payment" />
+              <GalleryImage src="/projects/art-direction/ad_01.png" alt="Art Direction: NFC payment" fillCell />
             </div>
             <div>
-              <GalleryImage src="/projects/art-direction/ad_02.png" alt="Art Direction: Card on plate" />
+              <GalleryImage src="/projects/art-direction/ad_02.png" alt="Art Direction: Card on plate" fillCell />
             </div>
           </div>
         </Reveal>
@@ -95,10 +98,10 @@ function ArtDirectionContent() {
         <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
             <div className="border-b lg:border-b-0 lg:border-r border-border">
-              <GalleryImage src="/projects/art-direction/ad_04.png" alt="Art Direction: Phone on towel" />
+              <GalleryImage src="/projects/art-direction/ad_04.png" alt="Art Direction: Phone on towel" fillCell />
             </div>
             <div>
-              <GalleryImage src="/projects/art-direction/ad_05.png" alt="Art Direction: Laptop lifestyle" />
+              <GalleryImage src="/projects/art-direction/ad_05.png" alt="Art Direction: Laptop lifestyle" fillCell />
             </div>
           </div>
         </Reveal>
@@ -114,10 +117,10 @@ function ArtDirectionContent() {
         <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
             <div className="border-b lg:border-b-0 lg:border-r border-border">
-              <GalleryImage src="/projects/art-direction/ad_09.jpg" alt="Art Direction: Card pulled from a handbag" width={1384} height={1032} />
+              <GalleryImage src="/projects/art-direction/ad_09.jpg" alt="Art Direction: Card pulled from a handbag" width={1384} height={1032} fillCell />
             </div>
             <div>
-              <GalleryImage src="/projects/art-direction/ad_10.jpg" alt="Art Direction: Phone on a packed suitcase" width={1299} height={969} />
+              <GalleryImage src="/projects/art-direction/ad_10.jpg" alt="Art Direction: Phone on a packed suitcase" width={1299} height={969} fillCell />
             </div>
           </div>
         </Reveal>
@@ -126,10 +129,10 @@ function ArtDirectionContent() {
         <Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
             <div className="border-b lg:border-b-0 lg:border-r border-border">
-              <GalleryImage src="/projects/art-direction/ad_11.jpg" alt="Art Direction: Laptop at the airport window" width={1372} height={959} />
+              <GalleryImage src="/projects/art-direction/ad_11.jpg" alt="Art Direction: Laptop at the airport window" width={1372} height={959} fillCell />
             </div>
             <div>
-              <GalleryImage src="/projects/art-direction/ad_12.jpg" alt="Art Direction: App in hand inside a car" width={1380} height={964} />
+              <GalleryImage src="/projects/art-direction/ad_12.jpg" alt="Art Direction: App in hand inside a car" width={1380} height={964} fillCell />
             </div>
           </div>
         </Reveal>
