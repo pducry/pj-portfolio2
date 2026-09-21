@@ -72,7 +72,7 @@ function ArtDirectionContent() {
         </div>
       </div>
 
-      {/* Gallery: rhythm: full / 2col / 2col / full / 2col / 2col / text / 3col */}
+      {/* Gallery: rhythm: full / 2col / 2col / full / 2col / 2col / text / 2col / 2col */}
       <div className="mt-16 border-t border-border">
 
         {/* 7: full width hero */}
@@ -147,18 +147,25 @@ function ArtDirectionContent() {
           </div>
         </div>
 
-        {/* ui_01 + ui_02 + ui_03: three columns */}
+        {/* ui_01 + ui_02: two columns */}
         <Reveal>
-          <div className="grid grid-cols-1 lg:grid-cols-3 border-b border-border">
+          <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
             <div className="border-b lg:border-b-0 lg:border-r border-border">
               <GalleryImage src="/projects/art-direction/ad_ui_01.jpg" alt="Image generator: category, audience and theme for individuals" width={1600} height={900} fillCell />
             </div>
-            <div className="border-b lg:border-b-0 lg:border-r border-border">
+            <div>
               <GalleryImage src="/projects/art-direction/ad_ui_02.jpg" alt="Image generator: category, audience and theme for sellers" width={1600} height={900} fillCell />
             </div>
-            <div>
+          </div>
+        </Reveal>
+
+        {/* ui_03 + (fourth screen to come): two columns, right cell empty for now */}
+        <Reveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
+            <div className="lg:border-r border-border">
               <GalleryImage src="/projects/art-direction/ad_ui_03.jpg" alt="Image generator: advanced filters for camera angles and framing" width={1600} height={900} fillCell />
             </div>
+            <div />
           </div>
         </Reveal>
 
