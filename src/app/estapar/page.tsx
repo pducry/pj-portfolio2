@@ -75,6 +75,21 @@ function TwoCol({ imgs }: { imgs: readonly [Img, Img] }) {
   );
 }
 
+function TextBlock({ label, paragraphs }: { label?: string; paragraphs: readonly string[] }) {
+  return (
+    <div className="px-6 border-b border-border py-6">
+      {label && <span className="text-sm text-muted">{label}</span>}
+      <div className={label ? "mt-3 max-w-xl space-y-3" : "max-w-xl space-y-3"}>
+        {paragraphs.map((p) => (
+          <p key={p} className="text-base leading-snug text-foreground/70">
+            {p}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function EstaparContent() {
   const { lang } = useLang();
   const t = translations[lang];
@@ -104,6 +119,7 @@ function EstaparContent() {
         <div className="max-w-xl space-y-3">
           <p className="text-base leading-snug text-foreground/70">{c.desc1}</p>
           <p className="text-base leading-snug text-foreground/70">{c.desc2}</p>
+          <p className="text-base leading-snug text-foreground/70">{c.role1}</p>
         </div>
       </div>
 
@@ -122,21 +138,30 @@ function EstaparContent() {
         </Reveal>
 
         {/* Navigation: the Solutions menu that organizes the service portfolio */}
+        <TextBlock paragraphs={[c.nav1, c.nav2]} />
+
         <Reveal>
           <div className="border-b border-border">
             <GalleryImage img={imgDropdown} />
           </div>
         </Reveal>
 
-        {/* Zul+ landing page and app section */}
+        {/* Visual update: Zul+ landing page and app section */}
+        <TextBlock paragraphs={[c.visual1, c.visual2]} />
+
         <TwoCol imgs={imgsZul} />
 
-        {/* Content: full article page */}
-        <Reveal>
-          <div className="border-b border-border">
-            <GalleryImage img={imgArticle} />
-          </div>
-        </Reveal>
+        {/* Repositioning: content. Article on the left, right cell reserved for the next screen */}
+        <TextBlock paragraphs={[c.brand1, c.brand2]} />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
+          <Reveal>
+            <div className="md:border-r border-border">
+              <GalleryImage img={imgArticle} twoCol />
+            </div>
+          </Reveal>
+          <div />
+        </div>
       </div>
 
       <WorksFooter current="Estapar" />
