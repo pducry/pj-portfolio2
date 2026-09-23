@@ -123,6 +123,19 @@ function EstaparContent() {
         </div>
       </div>
 
+      {/* Live project link, same pattern as Foracle */}
+      <div className="border-b border-border">
+        <a
+          href="https://www.estapar.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-between px-6 py-5 transition-colors hover:bg-foreground hover:text-background"
+        >
+          <span className="text-sm text-foreground group-hover:text-background transition-colors">{t.common.liveProject}</span>
+          <span className="text-sm text-muted group-hover:text-background transition-colors">↗</span>
+        </a>
+      </div>
+
       <div className="mt-16 border-t border-border">
         <Reveal>
           <div className="border-b border-border">
