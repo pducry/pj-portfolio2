@@ -25,7 +25,7 @@ const imgStudio: Img = {
   height: 1600,
 };
 
-const imgsStreet: readonly Img[] = [
+const imgsStreet: readonly [Img, Img] = [
   {
     src: "/projects/descomplica/descomplica-3.jpg",
     alt: "Descomplica brand campaign: student balancing on a wall in the city, looking at a phone",
@@ -47,6 +47,52 @@ const imgNight: Img = {
   height: 1600,
 };
 
+const imgsBrandSystem: readonly [Img, Img] = [
+  {
+    src: "/projects/descomplica/descomplica-6.webp",
+    alt: "Descomplica brand guidelines: typography and color usage boards in green, black and white",
+    width: 1920,
+    height: 1080,
+  },
+  {
+    src: "/projects/descomplica/descomplica-7.webp",
+    alt: "Descomplica brand: pin button with the layered d symbol",
+    width: 1920,
+    height: 1080,
+  },
+];
+
+const imgIllustration: Img = {
+  src: "/projects/descomplica/descomplica-8.webp",
+  alt: "Descomplica brand illustration: student with a laptop on an orange background",
+  width: 2433,
+  height: 1432,
+};
+
+const imgPosters: Img = {
+  src: "/projects/descomplica/descomplica-9.webp",
+  alt: "Descomplica campaign: three ENEM 2020 posters, study for ENEM without leaving home",
+  width: 2000,
+  height: 1120,
+};
+
+const imgDesignSystem: Img = {
+  src: "/projects/descomplica/descomplica-10.webp",
+  alt: "Desco System: design principle cards for consistency, clarity, beauty and efficiency",
+  width: 2500,
+  height: 1874,
+};
+
+const imgsPlatform: readonly [Img, Img] = [
+  {
+    src: "/projects/descomplica/descomplica-11.webp",
+    alt: "Descomplica platform: student watching a recorded class on a laptop in a cafe",
+    width: 2121,
+    height: 1414,
+  },
+  imgNight,
+];
+
 function GalleryImage({ img, priority = false }: { img: Img; priority?: boolean }) {
   return (
     <div className="overflow-hidden w-full">
@@ -59,6 +105,26 @@ function GalleryImage({ img, priority = false }: { img: Img; priority?: boolean 
         sizes="100vw"
         priority={priority}
       />
+    </div>
+  );
+}
+
+/** Two images side by side on desktop, stacked on mobile. Pair images of the same aspect ratio. */
+function TwoCol({ imgs }: { imgs: readonly [Img, Img] }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
+      {imgs.map((img, i) => (
+        <Reveal key={img.src}>
+          <div
+            className={[
+              "border-border",
+              i === 0 ? "border-b md:border-b-0 md:border-r" : "",
+            ].join(" ")}
+          >
+            <GalleryImage img={img} />
+          </div>
+        </Reveal>
+      ))}
     </div>
   );
 }
@@ -124,31 +190,33 @@ function DescomplicaContent() {
           </div>
         </Reveal>
 
+        <TwoCol imgs={imgsBrandSystem} />
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage img={imgIllustration} />
+          </div>
+        </Reveal>
+
         <TextBlock paragraphs={[c.campaign1, c.campaign2]} />
 
-        {/* Two portrait shots side by side on desktop, stacked on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
-          {imgsStreet.map((img, i) => (
-            <Reveal key={img.src}>
-              <div
-                className={[
-                  "border-border",
-                  i === 0 ? "border-b md:border-b-0 md:border-r" : "",
-                ].join(" ")}
-              >
-                <GalleryImage img={img} />
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <TwoCol imgs={imgsStreet} />
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage img={imgPosters} />
+          </div>
+        </Reveal>
 
         <TextBlock paragraphs={[c.system1, c.system2]} />
 
         <Reveal>
           <div className="border-b border-border">
-            <GalleryImage img={imgNight} />
+            <GalleryImage img={imgDesignSystem} />
           </div>
         </Reveal>
+
+        <TwoCol imgs={imgsPlatform} />
       </div>
 
       <WorksFooter current="Descomplica" />
