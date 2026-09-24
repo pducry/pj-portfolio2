@@ -14,13 +14,11 @@ function GalleryImage({
   alt,
   width,
   height,
-  twoCol = false,
 }: {
   src: string;
   alt: string;
   width: number;
   height: number;
-  twoCol?: boolean;
 }) {
   return (
     <div className="overflow-hidden w-full">
@@ -30,7 +28,7 @@ function GalleryImage({
         width={width}
         height={height}
         className="w-full h-auto object-cover"
-        sizes={twoCol ? "(max-width: 768px) 100vw, 50vw" : "100vw"}
+        sizes="100vw"
       />
     </div>
   );
@@ -46,29 +44,6 @@ const imgsInvest: readonly Img[] = [
   { src: "/projects/visual-design/vd_12.jpg", alt: "New UI Kit: investments carousel, investment funds with a glass of coins", width: 1600, height: 843 },
   { src: "/projects/visual-design/vd_13.jpg", alt: "New UI Kit: investments carousel, crypto market with a stack of coins", width: 1600, height: 843 },
 ];
-
-/** Two images side by side on desktop, stacked on mobile. A missing second image leaves the right cell empty. */
-function TwoCol({ imgs }: { imgs: readonly [Img, Img?] }) {
-  const [a, b] = imgs;
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
-      <Reveal>
-        <div className={b ? "border-b md:border-b-0 md:border-r border-border" : "md:border-r border-border"}>
-          <GalleryImage {...a} twoCol />
-        </div>
-      </Reveal>
-      {b ? (
-        <Reveal>
-          <div>
-            <GalleryImage {...b} twoCol />
-          </div>
-        </Reveal>
-      ) : (
-        <div />
-      )}
-    </div>
-  );
-}
 
 function VisualDesignContent() {
   const { lang } = useLang();
@@ -171,10 +146,25 @@ function VisualDesignContent() {
           </div>
         </Reveal>
 
-        {/* Investments carousel: five slides in two-column rows, last one bottom left */}
-        <TwoCol imgs={[imgsInvest[0], imgsInvest[1]]} />
-        <TwoCol imgs={[imgsInvest[2], imgsInvest[3]]} />
-        <TwoCol imgs={[imgsInvest[4]]} />
+        {/* Investments carousel slides, automatic side-scrolling carousel (same as UxEvolve 2026) */}
+        <Reveal>
+          <div className="overflow-hidden border-b border-border">
+            <div className="flex w-max animate-marquee">
+              {[0, 1].map((dup) =>
+                imgsInvest.map((img) => (
+                  <div key={`${dup}-${img.src}`} className="h-64 lg:h-96 shrink-0 border-r border-border">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={asset(img.src)}
+                      alt={img.alt}
+                      className="h-full w-auto object-cover"
+                    />
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </Reveal>
       </div>
 
       <WorksFooter current="Mercado Pago" />
