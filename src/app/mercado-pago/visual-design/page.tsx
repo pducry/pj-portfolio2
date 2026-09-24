@@ -14,11 +14,13 @@ function GalleryImage({
   alt,
   width,
   height,
+  twoCol = false,
 }: {
   src: string;
   alt: string;
   width: number;
   height: number;
+  twoCol?: boolean;
 }) {
   return (
     <div className="overflow-hidden w-full">
@@ -28,8 +30,42 @@ function GalleryImage({
         width={width}
         height={height}
         className="w-full h-auto object-cover"
-        sizes="100vw"
+        sizes={twoCol ? "(max-width: 768px) 100vw, 50vw" : "100vw"}
       />
+    </div>
+  );
+}
+
+type Img = { src: string; alt: string; width: number; height: number };
+
+/** Investments carousel slides, in reading order. All 1600x843. */
+const imgsInvest: readonly Img[] = [
+  { src: "/projects/visual-design/vd_09.jpg", alt: "New UI Kit: investments carousel, automatic yield on the account balance", width: 1600, height: 843 },
+  { src: "/projects/visual-design/vd_10.jpg", alt: "New UI Kit: investments carousel, savings jars with piggy banks", width: 1600, height: 843 },
+  { src: "/projects/visual-design/vd_11.jpg", alt: "New UI Kit: investments carousel, fixed income with a calendar", width: 1600, height: 843 },
+  { src: "/projects/visual-design/vd_12.jpg", alt: "New UI Kit: investments carousel, investment funds with a glass of coins", width: 1600, height: 843 },
+  { src: "/projects/visual-design/vd_13.jpg", alt: "New UI Kit: investments carousel, crypto market with a stack of coins", width: 1600, height: 843 },
+];
+
+/** Two images side by side on desktop, stacked on mobile. A missing second image leaves the right cell empty. */
+function TwoCol({ imgs }: { imgs: readonly [Img, Img?] }) {
+  const [a, b] = imgs;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
+      <Reveal>
+        <div className={b ? "border-b md:border-b-0 md:border-r border-border" : "md:border-r border-border"}>
+          <GalleryImage {...a} twoCol />
+        </div>
+      </Reveal>
+      {b ? (
+        <Reveal>
+          <div>
+            <GalleryImage {...b} twoCol />
+          </div>
+        </Reveal>
+      ) : (
+        <div />
+      )}
     </div>
   );
 }
@@ -134,6 +170,11 @@ function VisualDesignContent() {
             />
           </div>
         </Reveal>
+
+        {/* Investments carousel: five slides in two-column rows, last one bottom left */}
+        <TwoCol imgs={[imgsInvest[0], imgsInvest[1]]} />
+        <TwoCol imgs={[imgsInvest[2], imgsInvest[3]]} />
+        <TwoCol imgs={[imgsInvest[4]]} />
       </div>
 
       <WorksFooter current="Mercado Pago" />
