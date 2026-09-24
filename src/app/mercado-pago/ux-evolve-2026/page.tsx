@@ -8,6 +8,57 @@ import { asset } from "@/lib/asset";
 import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 
+type Media =
+  | { kind: "image"; src: string; alt: string }
+  | { kind: "video"; src: string; alt: string };
+
+/** Slides and background loops from the deck, all 16:9. */
+const slideColors: Media   = { kind: "image", src: "/images/uxevolve/slide-1.jpg", alt: "UxEvolve deck: color proposal with the two yellows, black and white" };
+const slideType: Media     = { kind: "image", src: "/images/uxevolve/slide-2.jpg", alt: "UxEvolve deck: typography, Mercado Livre sans serif" };
+const slideBadge: Media    = { kind: "image", src: "/images/uxevolve/slide-3.jpg", alt: "UxEvolve badge on white and on black" };
+const slideIndices: Media  = { kind: "image", src: "/images/uxevolve/slide-4.jpg", alt: "UxSummit deck: relevant indices, big numbers on yellow, blue and black" };
+const slideAI: Media       = { kind: "image", src: "/images/uxevolve/slide-5.jpg", alt: "UxSummit deck: AI innovations from the Mercado Pago UX team" };
+const slideMeeting: Media  = { kind: "image", src: "/images/uxevolve/slide-6.jpg", alt: "UxSummit deck: annual UX meeting section opener over the yellow wave" };
+const loopYellow: Media    = { kind: "video", src: "/videos/uxevolve/loop-1.mp4", alt: "UxEvolve background loop, soft yellow gradient" };
+const loopDark: Media      = { kind: "video", src: "/videos/uxevolve/loop-2.mp4", alt: "UxEvolve background loop, yellow curve on black" };
+const loopWave: Media      = { kind: "video", src: "/videos/uxevolve/loop-3.mp4", alt: "UxEvolve background loop, yellow wave on white" };
+
+function MediaCell({ m }: { m: Media }) {
+  return (
+    <div className="aspect-video w-full overflow-hidden">
+      {m.kind === "video" ? (
+        <video
+          src={asset(m.src)}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-label={m.alt}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={asset(m.src)} alt={m.alt} className="w-full h-full object-cover" />
+      )}
+    </div>
+  );
+}
+
+/** Two 16:9 cells side by side on desktop, stacked on mobile. */
+function TwoCol({ items }: { items: readonly [Media, Media] }) {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
+      {items.map((m, i) => (
+        <Reveal key={m.src}>
+          <div className={i === 0 ? "border-b lg:border-b-0 lg:border-r border-border" : ""}>
+            <MediaCell m={m} />
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
 function UxEvolveContent() {
   const { lang } = useLang();
   const t = translations[lang];
@@ -81,6 +132,18 @@ function UxEvolveContent() {
               playsInline
               className="w-full h-auto"
             />
+          </div>
+        </Reveal>
+
+        {/* Deck: foundations, badge and section openers paired with their background loops */}
+        <TwoCol items={[slideColors, slideType]} />
+        <TwoCol items={[slideBadge, loopYellow]} />
+        <TwoCol items={[loopDark, slideAI]} />
+        <TwoCol items={[loopWave, slideMeeting]} />
+
+        <Reveal>
+          <div className="border-b border-border">
+            <MediaCell m={slideIndices} />
           </div>
         </Reveal>
 
