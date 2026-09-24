@@ -23,6 +23,21 @@ const loopYellow: Media    = { kind: "video", src: "/videos/uxevolve/loop-1.mp4"
 const loopDark: Media      = { kind: "video", src: "/videos/uxevolve/loop-2.mp4", alt: "UxEvolve background loop, yellow curve on black" };
 const loopWave: Media      = { kind: "video", src: "/videos/uxevolve/loop-3.mp4", alt: "UxEvolve background loop, yellow wave on white" };
 
+const separator: Media      = { kind: "video", src: "/videos/uxevolve/separator-01.mp4", alt: "UxEvolve separator, cinematic transition between talks" };
+
+function SectionText({ label, text }: { label: string; text: string }) {
+  return (
+    <Reveal>
+      <div className="px-6 border-b border-border py-6">
+        <div className="max-w-xl space-y-2">
+          <p className="text-xs text-muted">{label}</p>
+          <p className="text-base leading-snug text-foreground/70">{text}</p>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
 function MediaCell({ m }: { m: Media }) {
   return (
     <div className="aspect-video w-full overflow-hidden">
@@ -94,7 +109,7 @@ function UxEvolveContent() {
         </div>
       </div>
 
-      {/* Video 1: highlight reel */}
+      {/* Opener: highlight reel */}
       <Reveal>
         <div className="mt-16 border-t border-b border-border">
           <video
@@ -108,44 +123,65 @@ function UxEvolveContent() {
         </div>
       </Reveal>
 
-      {/* Visual identity */}
+      {/* Hosts + agenda */}
+      <Reveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
+          <div className="px-6 py-6 border-b lg:border-b-0 lg:border-r border-border">
+            <p className="text-xs text-muted">{ux.hostsLabel}</p>
+            <ul className="mt-3 space-y-1 max-w-xl">
+              {ux.hosts.map((h) => (
+                <li key={h.name} className="flex justify-between gap-6 text-sm">
+                  <span className="text-foreground">{h.name}</span>
+                  <span className="text-muted whitespace-nowrap">{h.role}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="px-6 py-6">
+            <p className="text-xs text-muted">{ux.agendaLabel}</p>
+            <ul className="mt-3 space-y-1 max-w-xl">
+              {ux.talks.map((tk) => (
+                <li key={tk.label} className="flex justify-between gap-6 text-sm">
+                  <span className="text-foreground">{tk.label}</span>
+                  <span className="text-muted text-right">{tk.speakers}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Visual identity: concept, foundations, badge */}
       <div className="mt-16 border-t border-border">
+        <SectionText label={`${ux.visualLabel} · ${ux.conceptLabel}`} text={ux.conceptText} />
 
-        {/* Concept text */}
-        <Reveal>
-          <div className="px-6 border-b border-border py-6">
-            <div className="max-w-xl space-y-2">
-              <p className="text-xs text-muted">{ux.conceptLabel}</p>
-              <p className="text-base leading-snug text-foreground/70">{ux.conceptText}</p>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Video 2: separator */}
-        <Reveal>
-          <div className="border-b border-border">
-            <video
-              src={asset("/videos/uxevolve/separator-01.mp4")}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-auto"
-            />
-          </div>
-        </Reveal>
-
-        {/* Deck: foundations, badge and section openers paired with their background loops */}
         <TwoCol items={[slideColors, slideType]} />
-        <TwoCol items={[slideBadge, loopYellow]} />
-        <TwoCol items={[loopDark, slideAI]} />
-        <TwoCol items={[loopWave, slideMeeting]} />
 
         <Reveal>
           <div className="border-b border-border">
-            <MediaCell m={slideIndices} />
+            <MediaCell m={slideBadge} />
           </div>
         </Reveal>
+
+        {/* Separators: the transition loops, each paired with the slide that uses its background */}
+        <SectionText label={ux.separatorsLabel} text={ux.separatorsText} />
+
+        <Reveal>
+          <div className="border-b border-border">
+            <MediaCell m={separator} />
+          </div>
+        </Reveal>
+
+        <TwoCol items={[slideMeeting, loopWave]} />
+        <TwoCol items={[loopDark, slideAI]} />
+
+        {/* The deck: data slide with the soft yellow loop */}
+        <SectionText label={ux.deckLabel} text={ux.deckText} />
+
+        <TwoCol items={[slideIndices, loopYellow]} />
+
+        {/* The evolution: closing text and the still backgrounds in the marquee */}
+        <SectionText label={ux.evolutionLabel} text={ux.evolutionText} />
 
         {/* Slide backgrounds, automatic side-scrolling carousel */}
         <Reveal>

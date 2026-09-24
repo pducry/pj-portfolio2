@@ -269,6 +269,10 @@ export const translations = {
         visualLabel: "Visual Identity",
         conceptLabel: "The Concept",
         conceptText: "The visual concept started by mapping the event's themes and translating them into a single system built to move at the pace of the summit itself: a dynamic grid and generous negative space, flexible enough to hold seven different talks under one voice. The result reads as dynamism and modernity: a language designed to energize a team of roughly 500 people.",
+        separatorsLabel: "Separators",
+        separatorsText: "Motion loops open each talk and set the pace of the summit. The same backgrounds carry over into the slides, so the deck and the transitions read as one piece.",
+        deckLabel: "The Deck",
+        deckText: "Section openers and data slides built on the same grid, the same yellows and the same backgrounds as the separators.",
         evolutionLabel: "The Evolution",
         evolutionText: "Beyond the event itself, UxEvolve marks a shift in how the team works: raising the bar for craft quality and sharpening design taste across every deliverable. It also signals the evolution toward a unified design role: no longer separating content from visual design, but encouraging every designer to own both as a single practice.",
         hosts: [
@@ -623,6 +627,10 @@ export const translations = {
         visualLabel: "Identidade Visual",
         conceptLabel: "O Conceito",
         conceptText: "O conceito visual partiu do mapeamento dos temas do evento, traduzidos em um único sistema construído para acompanhar o ritmo do próprio encontro: grid dinâmica e espaço negativo generoso, flexível o suficiente para sustentar sete talks diferentes sob uma só voz. O resultado é dinamismo e modernidade: uma linguagem pensada para inspirar um time de cerca de 500 pessoas.",
+        separatorsLabel: "Separadores",
+        separatorsText: "Loops de motion abrem cada talk e dão o ritmo do encontro. Os mesmos fundos seguem para os slides, para que o deck e as transições se leiam como uma peça só.",
+        deckLabel: "O Deck",
+        deckText: "Aberturas de seção e slides de dados construídos sobre o mesmo grid, os mesmos amarelos e os mesmos fundos dos separadores.",
         evolutionLabel: "A Evolução",
         evolutionText: "Mais do que o evento em si, o UxEvolve marca uma mudança na forma de trabalhar do time: elevando a régua de qualidade do craft e refinando o taste de design em cada entrega. Também sinaliza a evolução para um role unificado: sem separar conteúdo de desenho, e sim estimulando que cada designer domine os dois como uma prática só.",
         hosts: [
