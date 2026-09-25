@@ -27,7 +27,7 @@ const subProjects = [
     category: "Culture",
     name: "UxSummit 2025",
     role: "Design Manager",
-    href: "/mercado-pago/ux-evolve-2026",
+    href: "/mercado-pago/ux-summit-2025",
   },
   // Unpublished: kept in src/app/mercado-pago/_motion-foundations
   // {

@@ -74,7 +74,7 @@ function TwoCol({ items }: { items: readonly [Media, Media] }) {
   );
 }
 
-function UxEvolveContent() {
+function UxSummitContent() {
   const { lang } = useLang();
   const t = translations[lang];
   const ux = t.pages.uxEvolve;
@@ -147,9 +147,7 @@ function UxEvolveContent() {
         <TwoCol items={[slideMeeting, loopWave]} />
         <TwoCol items={[loopDark, slideAI]} />
 
-        {/* The deck: data slide with the soft yellow loop */}
-        <SectionText label={ux.deckLabel} text={ux.deckText} />
-
+        {/* Data slide with the soft yellow loop */}
         <TwoCol items={[slideIndices, loopYellow]} />
 
         {/* The evolution: closing text and the still backgrounds in the marquee */}
@@ -183,6 +181,6 @@ function UxEvolveContent() {
   );
 }
 
-export default function UxEvolvePage() {
-  return <UxEvolveContent />;
+export default function UxSummitPage() {
+  return <UxSummitContent />;
 }
