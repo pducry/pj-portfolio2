@@ -262,7 +262,7 @@ export const translations = {
         ],
       },
       uxEvolve: {
-        intro1: "UxEvolve is Mercado Pago's annual UX summit, an internal gathering that brings the entire product design team together to look back at a year of work and forward at what's next. Part celebration, part working session: a space to share craft, align on where the discipline is heading, and recognize the effort behind the year's shipped work.",
+        intro1: "UxSummit is Mercado Pago's annual UX summit, an internal gathering that brings the entire product design team together to look back at a year of work and forward at what's next. Part celebration, part working session: a space to share craft, align on where the discipline is heading, and recognize the effort behind the year's shipped work.",
         intro2: "Structured as a series of short talks interwoven with cinematic separators, motion, and a shared visual identity, the summit's format is itself a piece of design: every transition, every slide, treated with the same care as the product work it celebrates.",
         hostsLabel: "Hosted by",
         agendaLabel: "Agenda",
@@ -274,7 +274,7 @@ export const translations = {
         deckLabel: "The Deck",
         deckText: "Section openers and data slides built on the same grid, the same yellows and the same backgrounds as the separators.",
         evolutionLabel: "The Evolution",
-        evolutionText: "Beyond the event itself, UxEvolve marks a shift in how the team works: raising the bar for craft quality and sharpening design taste across every deliverable. It also signals the evolution toward a unified design role: no longer separating content from visual design, but encouraging every designer to own both as a single practice.",
+        evolutionText: "Beyond the event itself, UxSummit marks a shift in how the team works: raising the bar for craft quality and sharpening design taste across every deliverable. It also signals the evolution toward a unified design role: no longer separating content from visual design, but encouraging every designer to own both as a single practice.",
         hosts: [
           { name: "Julia Lima", role: "Expert" },
           { name: "Leandro Di Pasquale", role: "Sr. Director" },
@@ -620,7 +620,7 @@ export const translations = {
         ],
       },
       uxEvolve: {
-        intro1: "UxEvolve é o encontro anual de UX do Mercado Pago, uma reunião interna que junta todo o time de design de produto para revisitar um ano de trabalho e alinhar o que vem a seguir. Parte celebração, parte sessão de trabalho: um espaço para compartilhar craft, alinhar para onde a disciplina está indo e reconhecer o esforço por trás do que foi entregue no ano.",
+        intro1: "UxSummit é o encontro anual de UX do Mercado Pago, uma reunião interna que junta todo o time de design de produto para revisitar um ano de trabalho e alinhar o que vem a seguir. Parte celebração, parte sessão de trabalho: um espaço para compartilhar craft, alinhar para onde a disciplina está indo e reconhecer o esforço por trás do que foi entregue no ano.",
         intro2: "Estruturado como uma série de talks curtas intercaladas por separadores cinematográficos, motion e uma identidade visual única, o formato do encontro é, em si, uma peça de design: cada transição, cada slide, tratado com o mesmo cuidado do trabalho de produto que celebra.",
         hostsLabel: "Apresentado por",
         agendaLabel: "Agenda",
@@ -632,7 +632,7 @@ export const translations = {
         deckLabel: "O Deck",
         deckText: "Aberturas de seção e slides de dados construídos sobre o mesmo grid, os mesmos amarelos e os mesmos fundos dos separadores.",
         evolutionLabel: "A Evolução",
-        evolutionText: "Mais do que o evento em si, o UxEvolve marca uma mudança na forma de trabalhar do time: elevando a régua de qualidade do craft e refinando o taste de design em cada entrega. Também sinaliza a evolução para um role unificado: sem separar conteúdo de desenho, e sim estimulando que cada designer domine os dois como uma prática só.",
+        evolutionText: "Mais do que o evento em si, o UxSummit marca uma mudança na forma de trabalhar do time: elevando a régua de qualidade do craft e refinando o taste de design em cada entrega. Também sinaliza a evolução para um role unificado: sem separar conteúdo de desenho, e sim estimulando que cada designer domine os dois como uma prática só.",
         hosts: [
           { name: "Julia Lima", role: "Expert" },
           { name: "Leandro Di Pasquale", role: "Sr. Director" },
