@@ -123,8 +123,8 @@ function UxSummitContent() {
         </div>
       </Reveal>
 
-      {/* Visual identity: concept, foundations, badge */}
-      <div className="mt-16 border-t border-border">
+      {/* Visual identity: concept, foundations, badge (flush under the opener, no gap) */}
+      <div>
         <SectionText label={`${ux.visualLabel} · ${ux.conceptLabel}`} text={ux.conceptText} />
 
         <TwoCol items={[slideColors, slideType]} />
