@@ -23,9 +23,9 @@ const subProjects = [
     href: "/mercado-pago/art-direction",
   },
   {
-    year: "2026",
+    year: "2025",
     category: "Culture",
-    name: "UxEvolve 2026",
+    name: "UxSummit 2025",
     role: "Design Manager",
     href: "/mercado-pago/ux-evolve-2026",
   },

@@ -95,9 +95,9 @@ function UxEvolveContent() {
 
       {/* Title + meta */}
       <div className="px-6 border-t border-border py-4 flex flex-wrap items-baseline gap-x-10 gap-y-1">
-        <span className="text-base text-foreground whitespace-nowrap">UxEvolve 2026</span>
+        <span className="text-base text-foreground whitespace-nowrap">UxSummit 2025</span>
         <span className="text-sm text-muted whitespace-nowrap">{t.categories["Culture"]}</span>
-        <span className="text-sm text-muted whitespace-nowrap">2026</span>
+        <span className="text-sm text-muted whitespace-nowrap">2025</span>
         <span className="text-sm text-muted whitespace-nowrap">{t.roles["Design Manager"]}</span>
       </div>
 
@@ -120,34 +120,6 @@ function UxEvolveContent() {
             playsInline
             className="w-full h-auto"
           />
-        </div>
-      </Reveal>
-
-      {/* Hosts + agenda */}
-      <Reveal>
-        <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
-          <div className="px-6 py-6 border-b lg:border-b-0 lg:border-r border-border">
-            <p className="text-xs text-muted">{ux.hostsLabel}</p>
-            <ul className="mt-3 space-y-1 max-w-xl">
-              {ux.hosts.map((h) => (
-                <li key={h.name} className="flex justify-between gap-6 text-sm">
-                  <span className="text-foreground">{h.name}</span>
-                  <span className="text-muted whitespace-nowrap">{h.role}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="px-6 py-6">
-            <p className="text-xs text-muted">{ux.agendaLabel}</p>
-            <ul className="mt-3 space-y-1 max-w-xl">
-              {ux.talks.map((tk) => (
-                <li key={tk.label} className="flex justify-between gap-6 text-sm">
-                  <span className="text-foreground">{tk.label}</span>
-                  <span className="text-muted text-right">{tk.speakers}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </Reveal>
 
@@ -193,7 +165,7 @@ function UxEvolveContent() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={asset(`/images/uxevolve/bg-${i}.jpg`)}
-                      alt={`UxEvolve 2026, background ${i}`}
+                      alt={`UxSummit 2025, background ${i}`}
                       className="h-full w-auto object-cover"
                     />
                   </div>
