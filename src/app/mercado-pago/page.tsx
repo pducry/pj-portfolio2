@@ -23,6 +23,13 @@ const subProjects = [
     href: "/mercado-pago/art-direction",
   },
   {
+    year: "2026",
+    category: "Creative",
+    name: "Brújula MP",
+    role: "Design Manager",
+    href: "/mercado-pago/brujula",
+  },
+  {
     year: "2025",
     category: "Culture",
     name: "UxSummit",

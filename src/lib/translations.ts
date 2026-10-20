@@ -171,6 +171,11 @@ export const translations = {
         tool2: "The UX rationale is guided choice over blank prompt. Instead of writing free text and hoping for the best, the designer picks a category such as fintech photography, 3D or 2D illustration, then an audience, individuals or sellers, then a narrative theme: movement, growth, control and security. Each step narrows the output toward the brand's visual language.",
         tool3: "Advanced filters expose the photographic grammar the guidelines already defined, from nadir to overhead shot, from wide to close framing, so that consistency is a default rather than a review comment. One tool, one set of rules, for 11 verticals and 7 countries, and on-brand imagery becomes something every designer can produce.",
       },
+      brujula: {
+        intro1: "Brújula MP is a visual reference library for Mercado Pago's art direction. Campaign photography, generated images and value proposition videos live in a single searchable feed, organized by the brand's narrative axes: movement, growth, security and value props.",
+        intro2: "Every reference carries the prompt used to create it, its tags and its framing. Designers search by category, tag or prompt, save favorites, group references into boards and start a new variation from an image that already works. A shared starting point that makes design critique more objective and keeps the team from reinventing solutions already explored.",
+        openFull: "Open full screen ↗",
+      },
       visualDesign: {
         intro1: "The visual and creative evolution of Mercado Pago's aesthetic language, from product surfaces to campaign pages to the hardware itself. A shift toward a louder, more confident brand: yellow as the field, type as the voice, and the Point as a designed object.",
         intro2: "The work tightens how the brand looks and feels at the scale of Latin America's largest fintech. Bold headlines, saturated yellow fields, and a product UI that treats rates, devices, and checkout as one system, so every surface, from a rates page to a Point Smart screen, speaks with the same weight.",
@@ -526,6 +531,11 @@ export const translations = {
         tool1: "Direção de arte só escala se puder ser reproduzida sem o diretor de arte na sala. Por isso as regras definidas durante o projeto, categoria, público, tema, ângulo e enquadramento de câmera, viraram um gerador de imagens dentro do Fury, a plataforma interna do Mercado Livre, disponível para todo o time de UX.",
         tool2: "O racional de UX é escolha guiada em vez de prompt em branco. Em vez de escrever texto livre e torcer pelo resultado, o designer escolhe uma categoria, como fotografia fintech, ilustração 3D ou 2D, depois um público, pessoas ou vendedores, e então um tema narrativo: movimento, crescimento, controle e segurança. Cada etapa afunila o resultado para a linguagem visual da marca.",
         tool3: "Os filtros avançados expõem a gramática fotográfica que as diretrizes já definiam, do nadir ao plano zenital, do enquadramento aberto ao fechado, para que a consistência seja padrão e não um comentário de revisão. Uma ferramenta, um conjunto de regras, para 11 verticais e 7 países, e imagem on-brand vira algo que qualquer designer consegue produzir.",
+      },
+      brujula: {
+        intro1: "Brújula MP é uma biblioteca de referências visuais para a direção de arte do Mercado Pago. Fotografia de campanha, imagens geradas e vídeos de proposta de valor ficam num único feed pesquisável, organizado pelos eixos narrativos da marca: movimento, crescimento, segurança e value props.",
+        intro2: "Cada referência traz o prompt usado para criá-la, suas tags e seu enquadramento. O designer busca por categoria, tag ou prompt, salva favoritos, agrupa referências em boards e começa uma nova variação a partir de uma imagem que já funciona. Um ponto de partida comum que torna a crítica de design mais objetiva e evita que o time reinvente soluções já exploradas.",
+        openFull: "Abrir em tela cheia ↗",
       },
       visualDesign: {
         intro1: "A evolução visual e criativa da linguagem estética do Mercado Pago, das superfícies de produto às páginas de campanha até o hardware. Um movimento em direção a uma identidade mais assertiva: o amarelo como campo, a tipografia como voz, e o Point como objeto de design.",
