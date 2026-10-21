@@ -6,6 +6,7 @@ import { useLang } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
 import { SiteHeader } from "@/components/site-header";
 import { Reveal } from "@/components/reveal";
+import { asset } from "@/lib/asset";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -147,6 +148,20 @@ export default function Bio() {
       </div>
 
       <div className="h-12 lg:h-[140px]" />
+
+      {/* Opener video, right before the Works list */}
+      <Reveal>
+        <div className="border-t border-border">
+          <video
+            src={asset("/videos/home-opener.mp4")}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="block w-full h-auto"
+          />
+        </div>
+      </Reveal>
 
       {/* Works */}
       <div id="projects" className="border-t border-border">
