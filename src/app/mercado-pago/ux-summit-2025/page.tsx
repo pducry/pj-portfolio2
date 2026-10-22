@@ -13,17 +13,17 @@ type Media =
   | { kind: "video"; src: string; alt: string };
 
 /** Slides and background loops from the deck, all 16:9. */
-const slideColors: Media   = { kind: "image", src: "/images/uxevolve/slide-1.jpg", alt: "UxSummit deck: color proposal with the two yellows, black and white" };
-const slideType: Media     = { kind: "image", src: "/images/uxevolve/slide-2.jpg", alt: "UxSummit deck: typography, Mercado Livre sans serif" };
-const slideBadge: Media    = { kind: "image", src: "/images/uxevolve/slide-3.jpg", alt: "UxSummit badge on white and on black" };
-const slideIndices: Media  = { kind: "image", src: "/images/uxevolve/slide-4.jpg", alt: "UxSummit deck: relevant indices, big numbers on yellow, blue and black" };
-const slideAI: Media       = { kind: "image", src: "/images/uxevolve/slide-5.jpg", alt: "UxSummit deck: AI innovations from the Mercado Pago UX team" };
-const slideMeeting: Media  = { kind: "image", src: "/images/uxevolve/slide-6.jpg", alt: "UxSummit deck: annual UX meeting section opener over the yellow wave" };
-const loopYellow: Media    = { kind: "video", src: "/videos/uxevolve/loop-1.mp4", alt: "UxSummit background loop, soft yellow gradient" };
-const loopDark: Media      = { kind: "video", src: "/videos/uxevolve/loop-2.mp4", alt: "UxSummit background loop, yellow curve on black" };
-const loopWave: Media      = { kind: "video", src: "/videos/uxevolve/loop-3.mp4", alt: "UxSummit background loop, yellow wave on white" };
+const slideColors: Media   = { kind: "image", src: "/images/uxevolve/slide-1.jpg", alt: "UxEvolve deck: color proposal with the two yellows, black and white" };
+const slideType: Media     = { kind: "image", src: "/images/uxevolve/slide-2.jpg", alt: "UxEvolve deck: typography, Mercado Livre sans serif" };
+const slideBadge: Media    = { kind: "image", src: "/images/uxevolve/slide-3.jpg", alt: "UxEvolve badge on white and on black" };
+const slideIndices: Media  = { kind: "image", src: "/images/uxevolve/slide-4.jpg", alt: "UxEvolve deck: relevant indices, big numbers on yellow, blue and black" };
+const slideAI: Media       = { kind: "image", src: "/images/uxevolve/slide-5.jpg", alt: "UxEvolve deck: AI innovations from the Mercado Pago UX team" };
+const slideMeeting: Media  = { kind: "image", src: "/images/uxevolve/slide-6.jpg", alt: "UxEvolve deck: annual UX meeting section opener over the yellow wave" };
+const loopYellow: Media    = { kind: "video", src: "/videos/uxevolve/loop-1.mp4", alt: "UxEvolve background loop, soft yellow gradient" };
+const loopDark: Media      = { kind: "video", src: "/videos/uxevolve/loop-2.mp4", alt: "UxEvolve background loop, yellow curve on black" };
+const loopWave: Media      = { kind: "video", src: "/videos/uxevolve/loop-3.mp4", alt: "UxEvolve background loop, yellow wave on white" };
 
-const separator: Media      = { kind: "video", src: "/videos/uxevolve/separator-01.mp4", alt: "UxSummit separator, cinematic transition between talks" };
+const separator: Media      = { kind: "video", src: "/videos/uxevolve/separator-01.mp4", alt: "UxEvolve separator, cinematic transition between talks" };
 
 function SectionText({ label, text }: { label: string; text: string }) {
   return (
@@ -95,7 +95,7 @@ function UxSummitContent() {
 
       {/* Title + meta */}
       <div className="px-6 border-t border-border py-4 flex flex-wrap items-baseline gap-x-10 gap-y-1">
-        <span className="text-base text-foreground whitespace-nowrap">UxSummit 2025</span>
+        <span className="text-base text-foreground whitespace-nowrap">UxEvolve 2025</span>
         <span className="text-sm text-muted whitespace-nowrap">{t.categories["Culture"]}</span>
         <span className="text-sm text-muted whitespace-nowrap">2025</span>
         <span className="text-sm text-muted whitespace-nowrap">{t.roles["Design Manager"]}</span>
@@ -163,7 +163,7 @@ function UxSummitContent() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={asset(`/images/uxevolve/bg-${i}.jpg`)}
-                      alt={`UxSummit 2025, background ${i}`}
+                      alt={`UxEvolve 2025, background ${i}`}
                       className="h-full w-auto object-cover"
                     />
                   </div>

@@ -25,7 +25,7 @@ const subProjects = [
   {
     year: "2025",
     category: "Culture",
-    name: "UxSummit",
+    name: "UxEvolve",
     role: "Design Manager",
     href: "/mercado-pago/ux-summit-2025",
   },
