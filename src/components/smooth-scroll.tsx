@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 // Inertia scroll: lerp-based, frame-rate independent.
 // The viewport smoothly "chases" the wheel target each frame,
@@ -8,6 +9,10 @@ import { useEffect } from "react";
 const SMOOTHING = 0.09;
 
 export function SmoothScroll() {
+  const pathname = usePathname();
+  // Lets the route-change effect stop the inertia loop owned by the main effect.
+  const stopRef = useRef<(() => void) | null>(null);
+
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -73,7 +78,12 @@ export function SmoothScroll() {
       const link = (e.target as Element | null)?.closest?.("a");
       if (!link) return;
       const href = link.getAttribute("href");
-      if (!href || !href.startsWith("#") || href === "#") return;
+      // Navigating away: stop easing now, before the next page renders.
+      if (href && !href.startsWith("#")) {
+        stopRef.current?.();
+        return;
+      }
+      if (!href || href === "#") return;
       const el = document.getElementById(href.slice(1));
       if (!el) return;
       e.preventDefault();
@@ -93,6 +103,18 @@ export function SmoothScroll() {
       }
     };
 
+    // Drop inertia left over from the previous page. Without this, a link
+    // clicked while the scroll is still easing keeps chasing the old page's
+    // target and drags the new page down instead of leaving it at the top.
+    stopRef.current = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = null;
+      ticking = false;
+      lastTime = null;
+      targetY = window.scrollY;
+      currentY = window.scrollY;
+    };
+
     window.addEventListener("wheel", onWheel, { passive: false });
     document.addEventListener("click", onClick);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -103,8 +125,15 @@ export function SmoothScroll() {
       window.removeEventListener("scroll", onScroll);
       if (rafId) cancelAnimationFrame(rafId);
       html.style.scrollBehavior = prevBehavior;
+      stopRef.current = null;
     };
   }, []);
+
+  // New route: stop any running inertia so Next.js can place the page at the top
+  // (or restore the previous position on back/forward) without being overridden.
+  useEffect(() => {
+    stopRef.current?.();
+  }, [pathname]);
 
   return null;
 }
