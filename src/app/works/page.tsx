@@ -149,7 +149,7 @@ export default function Bio() {
 
       <div className="h-12 lg:h-[140px]" />
 
-      {/* Opener video, right before the Works list */}
+      {/* Opener video, 85% wide and centered, right before the Works list */}
       <Reveal>
         <div className="border-t border-border">
           <video
@@ -158,7 +158,7 @@ export default function Bio() {
             muted
             loop
             playsInline
-            className="block w-full h-auto"
+            className="block mx-auto w-[85%] h-auto"
           />
         </div>
       </Reveal>
