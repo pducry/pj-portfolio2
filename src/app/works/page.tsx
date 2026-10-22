@@ -149,16 +149,16 @@ export default function Bio() {
 
       <div className="h-12 lg:h-[140px]" />
 
-      {/* Opener video, 85% wide and centered with matching 7.5% vertical padding, right before the Works list */}
+      {/* Opener video, inset by the site padding (px-6) on all four sides, right before the Works list */}
       <Reveal>
-        <div className="border-t border-border py-[7.5%]">
+        <div className="border-t border-border p-6">
           <video
             src={asset("/videos/home-opener.mp4")}
             autoPlay
             muted
             loop
             playsInline
-            className="block mx-auto w-[85%] h-auto"
+            className="block w-full h-auto"
           />
         </div>
       </Reveal>
