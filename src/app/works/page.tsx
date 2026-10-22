@@ -149,9 +149,9 @@ export default function Bio() {
 
       <div className="h-12 lg:h-[140px]" />
 
-      {/* Opener video, 85% wide and centered, right before the Works list */}
+      {/* Opener video, 85% wide and centered with matching 7.5% vertical padding, right before the Works list */}
       <Reveal>
-        <div className="border-t border-border">
+        <div className="border-t border-border py-[7.5%]">
           <video
             src={asset("/videos/home-opener.mp4")}
             autoPlay
