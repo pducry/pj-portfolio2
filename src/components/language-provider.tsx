@@ -22,7 +22,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   useEffect(() => {
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-    document.title = translations[lang].common.siteTitle;
+    const title = translations[lang].common.siteTitle;
+    const apply = () => {
+      if (document.title !== title) document.title = title;
+    };
+    apply();
+    // Next.js re-renders the static metadata title after hydration and on
+    // navigation, so re-apply the translated title whenever it gets replaced.
+    const observer = new MutationObserver(apply);
+    observer.observe(document.head, { subtree: true, childList: true, characterData: true });
+    return () => observer.disconnect();
   }, [lang, pathname]);
 
   const toggle = useCallback(() => {
