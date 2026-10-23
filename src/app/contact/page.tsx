@@ -184,7 +184,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="block text-base text-foreground/60 transition-colors hover:text-foreground"
                 >
-                  {label}
+                  {label === "Email" ? t.common.email : label}
                 </a>
               ))}
             </div>

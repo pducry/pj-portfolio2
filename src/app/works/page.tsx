@@ -63,6 +63,10 @@ function ModuleHeader({ label }: { label: string }) {
 }
 
 function ProjectRow({ project }: { project: Project }) {
+  const { lang } = useLang();
+  const t = translations[lang];
+  const category = t.categories[project.category as keyof typeof t.categories] ?? project.category;
+  const role = t.roles[project.role as keyof typeof t.roles] ?? project.role;
   const linked = !!project.href;
   const cls = [
     "group grid items-baseline gap-x-6 border-b border-border px-6 py-5 transition-colors",
@@ -84,12 +88,12 @@ function ProjectRow({ project }: { project: Project }) {
       {/* Mobile: name + category below */}
       <div className="lg:hidden">
         <span className={`text-sm whitespace-nowrap ${txt(true)}`}>{project.name}</span>
-        <p className={`text-xs mt-0.5 ${txt()}`}>{project.category}</p>
+        <p className={`text-xs mt-0.5 ${txt()}`}>{category}</p>
       </div>
 
       {/* Desktop columns */}
-      <span className={`hidden lg:block text-sm whitespace-nowrap ${txt()}`}>{project.category}</span>
-      <span className={`hidden lg:block text-sm whitespace-nowrap ${txt()}`}>{project.role}</span>
+      <span className={`hidden lg:block text-sm whitespace-nowrap ${txt()}`}>{category}</span>
+      <span className={`hidden lg:block text-sm whitespace-nowrap ${txt()}`}>{role}</span>
       <span className={`hidden lg:block text-base whitespace-nowrap ${txt(true)}`}>{project.name}</span>
 
       <span className={`text-sm justify-self-end transition-colors ${linked ? "text-muted/40 group-hover:text-background" : "invisible"}`}>→</span>
@@ -167,7 +171,7 @@ export default function Bio() {
       <div id="projects" className="border-t border-border">
         <Reveal>
           <div className="px-6 py-3 border-b border-border">
-            <span className="text-sm text-foreground/30">Works</span>
+            <span className="text-sm text-foreground/30">{t.common.worksSection}</span>
           </div>
         </Reveal>
         {projects.map((p) => <ProjectRow key={p.name} project={p} />)}
@@ -249,7 +253,7 @@ export default function Bio() {
                   rel="noopener noreferrer"
                   className="block text-base text-foreground/60 transition-colors hover:text-foreground"
                 >
-                  {label}
+                  {label === "Email" ? t.common.email : label}
                 </a>
               ))}
             </div>

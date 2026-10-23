@@ -2,7 +2,12 @@ export type Lang = "en" | "pt";
 
 export const translations = {
   en: {
-    nav: { bio: "Works", playground: "Playground", contact: "About & Contact" },
+    nav: {
+      bio: "Works", playground: "Playground", contact: "About & Contact",
+      version: "Portfolio Version 26.2", light: "Light", dark: "Dark",
+      openMenu: "Open menu", closeMenu: "Close menu",
+    },
+    projectNames: { "Art Direction": "Art Direction" },
     bio: {
       label: "Bio",
       p1: "Design direction driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams. Leading by doing, from strategy to execution.",
@@ -106,6 +111,13 @@ export const translations = {
       foundations:    "Foundations",
       projects:       "Projects",
       liveProject:    "Live project",
+      email:          "Email",
+      password:       "Password",
+      enter:          "Enter →",
+      redirecting:    "Redirecting…",
+      gridColumns:    "Col",
+      gridGap:        "Gap",
+      siteTitle:      "Pedro Julien Creative Director",
     },
     pages: {
       mercadoPago: {
@@ -358,14 +370,19 @@ export const translations = {
     copyright: "© Pedro Julien 2026",
   },
   pt: {
-    nav: { bio: "Works", playground: "Playground", contact: "About & Contact" },
+    nav: {
+      bio: "Trabalhos", playground: "Playground", contact: "Sobre & Contato",
+      version: "Portfólio Versão 26.2", light: "Claro", dark: "Escuro",
+      openMenu: "Abrir menu", closeMenu: "Fechar menu",
+    },
+    projectNames: { "Art Direction": "Direção de Arte" },
     bio: {
       label: "Bio",
       p1: "Direção de design guiada por taste e craft, impulsionada por IA. Mais de 20 anos moldando produtos digitais e experiências de branding, formando e conduzindo times de design. Liderando fazendo, da estratégia à execução.",
       p4a: "Fundador da",
       p4b: ".",
       cta: "Entre em contato",
-      scroll: "Scroll down",
+      scroll: "Role para baixo",
     },
     projects: { type: "Tipo", year: "Ano", role: "Cargo", name: "Nome do Projeto" },
     works: { craft: "Craft", build: "Artefatos Digitais" },
@@ -374,7 +391,7 @@ export const translations = {
       "Brand Identity":  "Identidade de Marca",
       "Digital Product": "Produto Digital",
       "Interactive":     "Interativo",
-      "Product Design":  "Product Design",
+      "Product Design":  "Design de Produto",
       "Branding":        "Branding",
       "Creative":        "Sistema Criativo",
       "Leadership":      "Liderança",
@@ -390,7 +407,7 @@ export const translations = {
       "Founder":           "Fundador",
       "Designer":          "Designer",
       "Creative Direction":"Direção Criativa",
-      "Product Design":    "Product Design",
+      "Product Design":    "Design de Produto",
     },
     footer: {
       skills:      "Habilidades",
@@ -452,16 +469,23 @@ export const translations = {
       },
     },
     common: {
-      backToWorks:    "← Works",
+      backToWorks:    "← Trabalhos",
       backToMP:       "← Mercado Pago",
       backToWorksBtn: "Voltar",
-      worksSection:   "Works",
+      worksSection:   "Trabalhos",
       year:           "Ano",
       role:           "Cargo",
       category:       "Categoria",
       foundations:    "Fundamentos",
       projects:       "Projetos",
       liveProject:    "Ver projeto",
+      email:          "E-mail",
+      password:       "Senha",
+      enter:          "Entrar →",
+      redirecting:    "Redirecionando…",
+      gridColumns:    "Col",
+      gridGap:        "Espaço",
+      siteTitle:      "Pedro Julien Diretor Criativo",
     },
     pages: {
       mercadoPago: {

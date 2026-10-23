@@ -101,7 +101,7 @@ function MercadoPagoContent() {
               </span>
               <div className="lg:hidden">
                 <span className={`text-sm whitespace-nowrap text-foreground ${linked ? "transition-colors group-hover:text-background" : ""}`}>
-                  {p.name}
+                  {t.projectNames[p.name as keyof typeof t.projectNames] ?? p.name}
                 </span>
                 <p className={`text-xs mt-0.5 text-muted ${linked ? "transition-colors group-hover:text-background" : ""}`}>
                   {t.categories[p.category as keyof typeof t.categories]}
@@ -111,7 +111,7 @@ function MercadoPagoContent() {
                 {t.categories[p.category as keyof typeof t.categories]}
               </span>
               <span className={`hidden lg:block text-base whitespace-nowrap text-foreground ${linked ? "transition-colors group-hover:text-background" : ""}`}>
-                {p.name}
+                {t.projectNames[p.name as keyof typeof t.projectNames] ?? p.name}
               </span>
               <span className={`text-sm justify-self-end ${linked ? "text-muted/40 transition-colors group-hover:text-background" : "invisible"}`}>
                 →

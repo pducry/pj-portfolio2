@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLang } from "./language-provider";
+import { translations } from "@/lib/translations";
 
 export function PasswordGate({
   children,
@@ -15,6 +17,8 @@ export function PasswordGate({
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { lang } = useLang();
+  const t = translations[lang].common;
 
   useEffect(() => {
     setMounted(true);
@@ -46,7 +50,7 @@ export function PasswordGate({
           type="password"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Password"
+          placeholder={t.password}
           className={`w-full border-b bg-transparent pb-2 text-base lg:text-[13px] tracking-widest text-foreground outline-none transition-colors placeholder:text-muted ${
             error ? "border-red-400" : "border-border focus:border-foreground"
           }`}
@@ -55,7 +59,7 @@ export function PasswordGate({
           type="submit"
           className="text-base lg:text-[13px] text-muted transition-colors hover:text-foreground"
         >
-          Enter →
+          {t.enter}
         </button>
       </form>
     </div>

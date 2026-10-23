@@ -26,7 +26,7 @@ export function SiteHeader() {
         <Link href="/works" className="text-[14px] font-medium text-foreground transition-opacity hover:opacity-60">
           Pedro Julien
         </Link>
-        <span className="hidden lg:inline text-[14px] text-muted">Portfolio Version 26.2</span>
+        <span className="hidden lg:inline text-[14px] text-muted">{t.version}</span>
       </div>
 
       {/* Desktop nav */}
@@ -71,13 +71,13 @@ export function SiteHeader() {
             className={`text-[11px] px-2.5 py-0.5 rounded-full transition-all ${
               theme === "light" ? "bg-background text-foreground shadow-sm" : "text-muted hover:text-foreground"
             }`}
-          >Light</button>
+          >{t.light}</button>
           <button
             onClick={() => theme !== "dark" && toggleTheme()}
             className={`text-[11px] px-2.5 py-0.5 rounded-full transition-all ${
               theme === "dark" ? "bg-background text-foreground shadow-sm" : "text-muted hover:text-foreground"
             }`}
-          >Dark</button>
+          >{t.dark}</button>
         </div>
       </div>
 

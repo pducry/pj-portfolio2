@@ -1,7 +1,8 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
-import type { Lang } from "@/lib/translations";
+import { usePathname } from "next/navigation";
+import { translations, type Lang } from "@/lib/translations";
 
 const LangContext = createContext<{ lang: Lang; toggle: () => void }>({
   lang: "en",
@@ -15,6 +16,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const stored = localStorage.getItem("lang") as Lang | null;
     if (stored === "en" || stored === "pt") setLang(stored);
   }, []);
+
+  // Keep the document language and tab title in sync with the chosen language,
+  // so browsers, screen readers and the tab never stay in English on PT.
+  const pathname = usePathname();
+  useEffect(() => {
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+    document.title = translations[lang].common.siteTitle;
+  }, [lang, pathname]);
 
   const toggle = useCallback(() => {
     setLang((prev) => {

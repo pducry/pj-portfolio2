@@ -77,7 +77,7 @@ export function MobileMenu() {
           <span style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#ef4444", flexShrink: 0, display: "block" }} />
           <span style={{ fontSize: 14, fontWeight: 500, color: fg }}>Pedro Julien</span>
         </Link>
-        <button onClick={close} style={{ width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, color: fg, background: "none", border: "none", cursor: "pointer" }}>
+        <button onClick={close} aria-label={t.nav.closeMenu} style={{ width: 44, height: 44, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, color: fg, background: "none", border: "none", cursor: "pointer" }}>
           ×
         </button>
       </div>
@@ -125,7 +125,7 @@ export function MobileMenu() {
         <div style={{ display: "flex", borderRadius: 999, padding: 3, backgroundColor: pill }}>
           {(["light", "dark"] as const).map((th) => (
             <button key={th} onClick={() => theme !== th && toggleTheme()} style={{ padding: "10px 22px", borderRadius: 999, border: "none", cursor: "pointer", fontSize: 30, fontWeight: theme === th ? 600 : 400, backgroundColor: theme === th ? bg : "transparent", color: theme === th ? fg : `${fg}55`, textTransform: "capitalize" }}>
-              {th}
+              {th === "light" ? t.nav.light : t.nav.dark}
             </button>
           ))}
         </div>
@@ -140,7 +140,7 @@ export function MobileMenu() {
         onClick={() => setOpen((v) => !v)}
         className="lg:hidden flex flex-col justify-center items-center"
         style={{ width: 44, height: 44, gap: 6, background: "none", border: "none", cursor: "pointer" }}
-        aria-label={open ? "Fechar menu" : "Abrir menu"}
+        aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
         aria-expanded={open}
       >
         <span style={{ display: "block", height: 1, width: 20, backgroundColor: fg, transformOrigin: "center", transition: "all 0.3s", transform: open ? "translateY(9px) rotate(45deg)" : "none" }} />

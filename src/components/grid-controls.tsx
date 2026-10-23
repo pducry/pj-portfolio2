@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useLang } from "./language-provider";
+import { translations } from "@/lib/translations";
 
 interface GridControlsProps {
   visible: boolean;
@@ -27,6 +29,8 @@ function MiniGrid({ columns, gap }: { columns: number; gap: number }) {
 
 export function GridControls({ visible, columns, gap, onColumnsChange, onGapChange }: GridControlsProps) {
   const [expanded, setExpanded] = useState(false);
+  const { lang } = useLang();
+  const t = translations[lang].common;
 
   return (
     <div
@@ -73,7 +77,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
 
               {/* Col slider */}
               <div className="flex items-center gap-[12px] shrink-0">
-                <span className="text-[14px] font-medium uppercase tracking-wide leading-none text-white/50">Col</span>
+                <span className="text-[14px] font-medium uppercase tracking-wide leading-none text-white/50">{t.gridColumns}</span>
                 <input
                   type="range"
                   min={1} max={6} step={1}
@@ -94,7 +98,7 @@ export function GridControls({ visible, columns, gap, onColumnsChange, onGapChan
 
               {/* Gap slider */}
               <div className="flex items-center gap-[12px] shrink-0">
-                <span className="text-[14px] font-medium uppercase tracking-wide leading-none text-white/50">Gap</span>
+                <span className="text-[14px] font-medium uppercase tracking-wide leading-none text-white/50">{t.gridGap}</span>
                 <input
                   type="range"
                   min={0} max={48} step={4}
