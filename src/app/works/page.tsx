@@ -118,7 +118,7 @@ export default function Bio() {
       <SiteHeader />
 
       {/* Intro */}
-      <div className="px-6 pt-6 pb-8">
+      <div className="px-6 pt-6">
         <div className="max-w-xl space-y-6">
           <p className="text-2xl lg:text-[22px] leading-snug text-foreground/75">{t.bio.p1}</p>
           <p className="text-2xl lg:text-[22px] leading-tight text-foreground/75">
@@ -139,23 +139,13 @@ export default function Bio() {
           >
             {t.bio.cta} →
           </a>
-          <div>
-            <a
-              href="#projects"
-              className="inline-flex items-baseline gap-2 text-sm text-foreground/30 transition-colors hover:text-foreground"
-            >
-              {t.bio.scroll}
-              <span className="animate-scroll-hint">↓</span>
-            </a>
-          </div>
         </div>
       </div>
 
-      <div className="h-12 lg:h-[140px]" />
-
-      {/* Opener video, inset by the site padding (px-6) on all four sides, right before the Works list */}
+      {/* Opener video, inset by the site padding (px-6) on all four sides, right before the Works list.
+          Same section gap (mt-16 lg:mt-20) as Experience and the footer. */}
       <Reveal>
-        <div className="border-t border-border p-6">
+        <div className="mt-16 lg:mt-20 border-t border-border p-6">
           <video
             src={asset("/videos/home-opener.mp4")}
             autoPlay
