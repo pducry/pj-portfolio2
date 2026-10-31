@@ -10,7 +10,7 @@ export const translations = {
     projectNames: { "Art Direction": "Art Direction" },
     bio: {
       label: "Bio",
-      p1: "Design direction driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams. Leading by doing, from strategy to execution.",
+      p1: "I am design leader driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams. Leading by doing, from strategy to execution.",
       p4a: "Founder of",
       p4b: ".",
       cta: "Get in touch",
