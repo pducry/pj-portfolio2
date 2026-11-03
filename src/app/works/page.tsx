@@ -152,7 +152,7 @@ export default function Bio() {
             muted
             loop
             playsInline
-            className="block w-full h-auto"
+            className="mx-auto block h-auto w-[85%]"
           />
         </div>
       </Reveal>
