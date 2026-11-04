@@ -151,6 +151,27 @@ function ArtDirectionContent() {
           </div>
         </Reveal>
 
+        {/* 15: centered square campaign portrait */}
+        <Reveal>
+          <div className="border-b border-border">
+            <div className="mx-auto w-full max-w-[900px]">
+              <GalleryImage src="/projects/art-direction/ad_15.jpg" alt="Woman celebrating while holding a yellow phone with a Mercado Pago card" width={1094} height={1096} />
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 16+17: full-width campaign image collections */}
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_16.jpg" alt="Mercado Pago campaign collage with portraits, lifestyle scenes and an investment app" width={2535} height={1164} />
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_17.jpg" alt="Mercado Pago campaign collage with payments, a video call and everyday moments" width={2537} height={1160} />
+          </div>
+        </Reveal>
+
         {/* Image generator: rationale, sits right above the Media Platform video */}
         <div className="px-6 border-b border-border py-6">
           <span className="text-sm text-muted">{ad.toolLabel}</span>
