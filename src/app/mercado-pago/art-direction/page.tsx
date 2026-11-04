@@ -151,11 +151,11 @@ function ArtDirectionContent() {
           </div>
         </Reveal>
 
-        {/* 15: centered square campaign portrait */}
+        {/* 15: full-width portrait with a gentle landscape crop on desktop */}
         <Reveal>
           <div className="border-b border-border">
-            <div className="mx-auto w-full max-w-[900px]">
-              <GalleryImage src="/projects/art-direction/ad_15.jpg" alt="Woman celebrating while holding a yellow phone with a Mercado Pago card" width={1094} height={1096} />
+            <div className="aspect-square lg:aspect-[4/3]">
+              <GalleryImage src="/projects/art-direction/ad_15.jpg" alt="Woman celebrating while holding a yellow phone with a Mercado Pago card" width={1094} height={1096} fillCell />
             </div>
           </div>
         </Reveal>
