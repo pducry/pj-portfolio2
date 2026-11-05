@@ -142,13 +142,6 @@ function ArtDirectionContent() {
           </div>
         </Reveal>
 
-        {/* 13: full width campaign graphic */}
-        <Reveal>
-          <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_13.png" alt="Art Direction: Mercado Livre installment payment campaign graphic" width={2590} height={1366} />
-          </div>
-        </Reveal>
-
         {/* 14: full width campaign graphic */}
         <Reveal>
           <div className="border-b border-border">
@@ -178,7 +171,7 @@ function ArtDirectionContent() {
           </div>
         </div>
 
-        {/* Media Platform: image generator tool walkthrough video, last asset on the page */}
+        {/* Media Platform: image generator tool walkthrough video */}
         <Reveal>
           <div className="border-b border-border">
             <video
@@ -189,6 +182,13 @@ function ArtDirectionContent() {
               playsInline
               className="w-full h-auto"
             />
+          </div>
+        </Reveal>
+
+        {/* Final campaign image */}
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_13.png" alt="Art Direction: Mercado Livre installment payment campaign graphic" width={2590} height={1366} />
           </div>
         </Reveal>
 
