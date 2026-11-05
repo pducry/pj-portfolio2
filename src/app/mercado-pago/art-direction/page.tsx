@@ -106,10 +106,15 @@ function ArtDirectionContent() {
           </div>
         </Reveal>
 
-        {/* 6: full width */}
+        {/* 6+15: paired campaign portraits */}
         <Reveal>
-          <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_06.png" alt="Art Direction: Delivery boxes" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-border">
+            <div className="aspect-video lg:aspect-square border-b lg:border-b-0 lg:border-r border-border">
+              <GalleryImage src="/projects/art-direction/ad_06.png" alt="Art Direction: Delivery boxes" width={1672} height={941} fillCell />
+            </div>
+            <div className="aspect-square">
+              <GalleryImage src="/projects/art-direction/ad_15.jpg" alt="Woman celebrating while holding a yellow phone with a Mercado Pago card" width={1094} height={1096} fillCell />
+            </div>
           </div>
         </Reveal>
 
@@ -148,15 +153,6 @@ function ArtDirectionContent() {
         <Reveal>
           <div className="border-b border-border">
             <GalleryImage src="/projects/art-direction/ad_14.png" alt="Art Direction: Mercado Pago digital account landing hero" width={2632} height={1482} />
-          </div>
-        </Reveal>
-
-        {/* 15: full-width portrait with a gentle landscape crop on desktop */}
-        <Reveal>
-          <div className="border-b border-border">
-            <div className="aspect-square lg:aspect-[4/3]">
-              <GalleryImage src="/projects/art-direction/ad_15.jpg" alt="Woman celebrating while holding a yellow phone with a Mercado Pago card" width={1094} height={1096} fillCell />
-            </div>
           </div>
         </Reveal>
 
