@@ -171,24 +171,24 @@ function ArtDirectionContent() {
           </div>
         </div>
 
-        {/* Media Platform: image generator tool walkthrough video */}
+        {/* Final campaign image */}
         <Reveal>
           <div className="border-b border-border">
+            <GalleryImage src="/projects/art-direction/ad_13.png" alt="Art Direction: Mercado Livre installment payment campaign graphic" width={2590} height={1366} />
+          </div>
+        </Reveal>
+
+        {/* Media Platform: image generator tool walkthrough video */}
+        <Reveal>
+          <div className="border-b border-border p-6">
             <video
               src={asset("/projects/art-direction/ad-media-platform.mp4")}
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-auto"
+              className="mx-auto block h-auto w-[80%]"
             />
-          </div>
-        </Reveal>
-
-        {/* Final campaign image */}
-        <Reveal>
-          <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_13.png" alt="Art Direction: Mercado Livre installment payment campaign graphic" width={2590} height={1366} />
           </div>
         </Reveal>
 
