@@ -10,7 +10,7 @@ export const translations = {
     projectNames: { "Art Direction": "Art Direction" },
     bio: {
       label: "Bio",
-      p1: "I am design leader driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams. Leading by doing, from strategy to execution.",
+      p1: "I am a design leader driven by taste and craft, amplified by AI. 20+ years shaping digital products and branding experiences, building and guiding design teams. Leading by doing, from strategy to execution.",
       p4a: "Founder of",
       p4b: ".",
       cta: "Get in touch",
@@ -64,7 +64,7 @@ export const translations = {
     },
     about: {
       intro1:
-        "With 18+ years of professional experience, Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience, from understanding business strategy to delivering final prototypes.",
+        "With 20+ years of professional experience, I am a Brazilian/Swiss creative director working at the intersection of digital products and branding experience, from business strategy to final craft.",
       intro2a: "Fueled by curiosity, founder of",
       intro2b:
         ", a studio crafting new motion and visual solutions using GenAI for the creative industry.",
@@ -118,6 +118,8 @@ export const translations = {
       gridColumns:    "Col",
       gridGap:        "Gap",
       siteTitle:      "Pedro Julien Creative Director",
+      metaDescription:
+        "Brazilian/Swiss creative director with 20+ years of experience in branding, brand experience, digital products and visual identity.",
     },
     pages: {
       mercadoPago: {
@@ -378,7 +380,7 @@ export const translations = {
     projectNames: { "Art Direction": "Direção de Arte" },
     bio: {
       label: "Bio",
-      p1: "Direção de design guiada por taste e craft, impulsionada por IA. Mais de 20 anos moldando produtos digitais e experiências de branding, formando e conduzindo times de design. Liderando fazendo, da estratégia à execução.",
+      p1: "Sou um líder de design guiado por repertório e craft, potencializado por IA. Mais de 20 anos moldando produtos digitais e experiências de marca, formando e conduzindo times de design. Lidero fazendo, da estratégia à execução.",
       p4a: "Fundador da",
       p4b: ".",
       cta: "Entre em contato",
@@ -432,7 +434,7 @@ export const translations = {
     },
     about: {
       intro1:
-        "Com mais de 18 anos de experiência profissional, Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção de produtos digitais e experiências de branding, desde a compreensão da estratégia de negócio até a entrega de protótipos finais.",
+        "Com mais de 20 anos de experiência profissional, sou um diretor criativo brasileiro e suíço. Atuo na interseção entre produtos digitais e experiência de marca, da estratégia de negócio ao craft final.",
       intro2a: "Movido pela curiosidade, fundador da",
       intro2b:
         ", um estúdio que cria novas soluções de motion e visual usando GenAI para a indústria criativa.",
@@ -486,6 +488,8 @@ export const translations = {
       gridColumns:    "Col",
       gridGap:        "Espaço",
       siteTitle:      "Pedro Julien Diretor Criativo",
+      metaDescription:
+        "Diretor criativo brasileiro e suíço com mais de 20 anos de experiência em branding, brand experience, produtos digitais e identidade visual.",
     },
     pages: {
       mercadoPago: {
