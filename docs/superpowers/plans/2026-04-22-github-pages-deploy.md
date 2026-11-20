@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Migrar hospedagem do portfólio de Vercel para GitHub Pages, com deploy automático via GitHub Actions e domínio customizado `pedrojulien.com`.
+**Goal:** Publicar o portfólio no GitHub Pages, com deploy automático via GitHub Actions.
 
-**Architecture:** Um workflow GitHub Actions faz build do Next.js estático e publica o `out/` no GitHub Pages a cada push no `main`. Um arquivo `CNAME` em `public/` garante que o domínio customizado seja preservado a cada deploy.
+**Architecture:** Um workflow GitHub Actions faz build do Next.js estático e publica o `out/` no GitHub Pages a cada push no `main`. A produção atual é o project site `https://pducry.github.io/pj-portfolio2/` (por exemplo `https://pducry.github.io/pj-portfolio2/works/`). O `basePath` `/pj-portfolio2` em `next.config.ts` faz parte desse endereço. Não criar `public/CNAME` e não apontar `pedrojulien.com` para este repositório sem OK do Pedro: o domínio, em 20 de novembro de 2026, responde pela Squarespace (título `PJ2025`).
 
 **Tech Stack:** Next.js 16 (static export), GitHub Actions, GitHub Pages
 
@@ -14,46 +14,27 @@
 
 | Arquivo | Ação | Responsabilidade |
 |---------|------|-----------------|
-| `.github/workflows/deploy.yml` | Criar | Pipeline CI/CD: build + deploy para GitHub Pages |
-| `public/CNAME` | Criar | Domínio customizado persistido no build |
+| `.github/workflows/deploy.yml` | Manter | Pipeline CI/CD: build + deploy para GitHub Pages |
+| `public/CNAME` | Não criar | Um CNAME de `pedrojulien.com` tiraria o site do path `/pj-portfolio2` |
+| `next.config.ts` | Manter | `output: "export"` e, em produção, `basePath` e `assetPrefix` `/pj-portfolio2` |
 
 ---
 
-### Task 1: Criar arquivo CNAME
+### Task 1: Manter o site no path `/pj-portfolio2`
 
 **Files:**
-- Create: `public/CNAME`
+- Keep: `next.config.ts` (`basePath` e `assetPrefix` `/pj-portfolio2` quando `NODE_ENV` é `production`)
+- Do not create: `public/CNAME`
 
-- [ ] **Step 1: Criar o arquivo**
+- [x] **Step 1: Confirmar que não existe CNAME**
 
-Conteúdo exato (sem espaços, sem quebra de linha extra):
+`public/CNAME` não deve existir. O conteúdo `pedrojulien.com` faria o GitHub Pages publicar o projeto na raiz de um domínio customizado e o endereço `https://pducry.github.io/pj-portfolio2/` deixaria de ser a produção.
 
-```
-pedrojulien.com
-```
+- [x] **Step 2: Confirmar o basePath**
 
-Caminho: `public/CNAME`
+Em produção, `basePath` é `/pj-portfolio2` e `assetPrefix` é `/pj-portfolio2/`. `output` continua `"export"`.
 
-- [ ] **Step 2: Verificar que o build inclui o arquivo**
-
-```bash
-npm run build
-```
-
-Verificar que `out/CNAME` existe:
-
-```bash
-ls out/CNAME
-```
-
-Saída esperada: `out/CNAME`
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add public/CNAME
-git commit -m "feat: add CNAME for custom domain pedrojulien.com"
-```
+Não remover o `basePath` enquanto o site ao vivo for `https://pducry.github.io/pj-portfolio2/`. Sem ele, HTML e assets passam a pedir a raiz de `pducry.github.io` e a página em `/pj-portfolio2/` quebra.
 
 ---
 
@@ -148,7 +129,7 @@ Esta task requer ações no navegador — não pode ser automatizada.
 
 - [ ] **Step 1: Acessar Settings do repositório**
 
-Ir para: `https://github.com/pducry/pj-portfolio/settings/pages`
+Ir para: `https://github.com/pducry/pj-portfolio2/settings/pages`
 
 - [ ] **Step 2: Configurar Source**
 
@@ -156,20 +137,29 @@ Em **Build and deployment → Source**, selecionar **GitHub Actions**
 
 - [ ] **Step 3: Verificar que o workflow rodou com sucesso**
 
-Ir para: `https://github.com/pducry/pj-portfolio/actions`
+Ir para: `https://github.com/pducry/pj-portfolio2/actions`
 
 Aguardar o workflow "Deploy to GitHub Pages" completar (verde).
 
 - [ ] **Step 4: Verificar URL do GitHub Pages**
 
 Após deploy, o site estará disponível em:
-`https://pducry.github.io/pj-portfolio`
+`https://pducry.github.io/pj-portfolio2`
 
 ---
 
-### Task 4: Atualizar DNS para pedrojulien.com (manual)
+### Task 4: Domínio pedrojulien.com — não executar sem OK do Pedro
 
-Esta task requer acesso ao painel do registrador do domínio.
+Esta task não faz parte do deploy atual. O site no ar é `https://pducry.github.io/pj-portfolio2/`. `https://www.pedrojulien.com` responde pela Squarespace com o título `PJ2025` (`www` em `ext-sq.squarespace.com`). Não alterar DNS nem o custom domain do GitHub Pages a partir deste plano.
+
+Para esse domínio passar a mostrar o build de `pj-portfolio2`, o Pedro precisaria autorizar, fora deste PR:
+
+1. Remover o domínio da Squarespace.
+2. Apontar o DNS do apex para `185.199.108.153`, `185.199.109.153`, `185.199.110.153` e `185.199.111.153`, e `www` com `CNAME` para `pducry.github.io`.
+3. Em `https://github.com/pducry/pj-portfolio2/settings/pages`, salvar o custom domain `pedrojulien.com`.
+4. Numa mudança separada de código, criar `public/CNAME` com `pedrojulien.com` e zerar `basePath` e `assetPrefix`, porque o domínio customizado serve o projeto na raiz, não em `/pj-portfolio2`.
+
+Os passos abaixo ficam só como referência histórica. Não executá-los.
 
 - [ ] **Step 1: Acessar painel DNS do domínio**
 
@@ -199,7 +189,7 @@ www → pducry.github.io
 
 - [ ] **Step 5: Configurar domínio no GitHub Pages**
 
-Ir para: `https://github.com/pducry/pj-portfolio/settings/pages`
+Ir para: `https://github.com/pducry/pj-portfolio2/settings/pages`
 
 No campo **Custom domain**, digitar `pedrojulien.com` e salvar.
 
@@ -214,5 +204,5 @@ Acessar `https://pedrojulien.com` e confirmar que o site carrega corretamente.
 ## Notas
 
 - O domínio `goforacle.com` também está no Vercel — não alterar seus DNS, apenas os de `pedrojulien.com`
-- Vercel pode ser desconectado do projeto `pj-portfolio` após confirmar que GitHub Pages está funcionando
+- Vercel pode ser desconectado do projeto `pj-portfolio2` após confirmar que GitHub Pages está funcionando. Isso não move `pedrojulien.com`: o domínio customizado continua fora deste deploy até o Pedro autorizar.
 - O workflow inclui `workflow_dispatch` para permitir deploy manual pela UI do GitHub

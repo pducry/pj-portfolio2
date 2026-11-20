@@ -64,7 +64,7 @@ export const translations = {
     },
     about: {
       intro1:
-        "With 18+ years of professional experience, Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience, from understanding business strategy to delivering final prototypes.",
+        "With 20+ years of professional experience, Pedro is a Brazilian/Swiss designer and creative director working at the intersection of digital products and branding experience, from understanding business strategy to delivering final prototypes.",
       intro2a: "Fueled by curiosity, founder of",
       intro2b:
         ", a studio crafting new motion and visual solutions using GenAI for the creative industry.",
@@ -112,8 +112,6 @@ export const translations = {
       projects:       "Projects",
       liveProject:    "Live project",
       email:          "Email",
-      password:       "Password",
-      enter:          "Enter →",
       redirecting:    "Redirecting…",
       gridColumns:    "Col",
       gridGap:        "Gap",
@@ -432,7 +430,7 @@ export const translations = {
     },
     about: {
       intro1:
-        "Com mais de 18 anos de experiência profissional, Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção de produtos digitais e experiências de branding, desde a compreensão da estratégia de negócio até a entrega de protótipos finais.",
+        "Com mais de 20 anos de experiência profissional, Pedro é um designer e diretor criativo brasileiro/suíço que atua na interseção de produtos digitais e experiências de branding, desde a compreensão da estratégia de negócio até a entrega de protótipos finais.",
       intro2a: "Movido pela curiosidade, fundador da",
       intro2b:
         ", um estúdio que cria novas soluções de motion e visual usando GenAI para a indústria criativa.",
@@ -480,8 +478,6 @@ export const translations = {
       projects:       "Projetos",
       liveProject:    "Ver projeto",
       email:          "E-mail",
-      password:       "Senha",
-      enter:          "Entrar →",
       redirecting:    "Redirecionando…",
       gridColumns:    "Col",
       gridGap:        "Espaço",
