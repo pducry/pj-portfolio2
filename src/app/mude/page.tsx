@@ -118,9 +118,10 @@ function MudeContent() {
           <video
             aria-label={c.onboardingVideo}
             className="block h-auto w-full bg-[#131313]"
-            controls
+            autoPlay
+            loop
+            muted
             playsInline
-            preload="none"
             poster={asset("/projects/mude/mude-onboarding-poster.webp")}
             width={1360}
             height={700}
