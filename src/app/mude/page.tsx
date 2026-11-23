@@ -110,11 +110,24 @@ function MudeContent() {
         </div>
       </div>
 
-      {/* Gallery rhythm: full / text / full / full / text / pair / text / pair / full */}
       <div className="mt-16 border-t border-border">
         <FullRow img={imgOnboarding} priority />
 
         <TextBlock paragraphs={[c.experience1]} />
+        <div className="border-b border-border">
+          <video
+            aria-label={c.onboardingVideo}
+            className="block h-auto w-full bg-[#131313]"
+            controls
+            playsInline
+            preload="none"
+            poster={asset("/projects/mude/mude-onboarding-poster.webp")}
+            width={1360}
+            height={700}
+          >
+            <source src={asset("/projects/mude/mude-onboarding.mp4")} type="video/mp4" />
+          </video>
+        </div>
         <FullRow img={imgJourney} />
         <FullRow img={imgSeason} />
 
