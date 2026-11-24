@@ -114,6 +114,7 @@ function MudeContent() {
         <FullRow img={imgOnboarding} priority />
 
         <TextBlock paragraphs={[c.experience1]} />
+        <FullRow img={imgJourney} />
         <div className="border-b border-border">
           <video
             aria-label={c.onboardingVideo}
@@ -129,7 +130,6 @@ function MudeContent() {
             <source src={asset("/projects/mude/mude-onboarding.mp4")} type="video/mp4" />
           </video>
         </div>
-        <FullRow img={imgJourney} />
         <FullRow img={imgSeason} />
 
         <TextBlock paragraphs={[c.identity1]} />
