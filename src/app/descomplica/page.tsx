@@ -69,6 +69,13 @@ const imgIllustration: Img = {
   height: 1432,
 };
 
+const imgBillboard: Img = {
+  src: "/projects/descomplica/descomplica-13.webp",
+  alt: "Descomplica campaign: digital street billboard for computer engineering, a student walking past a green JCDecaux screen",
+  width: 2000,
+  height: 1120,
+};
+
 const imgPosters: Img = {
   src: "/projects/descomplica/descomplica-9.webp",
   alt: "Descomplica campaign: three ENEM 2020 posters, study for ENEM without leaving home",
@@ -208,6 +215,12 @@ function DescomplicaContent() {
         <TextBlock paragraphs={[c.campaign1, c.campaign2]} />
 
         <TwoCol imgs={imgsStreet} />
+
+        <Reveal>
+          <div className="border-b border-border">
+            <GalleryImage img={imgBillboard} />
+          </div>
+        </Reveal>
 
         <Reveal>
           <div className="border-b border-border">
