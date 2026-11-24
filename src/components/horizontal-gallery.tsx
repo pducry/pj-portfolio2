@@ -77,6 +77,10 @@ const images = [
   { src: "/gallery/rc-2.jpg", alt: "Royal Canin" },
   { src: "/gallery/rc-3.jpg", alt: "Royal Canin" },
   { src: "/gallery/rc-4.jpg", alt: "Royal Canin" },
+  { src: "/gallery/pace-15.webp", alt: "Pace app listing concept and a black-and-white running photograph" },
+  { src: "/gallery/pace-10.webp", alt: "Pace wordmark over a low-angle photograph of a runner in mid-stride" },
+  { src: "/gallery/pace-13.webp", alt: "Blue Pace icon in a dark browser tab" },
+  { src: "/gallery/pace-08.webp", alt: "Pace campaign layout with a blurred runner and the line Start. Everything else follows." },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
