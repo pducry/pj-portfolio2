@@ -171,13 +171,6 @@ function ArtDirectionContent() {
           </div>
         </div>
 
-        {/* Final campaign image */}
-        <Reveal>
-          <div className="border-b border-border">
-            <GalleryImage src="/projects/art-direction/ad_13.png" alt="Art Direction: Mercado Livre installment payment campaign graphic" width={2590} height={1366} />
-          </div>
-        </Reveal>
-
         {/* Media Platform: image generator tool walkthrough video */}
         <Reveal>
           <div className="border-b border-border p-6">
