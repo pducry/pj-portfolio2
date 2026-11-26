@@ -123,7 +123,7 @@ function EstaparContent() {
         </div>
       </div>
 
-      {/* Live project link, same pattern as Foracle */}
+      {/* Live project link */}
       <div className="border-b border-border">
         <a
           href="https://www.estapar.com.br"

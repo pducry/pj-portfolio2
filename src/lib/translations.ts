@@ -335,9 +335,6 @@ export const translations = {
         desc:       "Rebranding of a São Paulo-based sound design studio with a strong international presence. A new visual identity built to match the weight and reach of their work, bold, precise and unmistakably sonic.",
         descMobile: "Rebranding of a São Paulo-based sound design studio, bold, precise and unmistakably sonic.",
       },
-      foracle: {
-        desc: "Foracle is a free font recommendation platform built on human and AI curation. Designed to give back to the design community, type designers, typographers, and font enthusiasts, by surfacing and amplifying the best free typefaces from around the world.",
-      },
       mude: {
         desc1:       "Mude is a Brazilian well-being ecosystem built around one idea: turning cities into spaces for wellness. Through the app and its outdoor spaces it offers free yoga, fitness, meditation and sports, live and on demand, funded by partner brands rather than by the people who practice.",
         desc2:       "As Head of Design, I led the redesign of the app experience: a calmer, more editorial product that organizes practice into journeys and seasons, connects people to in-person experiences, and makes healthy habits feel effortless to start and to keep.",
@@ -703,9 +700,6 @@ export const translations = {
       combustion: {
         desc:       "Rebranding de um estúdio de sound design de São Paulo com forte presença internacional. Uma nova identidade visual construída para corresponder ao peso e alcance de seu trabalho: precisa, ousada e inconfundivelmente sônica.",
         descMobile: "Rebranding de um estúdio de sound design de São Paulo, preciso, ousado e inconfundivelmente sônico.",
-      },
-      foracle: {
-        desc: "Foracle é uma plataforma gratuita de recomendação de fontes construída sobre curadoria humana e de IA. Criada para retribuir à comunidade de design, tipógrafos, designers de tipos e entusiastas de fontes, divulgando e amplificando as melhores typefaces gratuitas do mundo.",
       },
       mude: {
         desc1:       "A Mude é um ecossistema brasileiro de bem-estar construído em torno de uma ideia: transformar cidades em espaços de bem-estar. Pelo app e por seus espaços ao ar livre, oferece yoga, fitness, meditação e esportes gratuitos, ao vivo e on demand, financiados por marcas parceiras e não por quem pratica.",
