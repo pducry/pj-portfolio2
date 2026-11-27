@@ -17,20 +17,32 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (stored === "en" || stored === "pt") setLang(stored);
   }, []);
 
-  // Keep the document language and tab title in sync with the chosen language,
-  // so browsers, screen readers and the tab never stay in English on PT.
+  // Keep the document language, tab title and meta description in sync with the
+  // chosen language, so browsers, screen readers and the tab never stay in English on PT.
   const pathname = usePathname();
   useEffect(() => {
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
     const title = translations[lang].common.siteTitle;
+    const description = translations[lang].common.metaDescription;
     const apply = () => {
       if (document.title !== title) document.title = title;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta && meta.getAttribute("content") !== description) {
+        meta.setAttribute("content", description);
+      }
     };
     apply();
-    // Next.js re-renders the static metadata title after hydration and on
-    // navigation, so re-apply the translated title whenever it gets replaced.
+    // Next.js re-renders the static metadata title and description after
+    // hydration and on navigation, so re-apply the translated values whenever
+    // they get replaced.
     const observer = new MutationObserver(apply);
-    observer.observe(document.head, { subtree: true, childList: true, characterData: true });
+    observer.observe(document.head, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ["content"],
+    });
     return () => observer.disconnect();
   }, [lang, pathname]);
 

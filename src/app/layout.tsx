@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
+import { translations } from "@/lib/translations";
 import "./globals.css";
 
 const instrumentSans = localFont({
@@ -13,8 +14,7 @@ const instrumentSans = localFont({
 
 export const metadata: Metadata = {
   title: "Pedro Julien Creative Director",
-  description:
-    "Brazilian/Swiss designer and creative director with 18+ years of experience in digital products and branding.",
+  description: translations.en.common.metaDescription,
 };
 
 export const viewport = {
