@@ -77,9 +77,9 @@ function TwoCol({ imgs }: { imgs: readonly [Img, Img] }) {
 
 function TextBlock({ label, paragraphs }: { label?: string; paragraphs: readonly string[] }) {
   return (
-    <div className="px-6 border-b border-border py-6">
+    <div className="px-6 border-b border-border py-16">
       {label && <span className="text-sm text-muted">{label}</span>}
-      <div className={label ? "mt-3 max-w-xl space-y-3" : "max-w-xl space-y-3"}>
+      <div className={label ? "mt-6 max-w-xl space-y-6" : "max-w-xl space-y-6"}>
         {paragraphs.map((p) => (
           <p key={p} className="text-base leading-snug text-foreground/70">
             {p}
@@ -115,8 +115,8 @@ function EstaparContent() {
         <span className="text-sm text-muted whitespace-nowrap">{t.roles["Head of Design"]}</span>
       </div>
 
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{c.desc1}</p>
           <p className="text-base leading-snug text-foreground/70">{c.desc2}</p>
           <p className="text-base leading-snug text-foreground/70">{c.role1}</p>

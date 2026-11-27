@@ -55,7 +55,7 @@ export default function CombustionPage() {
           </div>
 
           {/* Description */}
-          <div className="space-y-3 text-sm leading-relaxed text-muted border-t border-border/40 pt-6">
+          <div className="space-y-6 text-sm leading-relaxed text-muted border-t border-border/40 pt-12">
             <p>{t.pages.combustion.desc}</p>
           </div>
 
@@ -76,7 +76,7 @@ export default function CombustionPage() {
       <div className="lg:ml-[40%] pt-[57px]">
 
         {/* Mobile info */}
-        <div className="lg:hidden px-4 py-10 sm:px-8 space-y-4 border-b border-border/40">
+        <div className="lg:hidden px-4 py-16 sm:px-8 space-y-6 border-b border-border/40">
           <h1 className="text-3xl font-semibold tracking-tight">Combustion</h1>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             <div>

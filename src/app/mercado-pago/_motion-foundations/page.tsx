@@ -130,8 +130,8 @@ function MotionFoundationsContent() {
       </div>
 
       {/* Intro */}
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{mp.intro1}</p>
           <p className="text-base leading-snug text-foreground/70">{mp.intro2}</p>
         </div>
@@ -150,9 +150,9 @@ function MotionFoundationsContent() {
           <div className="px-6 py-3 border-t border-b border-border">
             <span className="text-sm text-foreground/30">{t.common.foundations}</span>
           </div>
-          <div className="px-6 pt-6 pb-12 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 max-w-4xl">
+          <div className="px-6 pt-10 pb-16 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 max-w-4xl">
             {mp.foundations.map((f) => (
-              <div key={f.label} className="space-y-1.5">
+              <div key={f.label} className="space-y-3">
                 <p className="text-sm text-foreground">{f.label}</p>
                 <p className="text-sm text-muted leading-snug">{f.body}</p>
               </div>
@@ -168,8 +168,8 @@ function MotionFoundationsContent() {
           <Reveal key={p.id}>
             <div className="mt-8">
               {/* Principle header */}
-              <div className="px-6 py-5 border-t border-b border-border">
-                <div className="max-w-2xl space-y-2">
+              <div className="px-6 py-10 border-t border-b border-border">
+                <div className="max-w-2xl space-y-4">
                   <div className="flex flex-wrap items-baseline gap-x-6 gap-y-1">
                     <h2 className="text-base text-foreground">{tp.label}</h2>
                     <span className="text-sm text-muted">{tp.tagline}</span>
