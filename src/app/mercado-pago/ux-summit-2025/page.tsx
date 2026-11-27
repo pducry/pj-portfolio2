@@ -28,8 +28,8 @@ const separator: Media      = { kind: "video", src: "/videos/uxevolve/separator-
 function SectionText({ label, text }: { label: string; text: string }) {
   return (
     <Reveal>
-      <div className="px-6 border-b border-border py-6">
-        <div className="max-w-xl space-y-2">
+      <div className="px-6 border-b border-border py-16">
+        <div className="max-w-xl space-y-4">
           <p className="text-xs text-muted">{label}</p>
           <p className="text-base leading-snug text-foreground/70">{text}</p>
         </div>
@@ -102,8 +102,8 @@ function UxSummitContent() {
       </div>
 
       {/* Intro */}
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{ux.intro1}</p>
           <p className="text-base leading-snug text-foreground/70">{ux.intro2}</p>
         </div>

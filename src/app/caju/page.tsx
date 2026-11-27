@@ -52,8 +52,8 @@ function GalleryImage({
 
 function TextBlock({ paragraphs }: { paragraphs: readonly string[] }) {
   return (
-    <div className="px-6 border-b border-border py-6">
-      <div className="max-w-xl space-y-3">
+    <div className="px-6 border-b border-border py-16">
+      <div className="max-w-xl space-y-6">
         {paragraphs.map((p) => (
           <p key={p} className="text-base leading-snug text-foreground/70">
             {p}
@@ -112,8 +112,8 @@ function CajuContent() {
         <span className="text-sm text-muted whitespace-nowrap">{t.roles["Head of Design"]}</span>
       </div>
 
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{c.desc1}</p>
           <p className="text-base leading-snug text-foreground/70">{c.desc2}</p>
           <p className="text-base leading-snug text-foreground/70">{c.desc3}</p>
@@ -140,9 +140,9 @@ function CajuContent() {
         <TextBlock paragraphs={[c.dyn1, c.dyn2]} />
 
         {/* KPIs */}
-        <div className="px-6 border-b border-border py-6">
+        <div className="px-6 border-b border-border py-16">
           <span className="text-sm text-muted">{c.kpisTitle}</span>
-          <div className="mt-3 flex flex-wrap gap-x-10 gap-y-3">
+          <div className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
             {c.kpis.map((kpi) => (
               <div key={kpi.label} className="flex flex-col gap-0.5">
                 <span className="text-base text-foreground whitespace-nowrap">{kpi.value}</span>
@@ -150,7 +150,7 @@ function CajuContent() {
               </div>
             ))}
           </div>
-          <p className="mt-4 max-w-xl text-sm text-muted">{c.kpisNote}</p>
+          <p className="mt-8 max-w-xl text-sm text-muted">{c.kpisNote}</p>
         </div>
 
         <GalleryBlock images={imagesDynamics} />

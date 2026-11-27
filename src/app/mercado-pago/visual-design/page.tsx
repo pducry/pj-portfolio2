@@ -70,8 +70,8 @@ function VisualDesignContent() {
         <span className="text-sm text-muted whitespace-nowrap">{t.roles["Design Manager"]}</span>
       </div>
 
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{vd.intro1}</p>
           <p className="text-base leading-snug text-foreground/70">{vd.intro2}</p>
         </div>

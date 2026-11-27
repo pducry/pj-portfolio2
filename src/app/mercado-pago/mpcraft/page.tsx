@@ -37,8 +37,8 @@ function MPCraftContent() {
       </div>
 
       {/* Intro */}
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{mp.intro1}</p>
           <p className="text-base leading-snug text-foreground/70">{mp.intro2}</p>
         </div>
@@ -52,7 +52,7 @@ function MPCraftContent() {
           </div>
           <div className="divide-y divide-border">
             {mp.pillars.map((pillar, i) => (
-              <div key={i} className="px-6 py-5 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-2 lg:gap-12">
+              <div key={i} className="px-6 py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-4 lg:gap-12">
                 <p className="text-base text-foreground">{pillar.label}</p>
                 <p className="text-sm text-muted leading-snug">{pillar.body}</p>
               </div>
@@ -69,7 +69,7 @@ function MPCraftContent() {
           </div>
           <div className="divide-y divide-border">
             {mp.initiatives.map((item, i) => (
-              <div key={i} className="px-6 py-5 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-2 lg:gap-12">
+              <div key={i} className="px-6 py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-4 lg:gap-12">
                 <p className="text-base text-foreground">{item.label}</p>
                 <p className="text-sm text-muted leading-snug">{item.body}</p>
               </div>
@@ -86,7 +86,7 @@ function MPCraftContent() {
           </div>
           <div className="divide-y divide-border">
             {mp.rituals.map((ritual, i) => (
-              <div key={i} className="px-6 py-5 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-2 lg:gap-12">
+              <div key={i} className="px-6 py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-4 lg:gap-12">
                 <div>
                   <p className="text-base text-foreground">{ritual.label}</p>
                   <p className="text-xs text-muted mt-0.5">{ritual.duration}</p>
@@ -104,12 +104,12 @@ function MPCraftContent() {
           <div className="px-6 py-3 border-t border-b border-border">
             <span className="text-sm text-foreground/30">{mp.agenticLabel}</span>
           </div>
-          <div className="px-6 py-5 border-b border-border max-w-xl">
+          <div className="px-6 py-16 border-b border-border max-w-xl">
             <p className="text-sm text-muted leading-snug">{mp.agenticIntro}</p>
           </div>
           <div className="divide-y divide-border">
             {mp.agentic.map((item, i) => (
-              <div key={i} className="px-6 py-5 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-2 lg:gap-12">
+              <div key={i} className="px-6 py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-4 lg:gap-12">
                 <p className="text-base text-foreground">{item.label}</p>
                 <p className="text-sm text-muted leading-snug">{item.body}</p>
               </div>

@@ -65,8 +65,8 @@ function ArtDirectionContent() {
       </div>
 
       {/* Intro */}
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">{ad.intro1}</p>
           <p className="text-base leading-snug text-foreground/70">{ad.intro2}</p>
         </div>
@@ -162,9 +162,9 @@ function ArtDirectionContent() {
         </Reveal>
 
         {/* Image generator: rationale, sits right above the Media Platform video */}
-        <div className="px-6 border-b border-border py-6">
+        <div className="px-6 border-b border-border py-16">
           <span className="text-sm text-muted">{ad.toolLabel}</span>
-          <div className="mt-3 max-w-xl space-y-3">
+          <div className="mt-6 max-w-xl space-y-6">
             <p className="text-base leading-snug text-foreground/70">{ad.tool1}</p>
             <p className="text-base leading-snug text-foreground/70">{ad.tool2}</p>
             <p className="text-base leading-snug text-foreground/70">{ad.tool3}</p>

@@ -44,8 +44,8 @@ export default function SutePage() {
       </div>
 
       {/* Description */}
-      <div className="px-6 border-t border-b border-border py-6">
-        <div className="max-w-xl space-y-3">
+      <div className="px-6 border-t border-b border-border py-16">
+        <div className="max-w-xl space-y-6">
           <p className="text-base leading-snug text-foreground/70">
             {t.pages.sute.desc1}
           </p>
